@@ -1,0 +1,3264 @@
+<IDM EXPORTED_ON="2023-10-11 10:46:25.1533333" IS_PACKAGE_FOLDER_EXPORT="0" PACKAGE_TRANSPORT_VERSION="8#0#8#2020#0#1#800SP8#1814#1814#1807" SCHEMA_VERSION="1814">
+<PACKAGES>
+<PACKAGE MCQUALIFIEDNAME="com.sapit.connector.ad.idm">
+<MCCOPIEDFROM>com.sapit.connector.newglobalad.pe3</MCCOPIEDFROM>
+<MCCOPIEDFROMMAJORVERSION>0</MCCOPIEDFROMMAJORVERSION>
+<MCCOPIEDFROMMINORVERSION>2</MCCOPIEDFROMMINORVERSION>
+<MCDISPLAYNAME>com.sapit.connector.ad.idm</MCDISPLAYNAME>
+<MCLASTMODIFIED>1697013799720</MCLASTMODIFIED>
+<MCMAJORVERSION>0</MCMAJORVERSION>
+<MCMINORVERSION>9</MCMINORVERSION>
+<MCPACKAGELEVEL>1814</MCPACKAGELEVEL>
+<MCPACKAGETYPE>0</MCPACKAGETYPE>
+<MCQUALIFIEDNAME>com.sapit.connector.ad.idm</MCQUALIFIEDNAME>
+<PACKAGE_VARS>
+<VARIABLE>
+<MCPACKAGEID>com.sapit.connector.ad.idm</MCPACKAGEID>
+<VARBEHAVIOR>0</VARBEHAVIOR>
+<VARCATEGORY>-1</VARCATEGORY>
+<VARDESCRIPTION>30 days</VARDESCRIPTION>
+<VARNAME>NUMBEROFDAYS</VARNAME>
+<VARTYPE>0</VARTYPE>
+<VARVALUE>30</VARVALUE>
+</VARIABLE>
+<VARIABLE>
+<MCPACKAGEID>com.sapit.connector.ad.idm</MCPACKAGEID>
+<VARBEHAVIOR>0</VARBEHAVIOR>
+<VARCATEGORY>-1</VARCATEGORY>
+<VARDESCRIPTION>Repository name in development</VARDESCRIPTION>
+<VARNAME>REPO_NAME</VARNAME>
+<VARTYPE>0</VARTYPE>
+<VARVALUE>ADS_LAB</VARVALUE>
+</VARIABLE>
+<VARIABLE>
+<MCPACKAGEID>com.sapit.connector.ad.idm</MCPACKAGEID>
+<VARBEHAVIOR>0</VARBEHAVIOR>
+<VARCATEGORY>-1</VARCATEGORY>
+<VARDESCRIPTION>Identity Store ID</VARDESCRIPTION>
+<VARNAME>SAP_MASTER_IDS_ID</VARNAME>
+<VARTYPE>0</VARTYPE>
+<VARVALUE>1</VARVALUE>
+</VARIABLE>
+<VARIABLE>
+<MCPACKAGEID>com.sapit.connector.ad.idm</MCPACKAGEID>
+<VARBEHAVIOR>0</VARBEHAVIOR>
+<VARCATEGORY>0</VARCATEGORY>
+<VARNAME>TEMP_COUNT_ASSIGNMENTMSKEY</VARNAME>
+<VARTYPE>0</VARTYPE>
+</VARIABLE>
+<VARIABLE>
+<MCPACKAGEID>com.sapit.connector.ad.idm</MCPACKAGEID>
+<VARBEHAVIOR>0</VARBEHAVIOR>
+<VARCATEGORY>0</VARCATEGORY>
+<VARNAME>TEMP_COUNT_AUDITID</VARNAME>
+<VARTYPE>0</VARTYPE>
+</VARIABLE>
+</PACKAGE_VARS>
+<USES>
+<USE>
+<MCFROMREFERENCE>B93673CD-D772-49F0-909F-CE947B9E6E16</MCFROMREFERENCE>
+<MCFROMTYPE>7</MCFROMTYPE>
+<MCMINORVERSION>0</MCMINORVERSION>
+<MCPACKAGEID>com.sapit.connector.ad.idm</MCPACKAGEID>
+<MCTOQUALIFIEDNAME>ADS_LAB</MCTOQUALIFIEDNAME>
+<MCTOTYPE>11</MCTOTYPE>
+<TOUSAGETYPE>1</TOUSAGETYPE>
+</USE>
+<USE>
+<MCFROMREFERENCE>F9EA76A5-EFC4-42E2-94C8-FC5B29C5508E</MCFROMREFERENCE>
+<MCFROMTYPE>7</MCFROMTYPE>
+<MCMINORVERSION>0</MCMINORVERSION>
+<MCPACKAGEID>com.sapit.connector.ad.idm</MCPACKAGEID>
+<MCTOQUALIFIEDNAME>ADS_LAB</MCTOQUALIFIEDNAME>
+<MCTOTYPE>11</MCTOTYPE>
+<TOUSAGETYPE>1</TOUSAGETYPE>
+</USE>
+<USE>
+<MCFROMREFERENCE>3DB6C50D-80D8-4109-BF20-6593D3E8BACD</MCFROMREFERENCE>
+<MCFROMTYPE>7</MCFROMTYPE>
+<MCMINORVERSION>0</MCMINORVERSION>
+<MCPACKAGEID>com.sapit.connector.ad.idm</MCPACKAGEID>
+<MCTOQUALIFIEDNAME>ADS_LAB</MCTOQUALIFIEDNAME>
+<MCTOTYPE>11</MCTOTYPE>
+<MCVERSION>0</MCVERSION>
+<TOUSAGETYPE>1</TOUSAGETYPE>
+</USE>
+<USE>
+<MCFROMREFERENCE>2E05DD88-E9CC-4BC8-A3F9-8C113B0A281B</MCFROMREFERENCE>
+<MCFROMTYPE>7</MCFROMTYPE>
+<MCMINORVERSION>0</MCMINORVERSION>
+<MCPACKAGEID>com.sapit.connector.ad.idm</MCPACKAGEID>
+<MCTOQUALIFIEDNAME>ADS_LAB</MCTOQUALIFIEDNAME>
+<MCTOTYPE>11</MCTOTYPE>
+<MCVERSION>0</MCVERSION>
+<TOUSAGETYPE>1</TOUSAGETYPE>
+</USE>
+</USES>
+<PACKAGE_SCRIPTS>
+<SCRIPT>
+<MCENABLED>1</MCENABLED>
+<MCPACKAGEID>com.sapit.connector.ad.idm</MCPACKAGEID>
+<MCPROTECTED>0</MCPROTECTED>
+<MCSCRIPTDEFINITION>// 1.0 | C5355743 | 2023-02-16 | https://jira.tools.sap/browse/NGDIAM-122.
+
+// Main function:cutTimeFromDate1
+
+function cutTimeFromDate1(Par) {
+    // 2016-12-31T23:59:59
+    var dateTime = Par;
+    // 2016-12-31
+    var date = dateTime.substring(0, 10);
+
+    return date;
+}</MCSCRIPTDEFINITION>
+<MCSCRIPTLANGUAGE>JScript</MCSCRIPTLANGUAGE>
+<MCSCRIPTLASTCHANGE>1679471164277</MCSCRIPTLASTCHANGE>
+<MCSCRIPTNAME>cutTimeFromDate1</MCSCRIPTNAME>
+<MCSCRIPTSTATUS>0</MCSCRIPTSTATUS>
+</SCRIPT>
+<SCRIPT>
+<MCENABLED>1</MCENABLED>
+<MCPACKAGEID>com.sapit.connector.ad.idm</MCPACKAGEID>
+<MCPROTECTED>0</MCPROTECTED>
+<MCSCRIPTDEFINITION>// 1.0 | C5355743 | 2023-02-16 | https://jira.tools.sap/browse/NGDIAM-122.
+
+// Main function:retrieveCN_fromDN
+
+function retrieveCN_fromDN(Par) {
+    var idstore = "%$pck.SAP_MASTER_IDS_ID%";
+    var sapit_sapnumber = Par;
+
+
+
+    var mskeyFinal = uSelect("select searchvalue from idmv_value_ext_active where attrname = 'MSKEYVALUE' and mskey in(select top 1 MSKEY from idmv_value_ext_active with (NOLOCK) where  IS_ID =" + idstore + " and AttrName ='SAPIT_SAPNUMBER' and SearchValue = '" + sapit_sapnumber + "' order by Modifytime desc) and IS_ID =" + idstore + ";");
+    if (mskeyFinal.indexOf("!ERROR") &gt;= 0) {
+        mskeyFinal = "";
+    }
+
+    return mskeyFinal;
+
+}</MCSCRIPTDEFINITION>
+<MCSCRIPTLANGUAGE>JScript</MCSCRIPTLANGUAGE>
+<MCSCRIPTLASTCHANGE>1679471162447</MCSCRIPTLASTCHANGE>
+<MCSCRIPTNAME>retrieveCN_fromDN</MCSCRIPTNAME>
+<MCSCRIPTSTATUS>0</MCSCRIPTSTATUS>
+</SCRIPT>
+<SCRIPT>
+<MCENABLED>1</MCENABLED>
+<MCPACKAGEID>com.sapit.connector.ad.idm</MCPACKAGEID>
+<MCPROTECTED>0</MCPROTECTED>
+<MCSCRIPTDEFINITION>// 1.0 | C5355743 | 2023-03-21 | https://jira.tools.sap/browse/NGDIAM-136.
+
+
+// Main function: sapit_getClient
+
+function sapit_getClient(Par) {
+    // check parameter is global -&gt; glb
+    // check parameter is lab -&gt; lab
+    if (Par.split("_")[1] == "GLOBAL")
+        return "GLB";
+    else
+        return Par.split("_")[1];
+}</MCSCRIPTDEFINITION>
+<MCSCRIPTLANGUAGE>JScript</MCSCRIPTLANGUAGE>
+<MCSCRIPTLASTCHANGE>1680521748390</MCSCRIPTLASTCHANGE>
+<MCSCRIPTNAME>sapit_getClient</MCSCRIPTNAME>
+<MCSCRIPTSTATUS>0</MCSCRIPTSTATUS>
+</SCRIPT>
+<SCRIPT>
+<MCENABLED>1</MCENABLED>
+<MCPACKAGEID>com.sapit.connector.ad.idm</MCPACKAGEID>
+<MCPROTECTED>0</MCPROTECTED>
+<MCSCRIPTDEFINITION>// 1.0 | C5355743 | 2023-02-16 | https://jira.tools.sap/browse/NGDIAM-122.
+
+// Main function:sapit_getJobVariable
+
+function sapit_getJobVariable(Par) {
+    var parArr = Par.split("!!");
+    var jobVariable = parArr[0];
+    var defaultValue = parArr[1];
+    var value = uGetUserVar(jobVariable, defaultValue);
+    return value;
+}</MCSCRIPTDEFINITION>
+<MCSCRIPTLANGUAGE>JScript</MCSCRIPTLANGUAGE>
+<MCSCRIPTLASTCHANGE>1679471178197</MCSCRIPTLASTCHANGE>
+<MCSCRIPTNAME>sapit_getJobVariable</MCSCRIPTNAME>
+<MCSCRIPTSTATUS>0</MCSCRIPTSTATUS>
+</SCRIPT>
+<SCRIPT>
+<MCENABLED>1</MCENABLED>
+<MCPACKAGEID>com.sapit.connector.ad.idm</MCPACKAGEID>
+<MCPROTECTED>0</MCPROTECTED>
+<MCSCRIPTDEFINITION>// 1.0 | C5355743 | 2023-03-21 | https://jira.tools.sap/browse/NGDIAM-136.
+
+
+// Main function:sapit_getSystemName
+
+function sapit_getSystemName(Par) {
+    //Example calling DSE internal function 
+    //uStop("Terminated by user");
+    if (Par.split("_")[0] == 'ADGROUP')
+        return 'ADS';
+    else
+        return Par.split("_")[0];
+}</MCSCRIPTDEFINITION>
+<MCSCRIPTLANGUAGE>JScript</MCSCRIPTLANGUAGE>
+<MCSCRIPTLASTCHANGE>1680521712060</MCSCRIPTLASTCHANGE>
+<MCSCRIPTNAME>sapit_getSystemName</MCSCRIPTNAME>
+<MCSCRIPTSTATUS>0</MCSCRIPTSTATUS>
+</SCRIPT>
+<SCRIPT>
+<MCENABLED>1</MCENABLED>
+<MCPACKAGEID>com.sapit.connector.ad.idm</MCPACKAGEID>
+<MCPROTECTED>0</MCPROTECTED>
+<MCSCRIPTDEFINITION>// 1.0 | C5355743 | 2023-02-16 | https://jira.tools.sap/browse/NGDIAM-122.
+
+// Main function:setJobVariable
+
+function setJobVariable(Par) {
+    var parameterSet = Par.keySet();
+    var I = parameterSet.iterator();
+    var curr;
+    while (I.hasNext()) {
+        curr = I.next();
+        var currValue = Par.get(curr);
+        if (currValue == "delete" || currValue.indexOf("!ERROR") &gt;= 0) {
+            OutString = uSetUserVar(curr, "");
+        } else {
+            OutString = uSetUserVar(curr, currValue);
+        }
+    }
+    return;
+}</MCSCRIPTDEFINITION>
+<MCSCRIPTLANGUAGE>JScript</MCSCRIPTLANGUAGE>
+<MCSCRIPTLASTCHANGE>1679471192277</MCSCRIPTLASTCHANGE>
+<MCSCRIPTNAME>setJobVariable</MCSCRIPTNAME>
+<MCSCRIPTSTATUS>0</MCSCRIPTSTATUS>
+</SCRIPT>
+</PACKAGE_SCRIPTS>
+<JOBS>
+<JOB JOBGUID="25D10F39-5D6D-47C8-A582-4890E25D31C2" MCPACKAGEID="com.sapit.connector.ad.idm">
+<ACTIVE>1</ACTIVE>
+<AUTOCREATED>0</AUTOCREATED>
+<BOOTSTRAPJOB>0</BOOTSTRAPJOB>
+<CHANGED_BY>mxmc_admin</CHANGED_BY>
+<CHANGED_DATE>1688738678840</CHANGED_DATE>
+<ENGINE_TYPE>2</ENGINE_TYPE>
+<JOBDEFINITION>
+<mx:EMS xmlns:mx="http://www.maxware.com/EMS">
+<mx:GUID>25D10F39-5D6D-47C8-A582-4890E25D31C2</mx:GUID>
+<mx:VERSION>1.0</mx:VERSION>
+<mx:DSEJobs>
+<mx:Sequence>
+<mx:Step Enabled="TRUE" Key="Modify AD Group"/>
+</mx:Sequence>
+<mx:Job name="Modify AD Group">
+<mx:Description/>
+<mx:Sequence>
+<mx:Step Enabled="TRUE" Key="ea502c6f-b8b2-4edd-9243-1bfb0c965d76"/>
+</mx:Sequence>
+<mx:Globals/>
+<mx:Functions/>
+<mx:Common>
+<ENGINETYPE>1</ENGINETYPE>
+<SCRIPTENG>JScript</SCRIPTENG>
+<EVLOG>0</EVLOG>
+<ERRLOG>%$ddm.ddmpath%\DSE.log</ERRLOG>
+<XLRESET>1</XLRESET>
+</mx:Common>
+<mx:Pass name="ea502c6f-b8b2-4edd-9243-1bfb0c965d76">
+<TYPE>ToDSA Direct</TYPE>
+<DESCRIPTION>modifyADGroupType</DESCRIPTION>
+<REPOSITORY>0</REPOSITORY>
+<UPDATEDB>%$ddm.identitycenter%</UPDATEDB>
+<MAXDELETE>5%</MAXDELETE>
+<AUDITLEVEL>0</AUDITLEVEL>
+<DELTAENABLED>0</DELTAENABLED>
+<SKIP>0</SKIP>
+<JUSTDELTA>0</JUSTDELTA>
+<MARKDEL>0</MARKDEL>
+<AUTODELETE>0</AUTODELETE>
+<CURRTAB>2</CURRTAB>
+<READFROMPVO>1</READFROMPVO>
+<FROMDB>%$ddm.identitycenter%</FROMDB>
+<FROMSQL>select  m.mcMSKEY as mskey,m2.SearchValue as groupType,m.mcMSKEYVALUE as mskeyvalue,&#13;
+m3.SearchValue as dn, m1.SearchValue as active&#13;
+from &#13;
+mxmc_db.dbo.idmv_entry_simple m with (nolock),&#13;
+mxmc_db.dbo.idmv_value_ext_active m1 with (nolock),&#13;
+mxmc_db.dbo.idmv_value_ext_active m2 with (nolock) ,&#13;
+mxmc_db.dbo.idmv_value_ext_active m3 with (nolock),&#13;
+mxmc_db.mxmc_rt_u.sapit_ad_group_all_%$rep.$NAME% as temp with (nolock)&#13;
+where&#13;
+ m.mcMSKEY=m1.MSKEY and  m2.MSKEY=m1.MSKEY and m3.MSKEY=m2.MSKEY and &#13;
+ m.mcEntryType='MX_PRIVILEGE'  and &#13;
+ m3.AttrName='SAPIT_AD_DN' and&#13;
+ m2.AttrName='SAPIT_AD_GROUP_TYPE' and m2.SearchValue in('8','-2147483640') and &#13;
+ m2.Modifytime&gt;='$FUNCTION.sapit_getJobVariable(LASTRUN!!1970-01-01 00:00:00:00)$$' and m2.Changename='Modify'&#13;
+ and m1.AttrName='SAPIT_AD_ACTIVE' and m1.SearchValue='1'&#13;
+ and m3.SearchValue=temp.dn</FROMSQL>
+<FILTEREDITSTATUS>16</FILTEREDITSTATUS>
+<USEIDSTORE>0</USEIDSTORE>
+<IDSTORE>null</IDSTORE>
+<SOURCEENTRYTYPE>MX_PRIVILEGE</SOURCEENTRYTYPE>
+<HOST>%$rep.LDAP_HOST%</HOST>
+<PORT>%$rep.LDAP_PORT_SSL%</PORT>
+<NAME>%$rep.LDAP_LOGIN_JAVA%</NAME>
+<PASSWORD>{DES3CBC}1:d42c1b1c3726a41a-ed70e949f8c9612087d7512ed63fc924c7ab7ab1cde7c1795ca3c6c73b4d2392</PASSWORD>
+<MAXERR>0</MAXERR>
+<LDAP3SUPPORT>1</LDAP3SUPPORT>
+<CHARSET>null</CHARSET>
+<LDAPCHARSET>2</LDAPCHARSET>
+<SECURITYOPTION>1</SECURITYOPTION>
+<ADDQUOTES>0</ADDQUOTES>
+<PASSTYPE>LDAP operation</PASSTYPE>
+<CSV>0</CSV>
+<CSVHEAD>0</CSVHEAD>
+<CSVDELIM>;</CSVDELIM>
+<SPLITLINE>|</SPLITLINE>
+<ARESET>0</ARESET>
+<LDIFSPLITLINE>|</LDIFSPLITLINE>
+<ENABLE>1</ENABLE>
+<DSML>0</DSML>
+<BINARYOUTPUT>0</BINARYOUTPUT>
+<mx:Class>
+<mx:attr name="distinguishedName">
+<mx:value>%SAPIT_AD_DN%</mx:value>
+</mx:attr>
+<mx:attr name="changetype">
+<mx:value>modify</mx:value>
+</mx:attr>
+<mx:attr name="groupType">
+<mx:value>%SAPIT_AD_GROUP_TYPE%</mx:value>
+</mx:attr>
+</mx:Class>
+</mx:Pass>
+</mx:Job>
+</mx:DSEJobs>
+</mx:EMS>
+</JOBDEFINITION>
+<MAX_LOGENTRIES>100</MAX_LOGENTRIES>
+<MCPUBLIC>0</MCPUBLIC>
+<MCREFERENCESTATUS>-1</MCREFERENCESTATUS>
+<MCSCRIPTSTATUS>0</MCSCRIPTSTATUS>
+<MCSOURCEGUID>25D10F39-5D6D-47C8-A582-4890E25D31C2</MCSOURCEGUID>
+<MULTIPROVISION>0</MULTIPROVISION>
+<MXPROTECTED>0</MXPROTECTED>
+<NAME>Modify AD Group</NAME>
+<PRIORITY_ACTUAL>20</PRIORITY_ACTUAL>
+<PRIORITY_DEF>20</PRIORITY_DEF>
+<PROVISION>1</PROVISION>
+<REVISION_NUMBER>0</REVISION_NUMBER>
+<SCHEDULE_RULE>Provision</SCHEDULE_RULE>
+<STATE>1</STATE>
+</JOB>
+<JOB JOBGUID="4AAE07C9-0D43-4CD9-9F43-40622E06E426" MCPACKAGEID="com.sapit.connector.ad.idm">
+<ACTIVE>1</ACTIVE>
+<AUTOCREATED>0</AUTOCREATED>
+<BOOTSTRAPJOB>0</BOOTSTRAPJOB>
+<CHANGED_BY>mxmc_admin</CHANGED_BY>
+<CHANGED_DATE>1679411311553</CHANGED_DATE>
+<ENGINE_TYPE>2</ENGINE_TYPE>
+<JOBDEFINITION>
+<mx:EMS xmlns:mx="http://www.maxware.com/EMS">
+<mx:GUID>CF737468-668A-474C-BA3A-5FE6D8C65921</mx:GUID>
+<mx:VERSION>1.0</mx:VERSION>
+<mx:DSEJobs>
+<mx:Sequence>
+<mx:Step Enabled="TRUE" Key="group alr rexists"/>
+</mx:Sequence>
+<mx:Job name="group alr rexists">
+<mx:Description/>
+<mx:Sequence>
+<mx:Step Enabled="TRUE" Key="432475c4-a65f-4060-b835-2d8de97bdb3d"/>
+</mx:Sequence>
+<mx:Globals/>
+<mx:Functions/>
+<mx:Common>
+<ENGINETYPE>1</ENGINETYPE>
+<SCRIPTENG>JScript</SCRIPTENG>
+<EVLOG>0</EVLOG>
+<ERRLOG>%$ddm.ddmpath%\DSE.log</ERRLOG>
+<XLRESET>1</XLRESET>
+</mx:Common>
+<mx:Pass name="432475c4-a65f-4060-b835-2d8de97bdb3d">
+<TYPE>ToIDStore</TYPE>
+<DESCRIPTION>writeBackToIDM</DESCRIPTION>
+<REPOSITORY>0</REPOSITORY>
+<UPDATEDB>%$ddm.identitycenter%</UPDATEDB>
+<MAXDELETE>5%</MAXDELETE>
+<AUDITLEVEL>0</AUDITLEVEL>
+<DELTAENABLED>0</DELTAENABLED>
+<SKIP>0</SKIP>
+<JUSTDELTA>0</JUSTDELTA>
+<MARKDEL>0</MARKDEL>
+<AUTODELETE>0</AUTODELETE>
+<CURRTAB>2</CURRTAB>
+<READFROMPVO>1</READFROMPVO>
+<FROMDB>%$ddm.identitycenter%</FROMDB>
+<FROMSQL>select  m.mcMSKEY as mskey,m2.SearchValue as groupType,m.mcMSKEYVALUE as mskeyvalue,&#13;
+m3.SearchValue as dn, m1.SearchValue as active&#13;
+from &#13;
+mxmc_db.dbo.idmv_entry_simple m with (nolock),&#13;
+mxmc_db.dbo.idmv_value_ext_active m1 with (nolock),&#13;
+mxmc_db.dbo.idmv_value_ext_active m2 with (nolock) ,&#13;
+mxmc_db.dbo.idmv_value_ext_active m3 with (nolock),&#13;
+mxmc_db.mxmc_rt_u.sapit_ad_group_all_%$rep.$NAME% as temp with (nolock)&#13;
+where&#13;
+ m.mcMSKEY=m1.MSKEY and  m2.MSKEY=m1.MSKEY and m3.MSKEY=m2.MSKEY and &#13;
+ m.mcEntryType='MX_PRIVILEGE'  and &#13;
+ m3.AttrName='SAPIT_PRIVILEGE_ADDN' and&#13;
+ m2.AttrName='SAPIT_AD_GROUP_TYPE' and m2.SearchValue in('8','-2147483640') &#13;
+ and m1.AttrName='SAPIT_AD_ACTIVE' and m1.SearchValue='1'&#13;
+ and m3.SearchValue=temp.dn</FROMSQL>
+<FILTEREDITSTATUS>16</FILTEREDITSTATUS>
+<USEIDSTORE>0</USEIDSTORE>
+<SOURCEENTRYTYPE>MX_PRIVILEGE</SOURCEENTRYTYPE>
+<IDSTORE>null</IDSTORE>
+<USERINFO>JobId=%$ddm.mcjob%</USERINFO>
+<DELIMITER>|</DELIMITER>
+<STOREID>Enterprise People</STOREID>
+<DATABASEURL>%$ddm.identitycenter%</DATABASEURL>
+<PROBE>0</PROBE>
+<SOURCEREPOSITORY>0</SOURCEREPOSITORY>
+<mx:Class>
+<mx:attr name="MSKEYVALUE">
+<mx:value>%MSKEYVALUE%</mx:value>
+</mx:attr>
+<mx:attr name="MX_ENTRYTYPE">
+<mx:value>MX_PRIVILEGE</mx:value>
+</mx:attr>
+<mx:attr name="changeType">
+<mx:value>modify</mx:value>
+</mx:attr>
+<mx:attr name="SAPIT_AD_DN">
+<mx:value>%SAPIT_PRIVILEGE_ADDN%</mx:value>
+</mx:attr>
+</mx:Class>
+</mx:Pass>
+</mx:Job>
+</mx:DSEJobs>
+</mx:EMS>
+</JOBDEFINITION>
+<MAX_LOGENTRIES>100</MAX_LOGENTRIES>
+<MCPUBLIC>0</MCPUBLIC>
+<MCREFERENCESTATUS>-1</MCREFERENCESTATUS>
+<MCSCRIPTSTATUS>0</MCSCRIPTSTATUS>
+<MCSOURCEGUID>4AAE07C9-0D43-4CD9-9F43-40622E06E426</MCSOURCEGUID>
+<MULTIPROVISION>0</MULTIPROVISION>
+<MXPROTECTED>0</MXPROTECTED>
+<NAME>WriteBacktoIDM</NAME>
+<PRIORITY_ACTUAL>20</PRIORITY_ACTUAL>
+<PRIORITY_DEF>20</PRIORITY_DEF>
+<PROVISION>1</PROVISION>
+<REVISION_NUMBER>0</REVISION_NUMBER>
+<SCHEDULE_RULE>Provision</SCHEDULE_RULE>
+<STATE>1</STATE>
+</JOB>
+<JOB JOBGUID="4F0935CC-6AAD-4565-B3BA-AA2B959FB51B" MCPACKAGEID="com.sapit.connector.ad.idm">
+<ACTIVE>1</ACTIVE>
+<AUTOCREATED>0</AUTOCREATED>
+<BOOTSTRAPJOB>0</BOOTSTRAPJOB>
+<CHANGED_BY>mxmc_admin</CHANGED_BY>
+<CHANGED_DATE>1688744481717</CHANGED_DATE>
+<ENGINE_TYPE>2</ENGINE_TYPE>
+<GROUP_ID>1650493F-7A7A-4BDA-BAA7-D1D71ED71CD8</GROUP_ID>
+<JOBDEFINITION>
+<mx:EMS xmlns:mx="http://www.maxware.com/EMS">
+<mx:GUID>BA560648-EF47-46D3-85C3-F113990A7A1B</mx:GUID>
+<mx:VERSION>1.0</mx:VERSION>
+<mx:DSEJobs>
+<mx:Sequence>
+<mx:Step Enabled="TRUE" Key="New Job 92"/>
+</mx:Sequence>
+<mx:Job name="New Job 92">
+<mx:Description/>
+<mx:Sequence>
+<mx:Step Enabled="TRUE" Key="9ccee263-6628-4f92-9e36-6b1b1ad6cc76"/>
+<mx:Step Enabled="TRUE" Key="7933f3f2-f5b0-4997-bade-3fc74f33f5e7"/>
+</mx:Sequence>
+<mx:Globals/>
+
+<mx:Common>
+<ENGINETYPE>1</ENGINETYPE>
+<SCRIPTENG>null</SCRIPTENG>
+<EVLOG>0</EVLOG>
+<ERRLOG>%$ddm.ddmpath%\DSE.log</ERRLOG>
+<XLRESET>1</XLRESET>
+<SNMPTRAPLEVEL>null</SNMPTRAPLEVEL>
+<MAXERROR>null</MAXERROR>
+<LOGLIMIT>null</LOGLIMIT>
+<RIGHT_TRIM>null</RIGHT_TRIM>
+<MCLOGLEVEL>null</MCLOGLEVEL>
+<ERRFUNCTION>null</ERRFUNCTION>
+<SNMPREMOTEHOST>null</SNMPREMOTEHOST>
+</mx:Common>
+<mx:Pass name="9ccee263-6628-4f92-9e36-6b1b1ad6cc76">
+<TYPE>Fromsource DSA</TYPE>
+<DESCRIPTION>getAllADGroups</DESCRIPTION>
+<REPOSITORY>0</REPOSITORY>
+<UPDATEDB>%$ddm.identitycenter%</UPDATEDB>
+<MAXDELETE>5%</MAXDELETE>
+<AUDITLEVEL>0</AUDITLEVEL>
+<DELTAENABLED>0</DELTAENABLED>
+<SKIP>0</SKIP>
+<JUSTDELTA>0</JUSTDELTA>
+<MARKDEL>0</MARKDEL>
+<AUTODELETE>0</AUTODELETE>
+<CURRTAB>2</CURRTAB>
+<TODB>%$ddm.identitycenter%</TODB>
+<DBTABLE>sapit_ad_group_all_%$rep.$NAME%</DBTABLE>
+<READFROMPVO>0</READFROMPVO>
+<SOURCEENTRYTYPE>0</SOURCEENTRYTYPE>
+<DELTABLE>1</DELTABLE>
+<FSIZEL>0</FSIZEL>
+<LDAPTRYTORESOLVESIZETIMELIMITPROBLEMS>false</LDAPTRYTORESOLVESIZETIMELIMITPROBLEMS>
+<LDAPMAXNUMBEROFRECURSIVELOOPS>0</LDAPMAXNUMBEROFRECURSIVELOOPS>
+<LDAPENCRYPTCONNECTIONSTRING>false</LDAPENCRYPTCONNECTIONSTRING>
+<RESOLVELOOPS>0</RESOLVELOOPS>
+<OPTREFERRALS>0</OPTREFERRALS>
+<DEREF>0</DEREF>
+<SECURITYOPTION>1</SECURITYOPTION>
+<PAGESIZE>50</PAGESIZE>
+<CHARSET>null</CHARSET>
+<LDAPCHARSET>2</LDAPCHARSET>
+<TIMELIMIT>80</TIMELIMIT>
+<SIZELIMIT>150</SIZELIMIT>
+<LDAP3SUPPORT>1</LDAP3SUPPORT>
+<PASSWORD>%$rep.LDAP_PASSWORD%</PASSWORD>
+<NAME>%$rep.LDAP_LOGIN%</NAME>
+<FROMDB>LDAP://%$rep.LDAP_HOST%:%$rep.LDAP_PORT_SSL%/%$rep.LDAP_STARTING_POINT_GROUPS%?dn,cn,whenChanged,displayName,name,sAMAccountName,sAMAccountType,groupType?ONE?(objectClass=*)</FROMDB>
+<mx:Class>
+<mx:attr name="dn">
+<mx:value>,,dn</mx:value>
+</mx:attr>
+<mx:attr name="cn">
+<mx:value>,,cn</mx:value>
+</mx:attr>
+<mx:attr name="whenChanged">
+<mx:value>,,whenChanged</mx:value>
+</mx:attr>
+<mx:attr name="displayName">
+<mx:value>,,displayName</mx:value>
+</mx:attr>
+<mx:attr name="name">
+<mx:value>,,name</mx:value>
+</mx:attr>
+<mx:attr name="sAMAccountName">
+<mx:value>,,sAMAccountName</mx:value>
+</mx:attr>
+<mx:attr name="sAMAccountType">
+<mx:value>,,sAMAccountType</mx:value>
+</mx:attr>
+<mx:attr name="groupType">
+<mx:value>,,groupType</mx:value>
+</mx:attr>
+</mx:Class>
+</mx:Pass>
+<mx:Pass name="7933f3f2-f5b0-4997-bade-3fc74f33f5e7">
+<TYPE>Fromsource DSA</TYPE>
+<DESCRIPTION>getAllADGroupsfromArchieveOU</DESCRIPTION>
+<REPOSITORY>0</REPOSITORY>
+<UPDATEDB>%$ddm.identitycenter%</UPDATEDB>
+<MAXDELETE>5%</MAXDELETE>
+<AUDITLEVEL>0</AUDITLEVEL>
+<DELTAENABLED>0</DELTAENABLED>
+<SKIP>0</SKIP>
+<JUSTDELTA>0</JUSTDELTA>
+<MARKDEL>0</MARKDEL>
+<AUTODELETE>0</AUTODELETE>
+<CURRTAB>2</CURRTAB>
+<TODB>%$ddm.identitycenter%</TODB>
+<DBTABLE>sapit_ad_group_%$rep.$NAME%_Archive</DBTABLE>
+<READFROMPVO>0</READFROMPVO>
+<SOURCEENTRYTYPE>0</SOURCEENTRYTYPE>
+<DELTABLE>1</DELTABLE>
+<FSIZEL>0</FSIZEL>
+<LDAPTRYTORESOLVESIZETIMELIMITPROBLEMS>false</LDAPTRYTORESOLVESIZETIMELIMITPROBLEMS>
+<LDAPMAXNUMBEROFRECURSIVELOOPS>0</LDAPMAXNUMBEROFRECURSIVELOOPS>
+<LDAPENCRYPTCONNECTIONSTRING>false</LDAPENCRYPTCONNECTIONSTRING>
+<RESOLVELOOPS>0</RESOLVELOOPS>
+<OPTREFERRALS>0</OPTREFERRALS>
+<DEREF>0</DEREF>
+<SECURITYOPTION>1</SECURITYOPTION>
+<PAGESIZE>50</PAGESIZE>
+<CHARSET>null</CHARSET>
+<LDAPCHARSET>2</LDAPCHARSET>
+<TIMELIMIT>80</TIMELIMIT>
+<SIZELIMIT>150</SIZELIMIT>
+<LDAP3SUPPORT>1</LDAP3SUPPORT>
+<PASSWORD>%$rep.LDAP_PASSWORD%</PASSWORD>
+<NAME>%$rep.LDAP_LOGIN%</NAME>
+<FROMDB>LDAP://%$rep.LDAP_HOST%:%$rep.LDAP_PORT_SSL%/%$rep.LDAP_STARTING_POINT_GROUPS_SOFTDELETE%?dn,cn,whenChanged,displayName,name,sAMAccountName,sAMAccountType,groupType?ONE?(objectClass=*)</FROMDB>
+<mx:Class>
+<mx:attr name="dn">
+<mx:value>,,dn</mx:value>
+</mx:attr>
+<mx:attr name="cn">
+<mx:value>,,cn</mx:value>
+</mx:attr>
+<mx:attr name="whenChanged">
+<mx:value>,,whenChanged</mx:value>
+</mx:attr>
+<mx:attr name="displayName">
+<mx:value>,,displayName</mx:value>
+</mx:attr>
+<mx:attr name="name">
+<mx:value>,,name</mx:value>
+</mx:attr>
+<mx:attr name="sAMAccountName">
+<mx:value>,,sAMAccountName</mx:value>
+</mx:attr>
+<mx:attr name="sAMAccountType">
+<mx:value>,,sAMAccountType</mx:value>
+</mx:attr>
+<mx:attr name="groupType">
+<mx:value>,,groupType</mx:value>
+</mx:attr>
+</mx:Class>
+</mx:Pass>
+<mx:Functions>
+<mx:Function Enabled="TRUE" GlobalScript="TRUE" Script="JScript" name="sapit_getJobVariable"/>
+<mx:Function Enabled="TRUE" GlobalScript="TRUE" Script="JScript" name="setJobVariable"/>
+<mx:Function Enabled="TRUE" GlobalScript="TRUE" Script="JScript" name="sapit_getClient"/>
+<mx:Function Enabled="TRUE" GlobalScript="TRUE" Script="JScript" name="sapit_getSystemName"/>
+</mx:Functions>
+</mx:Job>
+</mx:DSEJobs>
+</mx:EMS>
+</JOBDEFINITION>
+<MAX_LOGENTRIES>100</MAX_LOGENTRIES>
+<MCPUBLIC>0</MCPUBLIC>
+<MCREFERENCESTATUS>-1</MCREFERENCESTATUS>
+<MCREPOSITORYTYPEQN>com.sapit.NewPackage1:reptype.directory</MCREPOSITORYTYPEQN>
+<MCSCRIPTSTATUS>0</MCSCRIPTSTATUS>
+<MCSOURCEGUID>4F0935CC-6AAD-4565-B3BA-AA2B959FB51B</MCSOURCEGUID>
+<MULTIPROVISION>0</MULTIPROVISION>
+<MXPROTECTED>0</MXPROTECTED>
+<NAME>Initial Load ADGroups</NAME>
+<PRIORITY_ACTUAL>20</PRIORITY_ACTUAL>
+<PRIORITY_DEF>20</PRIORITY_DEF>
+<PROVISION>0</PROVISION>
+<REVISION_NUMBER>0</REVISION_NUMBER>
+<SCHEDULE_RULE>On demand</SCHEDULE_RULE>
+<STATE>1</STATE>
+</JOB>
+<JOB JOBGUID="4FB6832E-E514-4006-BF2A-8B755B9BE6EE" MCPACKAGEID="com.sapit.connector.ad.idm">
+<ACTIVE>1</ACTIVE>
+<AUTOCREATED>0</AUTOCREATED>
+<BOOTSTRAPJOB>0</BOOTSTRAPJOB>
+<CHANGED_BY>mxmc_admin</CHANGED_BY>
+<CHANGED_DATE>1688744841363</CHANGED_DATE>
+<ENGINE_TYPE>2</ENGINE_TYPE>
+<JOBDEFINITION>
+<mx:EMS xmlns:mx="http://www.maxware.com/EMS">
+<mx:GUID>4FB6832E-E514-4006-BF2A-8B755B9BE6EE</mx:GUID>
+<mx:VERSION>1.0</mx:VERSION>
+<mx:DSEJobs>
+<mx:Sequence>
+<mx:Step Enabled="TRUE" Key="Action Task389"/>
+</mx:Sequence>
+<mx:Job name="Action Task389">
+<mx:Description/>
+<mx:Sequence>
+<mx:Step Enabled="TRUE" Key="075d29db-2f71-4482-96b8-c9e21bae81cb"/>
+</mx:Sequence>
+<mx:Globals/>
+<mx:Functions/>
+<mx:Common>
+<ENGINETYPE>1</ENGINETYPE>
+<SCRIPTENG>null</SCRIPTENG>
+<EVLOG>0</EVLOG>
+<ERRLOG>%$ddm.ddmpath%\DSE.log</ERRLOG>
+<XLRESET>1</XLRESET>
+<PASSDOC>null</PASSDOC>
+<SNMPTRAPLEVEL>null</SNMPTRAPLEVEL>
+<MAXERROR>null</MAXERROR>
+<LOGLIMIT>null</LOGLIMIT>
+<RIGHT_TRIM>null</RIGHT_TRIM>
+<MCLOGLEVEL>null</MCLOGLEVEL>
+<ERRFUNCTION>null</ERRFUNCTION>
+<SNMPREMOTEHOST>null</SNMPREMOTEHOST>
+</mx:Common>
+<mx:Pass name="075d29db-2f71-4482-96b8-c9e21bae81cb">
+<TYPE>ToDSA Direct</TYPE>
+<DESCRIPTION>CreateAD ldap</DESCRIPTION>
+<REPOSITORY>0</REPOSITORY>
+<UPDATEDB>%$ddm.identitycenter%</UPDATEDB>
+<MAXDELETE>5%</MAXDELETE>
+<AUDITLEVEL>0</AUDITLEVEL>
+<DELTAENABLED>0</DELTAENABLED>
+<SKIP>0</SKIP>
+<JUSTDELTA>0</JUSTDELTA>
+<MARKDEL>0</MARKDEL>
+<AUTODELETE>0</AUTODELETE>
+<CURRTAB>2</CURRTAB>
+<READFROMPVO>1</READFROMPVO>
+<FILTEREDITSTATUS>0</FILTEREDITSTATUS>
+<USEIDSTORE>1</USEIDSTORE>
+<IDSTORE>null</IDSTORE>
+<SOURCEENTRYTYPE>0</SOURCEENTRYTYPE>
+<HOST>%$rep.LDAP_HOST%</HOST>
+<PORT>%$rep.LDAP_PORT_SSL%</PORT>
+<NAME>%$rep.LDAP_LOGIN_JAVA%</NAME>
+<PASSWORD>{DES3CBC}1:7b5d3e3850d8e279-bc952138fc16d38fbc958c4d6fc071680473a6ddf96e0206ac128d950b82499f</PASSWORD>
+<MAXERR>0</MAXERR>
+<LDAP3SUPPORT>1</LDAP3SUPPORT>
+<CHARSET>null</CHARSET>
+<LDAPCHARSET>2</LDAPCHARSET>
+<SECURITYOPTION>1</SECURITYOPTION>
+<ADDQUOTES>0</ADDQUOTES>
+<PASSTYPE>LDAP operation</PASSTYPE>
+<CSV>0</CSV>
+<CSVHEAD>0</CSVHEAD>
+<CSVDELIM>;</CSVDELIM>
+<SPLITLINE>|</SPLITLINE>
+<ARESET>0</ARESET>
+<LDIFSPLITLINE>|</LDIFSPLITLINE>
+<ENABLE>1</ENABLE>
+<DSML>0</DSML>
+<BINARYOUTPUT>0</BINARYOUTPUT>
+<mx:Class>
+<mx:attr name="distinguishedName">
+<mx:value>%SAPIT_PRIVILEGE_ADDN%</mx:value>
+</mx:attr>
+<mx:attr name="objectClass">
+<mx:value>top|group</mx:value>
+</mx:attr>
+<mx:attr name="cn">
+<mx:value>%SAPIT_PRIVILEGE_TECHNICAL_NAME%</mx:value>
+</mx:attr>
+<mx:attr name="objectCategory">
+<mx:value>CN=Group,CN=Schema,CN=Configuration,%$rep.AD_HOST%</mx:value>
+</mx:attr>
+<mx:attr name="sAMAccountName">
+<mx:value>%SAPIT_PRIVILEGE_TECHNICAL_NAME%</mx:value>
+</mx:attr>
+<mx:attr name="groupType">
+<mx:value>8</mx:value>
+</mx:attr>
+<mx:attr name="displayName">
+<mx:value>%SAPIT_PRIVILEGE_TECHNICAL_NAME%</mx:value>
+</mx:attr>
+<mx:attr name="description">
+<mx:value>%SAPIT_ADGROUP_DESCRIPTION%</mx:value>
+</mx:attr>
+</mx:Class>
+</mx:Pass>
+</mx:Job>
+</mx:DSEJobs>
+</mx:EMS>
+</JOBDEFINITION>
+<MAX_LOGENTRIES>100</MAX_LOGENTRIES>
+<MCPUBLIC>0</MCPUBLIC>
+<MCREFERENCESTATUS>-1</MCREFERENCESTATUS>
+<MCSCRIPTSTATUS>0</MCSCRIPTSTATUS>
+<MCSOURCEGUID>4FB6832E-E514-4006-BF2A-8B755B9BE6EE</MCSOURCEGUID>
+<MULTIPROVISION>0</MULTIPROVISION>
+<MXPROTECTED>0</MXPROTECTED>
+<NAME>CreateAD ldap</NAME>
+<PRIORITY_ACTUAL>20</PRIORITY_ACTUAL>
+<PRIORITY_DEF>20</PRIORITY_DEF>
+<PROVISION>1</PROVISION>
+<REVISION_NUMBER>0</REVISION_NUMBER>
+<SCHEDULE_RULE>Provision</SCHEDULE_RULE>
+<STATE>1</STATE>
+</JOB>
+<JOB JOBGUID="7F8FE0C2-1676-4DA7-8E59-CDE88F315E5F" MCPACKAGEID="com.sapit.connector.ad.idm">
+<ACTIVE>1</ACTIVE>
+<AUTOCREATED>0</AUTOCREATED>
+<BOOTSTRAPJOB>0</BOOTSTRAPJOB>
+<CHANGED_BY>mxmc_admin</CHANGED_BY>
+<CHANGED_DATE>1688745140543</CHANGED_DATE>
+<ENGINE_TYPE>2</ENGINE_TYPE>
+<GROUP_ID>1650493F-7A7A-4BDA-BAA7-D1D71ED71CD8</GROUP_ID>
+<JOBDEFINITION>
+<mx:EMS xmlns:mx="http://www.maxware.com/EMS">
+<mx:GUID>BA560648-EF47-46D3-85C3-F113990A7A1B</mx:GUID>
+<mx:VERSION>1.0</mx:VERSION>
+<mx:DSEJobs>
+<mx:Sequence>
+<mx:Step Enabled="TRUE" Key="New Job 92"/>
+</mx:Sequence>
+<mx:Job name="New Job 92">
+<mx:Description/>
+<mx:Sequence>
+<mx:Step Enabled="TRUE" Key="7b5cdd60-f9e7-4e06-8047-fc9b644a6171"/>
+<mx:Step Enabled="TRUE" Key="502933b2-67b8-4e2d-b597-577efcecb41d"/>
+</mx:Sequence>
+<mx:Globals/>
+
+<mx:Common>
+<ENGINETYPE>1</ENGINETYPE>
+<SCRIPTENG>JScript</SCRIPTENG>
+<EVLOG>0</EVLOG>
+<ERRLOG>%$ddm.ddmpath%\DSE.log</ERRLOG>
+<XLRESET>1</XLRESET>
+</mx:Common>
+<mx:Functions>
+</mx:Functions>
+<mx:Pass name="7b5cdd60-f9e7-4e06-8047-fc9b644a6171">
+<TYPE>ToDSA Direct</TYPE>
+<DESCRIPTION>DeleteADGroupFromNewOU-after 30days</DESCRIPTION>
+<REPOSITORY>0</REPOSITORY>
+<UPDATEDB>%$ddm.identitycenter%</UPDATEDB>
+<MAXDELETE>5%</MAXDELETE>
+<AUDITLEVEL>0</AUDITLEVEL>
+<DELTAENABLED>0</DELTAENABLED>
+<SKIP>0</SKIP>
+<JUSTDELTA>0</JUSTDELTA>
+<MARKDEL>0</MARKDEL>
+<AUTODELETE>0</AUTODELETE>
+<CURRTAB>2</CURRTAB>
+<READFROMPVO>0</READFROMPVO>
+<FROMDB>%$ddm.identitycenter%</FROMDB>
+<FROMSQL>SELECT  m.dn as dn&#13;
+FROM mxmc_db.dbo.idmv_entry_simple as m2 with(nolock),mxmc_db.dbo.idmv_value_ext_active as m1 with(nolock),&#13;
+ mxmc_db.dbo.idmv_value_ext_active as m3 with(nolock) &#13;
+ left join mxmc_db.mxmc_rt_u.sapit_ad_group_%$rep.$NAME%_Archive  as m with (NOLOCK)&#13;
+on m.cn=m3.SearchValue &#13;
+where&#13;
+m1.AttrName='SAPIT_AD_ACTIVE' and m1.SearchValue='0'&#13;
+and m1.MSKEY=m2.mcMSKEY&#13;
+and m3.AttrName='SAPIT_PRIVILEGE_TECHNICAL_NAME' and m3.MSKEY=m1.MSKEY  and m.cn is not null &#13;
+and DATEDIFF(DAYOFYEAR,m1.Modifytime,GETDATE())&gt;='%$pck.NUMBEROFDAYS%'</FROMSQL>
+<FILTEREDITSTATUS>16</FILTEREDITSTATUS>
+<USEIDSTORE>0</USEIDSTORE>
+<IDSTORE>null</IDSTORE>
+<SOURCEENTRYTYPE>0</SOURCEENTRYTYPE>
+<HOST>%$rep.LDAP_HOST%</HOST>
+<PORT>%$rep.LDAP_PORT_SSL%</PORT>
+<NAME>%$rep.LDAP_LOGIN_JAVA%</NAME>
+<PASSWORD>{DES3CBC}1:545111b54b60b731-4bf829883a08fd83351a99301e2d345e425d0e1d0352b963a36e634a0d509390</PASSWORD>
+<MAXERR>0</MAXERR>
+<LDAP3SUPPORT>1</LDAP3SUPPORT>
+<CHARSET>null</CHARSET>
+<LDAPCHARSET>2</LDAPCHARSET>
+<SECURITYOPTION>1</SECURITYOPTION>
+<ADDQUOTES>0</ADDQUOTES>
+<PASSTYPE>LDAP operation</PASSTYPE>
+<CSV>0</CSV>
+<CSVHEAD>0</CSVHEAD>
+<CSVDELIM>;</CSVDELIM>
+<SPLITLINE>|</SPLITLINE>
+<ARESET>0</ARESET>
+<LDIFSPLITLINE>|</LDIFSPLITLINE>
+<ENABLE>1</ENABLE>
+<DSML>0</DSML>
+<BINARYOUTPUT>0</BINARYOUTPUT>
+<mx:Class>
+<mx:attr name="distinguishedName">
+<mx:value>%dn%</mx:value>
+</mx:attr>
+<mx:attr name="changeType">
+<mx:value>delete</mx:value>
+</mx:attr>
+</mx:Class>
+</mx:Pass>
+<mx:Pass name="502933b2-67b8-4e2d-b597-577efcecb41d">
+<TYPE>ToIDStore</TYPE>
+<DESCRIPTION>DeleteAdGroupFromIDM-After 30 days</DESCRIPTION>
+<REPOSITORY>0</REPOSITORY>
+<UPDATEDB>%$ddm.identitycenter%</UPDATEDB>
+<MAXDELETE>5%</MAXDELETE>
+<AUDITLEVEL>0</AUDITLEVEL>
+<DELTAENABLED>0</DELTAENABLED>
+<SKIP>0</SKIP>
+<JUSTDELTA>0</JUSTDELTA>
+<MARKDEL>0</MARKDEL>
+<AUTODELETE>0</AUTODELETE>
+<CURRTAB>2</CURRTAB>
+<READFROMPVO>0</READFROMPVO>
+<FROMDB>%$ddm.identitycenter%</FROMDB>
+<FROMSQL>SELECT   m2.mcMSKEYVALUE as mskeyvalue&#13;
+FROM mxmc_db.dbo.idmv_entry_simple as m2 with(nolock),mxmc_db.dbo.idmv_value_ext_active as m1 with(nolock),&#13;
+ mxmc_db.dbo.idmv_value_ext_active as m3 with(nolock) &#13;
+ left join mxmc_db.mxmc_rt_u.sapit_ad_group_%$rep.$NAME%_Archive  as m with (NOLOCK)&#13;
+on m.cn=m3.SearchValue &#13;
+where&#13;
+m1.AttrName='SAPIT_AD_ACTIVE' and m1.SearchValue='0'&#13;
+and m1.MSKEY=m2.mcMSKEY&#13;
+and m3.AttrName='SAPIT_PRIVILEGE_TECHNICAL_NAME' and m3.MSKEY=m1.MSKEY  and m.cn is not null &#13;
+and DATEDIFF(DAYOFYEAR,m1.Modifytime,GETDATE())&gt;='%$pck.NUMBEROFDAYS%'</FROMSQL>
+<FILTEREDITSTATUS>16</FILTEREDITSTATUS>
+<USEIDSTORE>0</USEIDSTORE>
+<IDSTORE>null</IDSTORE>
+<USERINFO>JobId=%$ddm.mcjob%</USERINFO>
+<DELIMITER>|</DELIMITER>
+<STOREID>Enterprise People</STOREID>
+<DATABASEURL>%$ddm.identitycenter%</DATABASEURL>
+<PROBE>0</PROBE>
+<SOURCEREPOSITORY>0</SOURCEREPOSITORY>
+<mx:Class>
+<mx:attr name="Mskeyvalue">
+<mx:value>%mskeyvalue%</mx:value>
+</mx:attr>
+<mx:attr name="MX_ENTRYTYPE">
+<mx:value>MX_PRIVILEGE</mx:value>
+</mx:attr>
+<mx:attr name="changetype">
+<mx:value>delete</mx:value>
+</mx:attr>
+</mx:Class>
+<SOURCEENTRYTYPE/>
+</mx:Pass>
+</mx:Job>
+</mx:DSEJobs>
+</mx:EMS>
+</JOBDEFINITION>
+<MAX_LOGENTRIES>100</MAX_LOGENTRIES>
+<MCPUBLIC>0</MCPUBLIC>
+<MCREFERENCESTATUS>-1</MCREFERENCESTATUS>
+<MCREPOSITORYTYPEQN>com.sapit.NewPackage1:reptype.directory</MCREPOSITORYTYPEQN>
+<MCSCRIPTSTATUS>2</MCSCRIPTSTATUS>
+<MCSOURCEGUID>7F8FE0C2-1676-4DA7-8E59-CDE88F315E5F</MCSOURCEGUID>
+<MULTIPROVISION>0</MULTIPROVISION>
+<MXPROTECTED>0</MXPROTECTED>
+<NAME>PermanentDeleteADGroups</NAME>
+<PRIORITY_ACTUAL>20</PRIORITY_ACTUAL>
+<PRIORITY_DEF>20</PRIORITY_DEF>
+<PROVISION>0</PROVISION>
+<REVISION_NUMBER>0</REVISION_NUMBER>
+<SCHEDULE_RULE>On demand</SCHEDULE_RULE>
+<STATE>1</STATE>
+</JOB>
+<JOB JOBGUID="906059DB-7841-446C-BE0F-83FEDEDD3101" MCPACKAGEID="com.sapit.connector.ad.idm">
+<ACTIVE>1</ACTIVE>
+<AUTOCREATED>0</AUTOCREATED>
+<BOOTSTRAPJOB>0</BOOTSTRAPJOB>
+<CHANGED_BY>mxmc_admin</CHANGED_BY>
+<CHANGED_DATE>1685086601043</CHANGED_DATE>
+<ENGINE_TYPE>2</ENGINE_TYPE>
+<JOBDEFINITION>
+<mx:EMS xmlns:mx="http://www.maxware.com/EMS">
+<mx:GUID>51479D0C-CC0E-4965-BC54-25048D96D017</mx:GUID>
+<mx:VERSION>1.0</mx:VERSION>
+<mx:DSEJobs>
+<mx:Sequence>
+<mx:Step Enabled="TRUE" Key="Action Task237"/>
+</mx:Sequence>
+<mx:Job name="Action Task237">
+<mx:Description/>
+<mx:Sequence>
+<mx:Step Enabled="TRUE" Key="0bf1e2bf-70ae-41d5-8c29-22d592e3401d"/>
+</mx:Sequence>
+<mx:Globals/>
+
+<mx:Common>
+<ENGINETYPE>1</ENGINETYPE>
+<SCRIPTENG>null</SCRIPTENG>
+<EVLOG>1</EVLOG>
+<ERRLOG>%$ddm.ddmpath%\DSE.log</ERRLOG>
+<XLRESET>1</XLRESET>
+<PASSDOC>null</PASSDOC>
+<SNMPTRAPLEVEL>1</SNMPTRAPLEVEL>
+<MAXERROR>0</MAXERROR>
+<LOGLIMIT>25</LOGLIMIT>
+<RIGHT_TRIM>0</RIGHT_TRIM>
+<MCLOGLEVEL>1</MCLOGLEVEL>
+</mx:Common>
+<mx:Pass name="0bf1e2bf-70ae-41d5-8c29-22d592e3401d">
+<TYPE>ToDSA Direct</TYPE>
+<DESCRIPTION>de-assignment</DESCRIPTION>
+<REPOSITORY>0</REPOSITORY>
+<PTERMINATE>sapit_clearGlobal</PTERMINATE>
+<ENTRYSCRIPT>sapit_CheckAuditId</ENTRYSCRIPT>
+<UPDATEDB>%$ddm.identitycenter%</UPDATEDB>
+<MAXDELETE>5%</MAXDELETE>
+<AUDITLEVEL>0</AUDITLEVEL>
+<DELTAENABLED>0</DELTAENABLED>
+<SKIP>0</SKIP>
+<JUSTDELTA>0</JUSTDELTA>
+<MARKDEL>0</MARKDEL>
+<AUTODELETE>0</AUTODELETE>
+<CURRTAB>2</CURRTAB>
+<READFROMPVO>0</READFROMPVO>
+<FILTEREDITSTATUS>0</FILTEREDITSTATUS>
+<USEIDSTORE>1</USEIDSTORE>
+<IDSTORE>null</IDSTORE>
+<SOURCEENTRYTYPE>0</SOURCEENTRYTYPE>
+<HOST>%$rep.SAPIT_HOST%</HOST>
+<PORT>%$rep.LDAP_PORT_SSL%</PORT>
+<NAME>%$rep.LDAP_LOGIN%</NAME>
+<PASSWORD>%$rep.LDAP_PASSWORD%</PASSWORD>
+<MAXERR>0</MAXERR>
+<LDAP3SUPPORT>1</LDAP3SUPPORT>
+<CHARSET>null</CHARSET>
+<LDAPCHARSET>2</LDAPCHARSET>
+<SECURITYOPTION>0</SECURITYOPTION>
+<ADDQUOTES>0</ADDQUOTES>
+<PASSTYPE>LDAP operation</PASSTYPE>
+<CSV>0</CSV>
+<CSVHEAD>0</CSVHEAD>
+<CSVDELIM>;</CSVDELIM>
+<SPLITLINE>|</SPLITLINE>
+<ARESET>0</ARESET>
+<LDIFSPLITLINE>|</LDIFSPLITLINE>
+<ENABLE>1</ENABLE>
+<DSML>0</DSML>
+<BINARYOUTPUT>0</BINARYOUTPUT>
+<mx:Class>
+<mx:attr name="dn">
+<mx:value>$FUNCTION.sapit_deassignUserAD()$$</mx:value>
+</mx:attr>
+<mx:attr name="changetype">
+<mx:value>modify</mx:value>
+</mx:attr>
+<mx:attr name="-member">
+<mx:value>%DNGLOBAL%</mx:value>
+</mx:attr>
+</mx:Class>
+</mx:Pass>
+
+
+
+<mx:Functions>
+<mx:Function Enabled="TRUE" ErrorStatus="0" Script="JScript" name="Script101">
+<mx:Code>// 1.0 | C5353960 | 2023-23-07 | returns the privilege group name for SAP IDM group assignments
+
+
+function Script101(Par) {
+    var current_priv = 0;
+    var AuditID = uGetAuditID();
+    var CurrentEntryID = uGetEntryID();
+
+    uWarning("CurrentEntryID---" + CurrentEntryID);
+
+    var endReached = false;
+    while (!endReached) {
+        var tmp = uSelect("select refaudit from mxp_audit with (NOLOCK) where auditid = '" + AuditID + "'");
+        if (tmp.length &gt; 0 &amp;&amp; tmp.indexOf("null") &lt; 0) {
+            AuditID = tmp;
+        } else {
+            endReached = true;
+        }
+    }
+
+
+    var tempstoredValue = [];
+    var storedValue = uGetGlobalVar("TEMP_COUNT", "");
+    uWarning("TEMP_COUNT----" + uGetGlobalVar("TEMP_COUNT", ""));
+    uSetGlobalVar("TEMP_COUNT_AUDITID", AuditID);
+
+    if (storedValue.length &lt;= 0) {
+        priv = uSelect("SELECT AssignmentMSKEY FROM idmv_linkaudit_basic with (NOLOCK) WHERE  mcNewValidTo IS NULL and  Operation=13 and UserMSKEY = " + CurrentEntryID + "  and AuditId = '" + AuditID + "'");
+        tempstoredValue = priv.split("!!");
+        uSetGlobalVar("TEMP_COUNT", tempstoredValue);
+        var tempGet = uGetGlobalVar("TEMP_COUNT", "");
+        var temp_ini = tempGet.split(",");
+        current_priv = temp_ini[0];
+    }
+
+    if (storedValue.length &gt; 0) {
+        var storedValueTemp = [];
+        storedValueTemp = uGetGlobalVar("TEMP_COUNT", "");
+        var temp_next = storedValueTemp.split(",");
+        current_priv = temp_next[0];
+    }
+    if (current_priv.length &gt; 0) {
+        var techName2 = uSelect("select top 1 avalue from idmv_value_ext_active with (NOLOCK) where mskey = " + current_priv + " and attrname = 'SAPIT_PRIVILEGE_TECHNICAL_NAME'");
+        var type2 = uSelect("select top 1 avalue from idmv_value_ext_active with (NOLOCK) where mskey = " + current_priv + " and attrname = 'MX_PRIVILEGE_TYPE'");
+        var ret2 = "cn=" + techName2 + ",ou=Groups,ou=IAM,ou=Resources,DC=globallab,DC=corp,DC=sap";
+        if (type2.indexOf("GROUP") == 0) {
+            var temp_to_delete = uGetGlobalVar("TEMP_COUNT", "");
+            uWarning(" temp_to_delete " + temp_to_delete);
+            var temp = temp_to_delete.split(",");
+            temp.splice(0, 1);
+            uWarning("temp.length -----" + temp.length);
+            uWarning(" temp_to_delete  after  deletion " + temp_to_delete_arr);
+            uSetGlobalVar("TEMP_COUNT", temp);
+            return ret2;
+        } else {
+            uErrMsg(1, "Attention: auditID " + AuditID + " / entry " + CurrentEntryID + " / priv: " + current_priv);
+        }
+    }
+
+
+    // Write code to clear both TEMP_COUNT and TEMP_COPUNT_Audit  setGlobalValue(TEMP_COUNT_AUDITID,"");
+    uErrMsg(1, "No privilege can be found: auditID " + AuditID + " / entry " + CurrentEntryID + " / priv: " + priv);
+    return "";
+}</mx:Code>
+</mx:Function>
+<mx:Function Enabled="TRUE" ErrorStatus="0" Script="JScript" name="sapit_CheckAuditId">
+<mx:Code>// Main function: sapit_CheckAuditId
+
+function sapit_CheckAuditId(Par) {
+
+    try {
+        var auditID = uGetAuditID();
+
+        var refaudit = uSelect("select refaudit from mxp_audit with (NOLOCK) where auditid = '" + auditID + "'");
+        auditID = refaudit;
+        var storedValue = uGetGlobalVar("TEMP_COUNT_ASSIGNMENTMSKEY", "");
+        if (storedValue.length == 0) {
+            uSetGlobalVar("TEMP_COUNT_AUDITID", auditID);
+        } else {
+            var temp_audit = uGetGlobalVar("TEMP_COUNT_AUDITID", "");
+            if (temp_audit == auditID) {
+                //uWarning("in the cpmpare of Audit ID");
+            } else {
+                uSetGlobalVar("TEMP_COUNT_AUDITID", "");
+                uSetGlobalVar("TEMP_COUNT_ASSIGNMENTMSKEY", "");
+            }
+        }
+    } catch (e) {
+        UserFunc.uErrMsg(2, "Error on JSript sapit_CheckAuditId " + e.message);
+    }
+
+    return Par;
+}</mx:Code>
+</mx:Function>
+<mx:Function Enabled="TRUE" ErrorStatus="0" Script="JScript" name="sapit_clearGlobal">
+<mx:Code>// Main function: sapit_clearGlobal
+
+function sapit_clearGlobal(Par) {
+
+    uSetGlobalVar("TEMP_COUNT_AUDITID", "");
+    uSetGlobalVar("TEMP_COUNT_ASSIGNMENTMSKEY", "");
+    return Par;
+}</mx:Code>
+</mx:Function>
+<mx:Function Enabled="TRUE" ErrorStatus="0" Script="JScript" name="sapit_deassignUserAD">
+<mx:Code>// 1.0 | C5353960 | 2023-23-07 | returns the privilege group name for SAP IDM group assignments
+
+
+function sapit_deassignUserAD(Par) {
+    var currentPriv = 0;
+    var auditID = uGetAuditID();
+    var currentEntryID = uGetEntryID();
+
+    // uWarning("CurrentEntryID---" + CurrentEntryID);
+
+    var endReached = false;
+    while (!endReached) {
+        var refAudit = uSelect("select refaudit from mxp_audit with (NOLOCK) where auditid = '" + auditID + "'");
+        if (refAudit.length &gt; 0 &amp;&amp; refAudit.indexOf("null") &lt; 0) {
+            auditID = refAudit;
+        } else {
+            endReached = true;
+        }
+    }
+
+    var storedValue = uGetGlobalVar("TEMP_COUNT_ASSIGNMENTMSKEY", "");
+    // uWarning("TEMP_COUNT_ASSIGNMENTMSKEY----" + uGetGlobalVar("TEMP_COUNT_ASSIGNMENTMSKEY", ""));
+    uSetGlobalVar("TEMP_COUNT_AUDITID", auditID);
+
+    if (storedValue.length &lt;= 0) {
+        var tempStoredValueInitial = [];
+        queryResPriv = uSelect("SELECT AssignmentMSKEY FROM idmv_linkaudit_basic with (NOLOCK) WHERE  mcNewValidTo IS NULL and  Operation=13 and UserMSKEY = " + currentEntryID + "  and AuditId = '" + auditID + "'");
+        tempStoredValueInitial = queryResPriv.split("!!");
+        uSetGlobalVar("TEMP_COUNT_ASSIGNMENTMSKEY", tempStoredValueInitial);
+        var tempGet = uGetGlobalVar("TEMP_COUNT_ASSIGNMENTMSKEY", "");
+        var tempIni = tempGet.split(",");
+        currentPriv = tempIni[0];
+    }
+
+    if (storedValue.length &gt; 0) {
+        var storedValueTemp = [];
+        storedValueTemp = uGetGlobalVar("TEMP_COUNT_ASSIGNMENTMSKEY", "");
+        var tempNext = storedValueTemp.split(",");
+        currentPriv = tempNext[0];
+    }
+    if (currentPriv.length &gt; 0) {
+        var privilegeName = uSelect("select top 1 avalue from idmv_value_ext_active with (NOLOCK) where mskey = " + currentPriv + " and attrname = 'SAPIT_PRIVILEGE_TECHNICAL_NAME'");
+        var privilegeType = uSelect("select top 1 avalue from idmv_value_ext_active with (NOLOCK) where mskey = " + currentPriv + " and attrname = 'MX_PRIVILEGE_TYPE'");
+        var ldapStartingPoint = UserFunc.uGetConstant("rep.LDAP_STARTING_POINT_GROUPS");
+        // uWarning(" UserFunc.uGetConstant " + ldapStartingPoint);
+        var groupDN = "cn=" + privilegeName + "," + ldapStartingPoint;
+
+        if (privilegeType.indexOf("GROUP") == 0) {
+            var tempToDelete = uGetGlobalVar("TEMP_COUNT_ASSIGNMENTMSKEY", "");
+            // uWarning(" tempToDelete " + tempToDelete);
+            var temp = tempToDelete.split(",");
+            temp.splice(0, 1);
+            // uWarning("temp.length -----" + temp.length);
+            uSetGlobalVar("TEMP_COUNT_ASSIGNMENTMSKEY", temp);
+            return groupDN;
+        } else {
+            uErrMsg(1, "Attention: auditID " + auditID + " / entry " + currentEntryID + " / priv: " + currentPriv);
+        }
+    }
+
+
+    // Write code to clear both TEMP_COUNT and TEMP_COPUNT_Audit  setGlobalValue(TEMP_COUNT_AUDITID,"");
+    uErrMsg(1, "No privilege can be found: auditID " + auditID + " / entry " + currentEntryID + " / priv: " + currentPriv);
+    return "";
+}</mx:Code>
+</mx:Function>
+</mx:Functions>
+</mx:Job>
+</mx:DSEJobs>
+</mx:EMS>
+</JOBDEFINITION>
+<MACHINE>test_kt</MACHINE>
+<MAX_LOGENTRIES>100</MAX_LOGENTRIES>
+<MCPUBLIC>0</MCPUBLIC>
+<MCREFERENCESTATUS>-1</MCREFERENCESTATUS>
+<MCSCRIPTSTATUS>0</MCSCRIPTSTATUS>
+<MCSOURCEGUID>906059DB-7841-446C-BE0F-83FEDEDD3101</MCSOURCEGUID>
+<MULTIPROVISION>0</MULTIPROVISION>
+<MXPROTECTED>0</MXPROTECTED>
+<NAME>de-assignADSUser</NAME>
+<PRIORITY_ACTUAL>20</PRIORITY_ACTUAL>
+<PRIORITY_DEF>20</PRIORITY_DEF>
+<PROVISION>1</PROVISION>
+<REVISION_NUMBER>0</REVISION_NUMBER>
+<SCHEDULE_RULE>Provision</SCHEDULE_RULE>
+<STATE>1</STATE>
+</JOB>
+<JOB JOBGUID="AD476CD9-A2E0-4A45-912B-582A9E7C4196" MCPACKAGEID="com.sapit.connector.ad.idm">
+<ACTIVE>1</ACTIVE>
+<AUTOCREATED>0</AUTOCREATED>
+<BOOTSTRAPJOB>0</BOOTSTRAPJOB>
+<CHANGED_BY>mxmc_admin</CHANGED_BY>
+<CHANGED_DATE>1678976482287</CHANGED_DATE>
+<ENGINE_TYPE>2</ENGINE_TYPE>
+<GROUP_ID>1650493F-7A7A-4BDA-BAA7-D1D71ED71CD8</GROUP_ID>
+<JOBDEFINITION>
+<mx:EMS xmlns:mx="http://www.maxware.com/EMS">
+<mx:GUID>01115DD6-6719-451E-8C6D-20529C4D1056</mx:GUID>
+<mx:VERSION>1.0</mx:VERSION>
+<mx:DSEJobs>
+<mx:Sequence>
+<mx:Step Enabled="TRUE" Key="New Job 494"/>
+</mx:Sequence>
+<mx:Job name="New Job 494">
+<mx:Description/>
+<mx:Sequence>
+<mx:Step Enabled="TRUE" Key="a5797997-2f46-4c29-8bed-20211470db19"/>
+<mx:Step Enabled="TRUE" Key="f713b804-6fd2-46b6-a1c1-51535ce0055f"/>
+<mx:Step Enabled="TRUE" Key="fbce74a4-1ddd-46fd-95b4-8189ac7680cb"/>
+<mx:Step Enabled="TRUE" Key="53c35a50-7608-44e8-ba5a-a8fdb8db8f2e"/>
+<mx:Step Enabled="TRUE" Key="3238124a-f8f6-4123-ab39-4c8238610ab9"/>
+<mx:Step Enabled="TRUE" Key="d5fc990c-7540-4599-9b80-0595d80df044"/>
+</mx:Sequence>
+<mx:Globals/>
+
+<mx:Common>
+<ENGINETYPE>1</ENGINETYPE>
+<SCRIPTENG>null</SCRIPTENG>
+<EVLOG>0</EVLOG>
+<ERRLOG>%$ddm.ddmpath%\DSE.log</ERRLOG>
+<XLRESET>1</XLRESET>
+<SNMPTRAPLEVEL>0</SNMPTRAPLEVEL>
+<MAXERROR>0</MAXERROR>
+<LOGLIMIT>25</LOGLIMIT>
+<RIGHT_TRIM>0</RIGHT_TRIM>
+<MCLOGLEVEL>1</MCLOGLEVEL>
+<ERRFUNCTION>null</ERRFUNCTION>
+<SNMPREMOTEHOST>null</SNMPREMOTEHOST>
+</mx:Common>
+<mx:Pass name="a5797997-2f46-4c29-8bed-20211470db19">
+<TYPE>To Generic</TYPE>
+<DESCRIPTION>setCurrentruntime</DESCRIPTION>
+<REPOSITORY>0</REPOSITORY>
+<UPDATEDB>%$ddm.identitycenter%</UPDATEDB>
+<MAXDELETE>5%</MAXDELETE>
+<AUDITLEVEL>0</AUDITLEVEL>
+<DELTAENABLED>0</DELTAENABLED>
+<SKIP>0</SKIP>
+<JUSTDELTA>0</JUSTDELTA>
+<MARKDEL>0</MARKDEL>
+<AUTODELETE>0</AUTODELETE>
+<CURRTAB>2</CURRTAB>
+<READFROMPVO>0</READFROMPVO>
+<FROMDB>%$ddm.identitycenter%</FROMDB>
+<FROMSQL>select CONVERT(VARCHAR(19), GETDATE(), 126) as jobcurrentstamp;&#13;
+&#13;
+&#13;
+</FROMSQL>
+<FILTEREDITSTATUS>16</FILTEREDITSTATUS>
+<USEIDSTORE>0</USEIDSTORE>
+<IDSTORE>null</IDSTORE>
+<SCRIPTNEXT>setJobVariable</SCRIPTNEXT>
+<mx:Class>
+<mx:attr name="CURRENTRUNTIME">
+<mx:value>%jobcurrentstamp%</mx:value>
+</mx:attr>
+</mx:Class>
+<SOURCEENTRYTYPE/>
+</mx:Pass>
+<mx:Pass name="f713b804-6fd2-46b6-a1c1-51535ce0055f">
+<TYPE>Fromsource DSA</TYPE>
+<DESCRIPTION>Read Office Number for Cusers</DESCRIPTION>
+<REPOSITORY>0</REPOSITORY>
+<UPDATEDB>%$ddm.identitycenter%</UPDATEDB>
+<MAXDELETE>5%</MAXDELETE>
+<AUDITLEVEL>0</AUDITLEVEL>
+<DELTAENABLED>0</DELTAENABLED>
+<SKIP>0</SKIP>
+<JUSTDELTA>0</JUSTDELTA>
+<MARKDEL>0</MARKDEL>
+<AUTODELETE>0</AUTODELETE>
+<CURRTAB>2</CURRTAB>
+<TODB>%$ddm.identitycenter%</TODB>
+<DBTABLE>sapit_%$rep.$NAME%_ofc_Tel_Cusers</DBTABLE>
+<READFROMPVO>0</READFROMPVO>
+<SOURCEENTRYTYPE>0</SOURCEENTRYTYPE>
+<DELTABLE>1</DELTABLE>
+<FSIZEL>0</FSIZEL>
+<LDAPTRYTORESOLVESIZETIMELIMITPROBLEMS>false</LDAPTRYTORESOLVESIZETIMELIMITPROBLEMS>
+<LDAPMAXNUMBEROFRECURSIVELOOPS>0</LDAPMAXNUMBEROFRECURSIVELOOPS>
+<LDAPENCRYPTCONNECTIONSTRING>false</LDAPENCRYPTCONNECTIONSTRING>
+<RESOLVELOOPS>0</RESOLVELOOPS>
+<OPTREFERRALS>0</OPTREFERRALS>
+<DEREF>0</DEREF>
+<SECURITYOPTION>1</SECURITYOPTION>
+<PAGESIZE>50</PAGESIZE>
+<CHARSET>null</CHARSET>
+<LDAPCHARSET>2</LDAPCHARSET>
+<TIMELIMIT>80</TIMELIMIT>
+<SIZELIMIT>180</SIZELIMIT>
+<LDAP3SUPPORT>1</LDAP3SUPPORT>
+<PASSWORD>%$rep.LDAP_PASSWORD%</PASSWORD>
+<NAME>%$rep.LDAP_LOGIN%</NAME>
+<FROMDB>LDAP://%$rep.LDAP_HOST%:%$rep.LDAP_PORT_SSL%/%$rep.LDAP_STARTING_POINT_OFCNO_CUSER%?dn,telephoneNumber,whenChanged?ONE?(objectClass=*)</FROMDB>
+<mx:Class>
+<mx:attr name="dn">
+<mx:value>,,dn</mx:value>
+</mx:attr>
+<mx:attr name="telephoneNumber">
+<mx:value>,,telephoneNumber</mx:value>
+</mx:attr>
+<mx:attr name="whenChanged">
+<mx:value>,,whenChanged</mx:value>
+</mx:attr>
+</mx:Class>
+</mx:Pass>
+<mx:Pass name="fbce74a4-1ddd-46fd-95b4-8189ac7680cb">
+<TYPE>Fromsource DSA</TYPE>
+<DESCRIPTION>Read Office Number for Dusers</DESCRIPTION>
+<REPOSITORY>0</REPOSITORY>
+<UPDATEDB>%$ddm.identitycenter%</UPDATEDB>
+<MAXDELETE>5%</MAXDELETE>
+<AUDITLEVEL>0</AUDITLEVEL>
+<DELTAENABLED>0</DELTAENABLED>
+<SKIP>0</SKIP>
+<JUSTDELTA>0</JUSTDELTA>
+<MARKDEL>0</MARKDEL>
+<AUTODELETE>0</AUTODELETE>
+<CURRTAB>2</CURRTAB>
+<TODB>%$ddm.identitycenter%</TODB>
+<DBTABLE>sapit_%$rep.$NAME%_ofc_Tel_Dusers</DBTABLE>
+<READFROMPVO>0</READFROMPVO>
+<SOURCEENTRYTYPE>0</SOURCEENTRYTYPE>
+<DELTABLE>1</DELTABLE>
+<FSIZEL>0</FSIZEL>
+<LDAPTRYTORESOLVESIZETIMELIMITPROBLEMS>false</LDAPTRYTORESOLVESIZETIMELIMITPROBLEMS>
+<LDAPMAXNUMBEROFRECURSIVELOOPS>0</LDAPMAXNUMBEROFRECURSIVELOOPS>
+<LDAPENCRYPTCONNECTIONSTRING>false</LDAPENCRYPTCONNECTIONSTRING>
+<RESOLVELOOPS>0</RESOLVELOOPS>
+<OPTREFERRALS>0</OPTREFERRALS>
+<DEREF>0</DEREF>
+<SECURITYOPTION>1</SECURITYOPTION>
+<PAGESIZE>50</PAGESIZE>
+<CHARSET>null</CHARSET>
+<LDAPCHARSET>2</LDAPCHARSET>
+<TIMELIMIT>80</TIMELIMIT>
+<SIZELIMIT>180</SIZELIMIT>
+<LDAP3SUPPORT>1</LDAP3SUPPORT>
+<PASSWORD>%$rep.LDAP_PASSWORD%</PASSWORD>
+<NAME>%$rep.LDAP_LOGIN%</NAME>
+<FROMDB>LDAP://%$rep.LDAP_HOST%:%$rep.LDAP_PORT_SSL%/%$rep.LDAP_STARTING_POINT_OFCNO_DUSER%?dn,telephoneNumber,whenChanged?ONE?(objectClass=*)</FROMDB>
+<mx:Class>
+<mx:attr name="dn">
+<mx:value>,,dn</mx:value>
+</mx:attr>
+<mx:attr name="telephoneNumber">
+<mx:value>,,telephoneNumber</mx:value>
+</mx:attr>
+<mx:attr name="whenChanged">
+<mx:value>,,whenChanged</mx:value>
+</mx:attr>
+</mx:Class>
+</mx:Pass>
+<mx:Pass name="53c35a50-7608-44e8-ba5a-a8fdb8db8f2e">
+<TYPE>Fromsource DSA</TYPE>
+<DESCRIPTION>Read Office Number for Iusers</DESCRIPTION>
+<REPOSITORY>0</REPOSITORY>
+<UPDATEDB>%$ddm.identitycenter%</UPDATEDB>
+<MAXDELETE>5%</MAXDELETE>
+<AUDITLEVEL>0</AUDITLEVEL>
+<DELTAENABLED>0</DELTAENABLED>
+<SKIP>0</SKIP>
+<JUSTDELTA>0</JUSTDELTA>
+<MARKDEL>0</MARKDEL>
+<AUTODELETE>0</AUTODELETE>
+<CURRTAB>2</CURRTAB>
+<TODB>%$ddm.identitycenter%</TODB>
+<DBTABLE>sapit_%$rep.$NAME%_ofc_Tel_Iusers</DBTABLE>
+<READFROMPVO>0</READFROMPVO>
+<SOURCEENTRYTYPE>0</SOURCEENTRYTYPE>
+<DELTABLE>1</DELTABLE>
+<FSIZEL>0</FSIZEL>
+<LDAPTRYTORESOLVESIZETIMELIMITPROBLEMS>false</LDAPTRYTORESOLVESIZETIMELIMITPROBLEMS>
+<LDAPMAXNUMBEROFRECURSIVELOOPS>0</LDAPMAXNUMBEROFRECURSIVELOOPS>
+<LDAPENCRYPTCONNECTIONSTRING>false</LDAPENCRYPTCONNECTIONSTRING>
+<RESOLVELOOPS>0</RESOLVELOOPS>
+<OPTREFERRALS>0</OPTREFERRALS>
+<DEREF>0</DEREF>
+<SECURITYOPTION>1</SECURITYOPTION>
+<PAGESIZE>50</PAGESIZE>
+<CHARSET>null</CHARSET>
+<LDAPCHARSET>2</LDAPCHARSET>
+<TIMELIMIT>80</TIMELIMIT>
+<SIZELIMIT>180</SIZELIMIT>
+<LDAP3SUPPORT>1</LDAP3SUPPORT>
+<PASSWORD>%$rep.LDAP_PASSWORD%</PASSWORD>
+<NAME>%$rep.LDAP_LOGIN%</NAME>
+<FROMDB>LDAP://%$rep.LDAP_HOST%:%$rep.LDAP_PORT_SSL%/%$rep.LDAP_STARTING_POINT_OFCNO_IUSER%?dn,telephoneNumber,whenChanged?ONE?(objectClass=*)</FROMDB>
+<mx:Class>
+<mx:attr name="dn">
+<mx:value>,,dn</mx:value>
+</mx:attr>
+<mx:attr name="telephoneNumber">
+<mx:value>,,telephoneNumber</mx:value>
+</mx:attr>
+<mx:attr name="whenChanged">
+<mx:value>,,whenChanged</mx:value>
+</mx:attr>
+</mx:Class>
+</mx:Pass>
+<mx:Pass name="3238124a-f8f6-4123-ab39-4c8238610ab9">
+<TYPE>ToIDStore</TYPE>
+<DESCRIPTION>writetelephoneNumber</DESCRIPTION>
+<REPOSITORY>0</REPOSITORY>
+<UPDATEDB>%$ddm.identitycenter%</UPDATEDB>
+<MAXDELETE>5%</MAXDELETE>
+<AUDITLEVEL>0</AUDITLEVEL>
+<DELTAENABLED>0</DELTAENABLED>
+<SKIP>0</SKIP>
+<JUSTDELTA>0</JUSTDELTA>
+<MARKDEL>0</MARKDEL>
+<AUTODELETE>0</AUTODELETE>
+<CURRTAB>2</CURRTAB>
+<READFROMPVO>0</READFROMPVO>
+<FROMDB>%$ddm.identitycenter%</FROMDB>
+<FROMSQL>select distinct a.dn as dn,a.telephoneNumber as telephoneNumber,&#13;
+a.whenChanged as whenChanged,replace(LEFT(a.dn,CHARINDEX(',',a.dn)-1),'CN=','') as &#13;
+sapit_sapnumber from mxmc_db.mxmc_rt_u.sapit_%$rep.$NAME%_ofc_Tel_Cusers as a WITH (NOLOCK)&#13;
+inner join mxmc_db.dbo.idmv_value_ext_active as b &#13;
+on replace(LEFT(a.dn,CHARINDEX(',',a.dn)-1),'CN=','')=b.aValue &#13;
+where &#13;
+b.AttrName='SAPIT_SAPNUMBER'&#13;
+and a.telephoneNumber is not null  and IS_ID='%$pck.SAP_MASTER_IDS_ID%'&#13;
+--and CAST( CAST(a.whenChanged AS VARCHAR(8)) AS DATE) &gt;= '$FUNCTION.cutTimeFromDate1($FUNCTION.sapit_getJobVariable(SAPIT_TIME_LAST!!1970-01-01T00:00:00)$$)$$' &#13;
+&#13;
+union &#13;
+&#13;
+select distinct a.dn as dn,a.telephoneNumber as telephoneNumber,&#13;
+a.whenChanged as whenChanged,replace(LEFT(a.dn,CHARINDEX(',',a.dn)-1),'CN=','') as &#13;
+sapit_sapnumber from mxmc_db.mxmc_rt_u.sapit_%$rep.$NAME%_ofc_Tel_Dusers as a WITH (NOLOCK)&#13;
+inner join mxmc_db.dbo.idmv_value_ext_active as b &#13;
+on replace(LEFT(a.dn,CHARINDEX(',',a.dn)-1),'CN=','')=b.aValue &#13;
+where &#13;
+b.AttrName='SAPIT_SAPNUMBER'&#13;
+and a.telephoneNumber is not null  and IS_ID='%$pck.SAP_MASTER_IDS_ID%'&#13;
+--and CAST( CAST(a.whenChanged AS VARCHAR(8)) AS DATE) &gt;= '$FUNCTION.cutTimeFromDate1($FUNCTION.sapit_getJobVariable(SAPIT_TIME_LAST!!1970-01-01T00:00:00)$$)$$' &#13;
+&#13;
+union&#13;
+&#13;
+ select distinct a.dn as dn,a.telephoneNumber as telephoneNumber,&#13;
+a.whenChanged as whenChanged,replace(LEFT(a.dn,CHARINDEX(',',a.dn)-1),'CN=','') as &#13;
+sapit_sapnumber from mxmc_db.mxmc_rt_u.sapit_%$rep.$NAME%_ofc_Tel_Iusers as a WITH (NOLOCK)&#13;
+inner join mxmc_db.dbo.idmv_value_ext_active as b &#13;
+on replace(LEFT(a.dn,CHARINDEX(',',a.dn)-1),'CN=','')=b.aValue &#13;
+where &#13;
+b.AttrName='SAPIT_SAPNUMBER'&#13;
+and a.telephoneNumber is not null  and IS_ID='%$pck.SAP_MASTER_IDS_ID%'&#13;
+--and CAST( CAST(a.whenChanged AS VARCHAR(8)) AS DATE) &gt;= '$FUNCTION.cutTimeFromDate1($FUNCTION.sapit_getJobVariable(SAPIT_TIME_LAST!!1970-01-01T00:00:00)$$)$$'</FROMSQL>
+<FILTEREDITSTATUS>16</FILTEREDITSTATUS>
+<USEIDSTORE>0</USEIDSTORE>
+<SOURCEENTRYTYPE>0</SOURCEENTRYTYPE>
+<IDSTORE>null</IDSTORE>
+<USERINFO>JobId=%$ddm.mcjob%</USERINFO>
+<DELIMITER>|</DELIMITER>
+<STOREID>Enterprise People</STOREID>
+<DATABASEURL>%$ddm.identitycenter%</DATABASEURL>
+<PROBE>0</PROBE>
+<SOURCEREPOSITORY>0</SOURCEREPOSITORY>
+<mx:Class>
+<mx:attr name="MSKEYVALUE">
+<mx:value>$FUNCTION.retrieveCN_fromDN(%sapit_sapnumber%)$$</mx:value>
+</mx:attr>
+<mx:attr name="MX_ENTRYTYPE">
+<mx:value>MX_PERSON</mx:value>
+</mx:attr>
+<mx:attr name="changeType">
+<mx:value>modify</mx:value>
+</mx:attr>
+<mx:attr name="MX_PHONE_PRIMARY">
+<mx:value>%telephoneNumber%</mx:value>
+</mx:attr>
+</mx:Class>
+</mx:Pass>
+<mx:Pass name="d5fc990c-7540-4599-9b80-0595d80df044">
+<TYPE>To Generic</TYPE>
+<DESCRIPTION>setLastruntime</DESCRIPTION>
+<REPOSITORY>0</REPOSITORY>
+<UPDATEDB>%$ddm.identitycenter%</UPDATEDB>
+<MAXDELETE>5%</MAXDELETE>
+<AUDITLEVEL>0</AUDITLEVEL>
+<DELTAENABLED>0</DELTAENABLED>
+<SKIP>0</SKIP>
+<JUSTDELTA>0</JUSTDELTA>
+<MARKDEL>0</MARKDEL>
+<AUTODELETE>0</AUTODELETE>
+<CURRTAB>2</CURRTAB>
+<READFROMPVO>0</READFROMPVO>
+<FROMDB>%$ddm.identitycenter%</FROMDB>
+<FILTEREDITSTATUS>0</FILTEREDITSTATUS>
+<USEIDSTORE>0</USEIDSTORE>
+<IDSTORE>null</IDSTORE>
+<SOURCEENTRYTYPE>0</SOURCEENTRYTYPE>
+<SCRIPTNEXT>setJobVariable</SCRIPTNEXT>
+<mx:Class>
+<mx:attr name="SAPIT_TIME_LAST">
+<mx:value>$FUNCTION.sapit_getJobVariable(CURRENTRUNTIME)$$</mx:value>
+</mx:attr>
+</mx:Class>
+</mx:Pass>
+
+
+
+
+<mx:Functions>
+<mx:Function Enabled="TRUE" GlobalScript="TRUE" Script="JScript" name="retrieveCN_fromDN"/>
+<mx:Function Enabled="TRUE" GlobalScript="TRUE" Script="JScript" name="cutTimeFromDate1"/>
+<mx:Function Enabled="TRUE" GlobalScript="TRUE" Script="JScript" name="sapit_getJobVariable"/>
+<mx:Function Enabled="TRUE" GlobalScript="TRUE" Script="JScript" name="setJobVariable"/>
+</mx:Functions>
+</mx:Job>
+</mx:DSEJobs>
+</mx:EMS>
+</JOBDEFINITION>
+<MAX_LOGENTRIES>100</MAX_LOGENTRIES>
+<MCPUBLIC>0</MCPUBLIC>
+<MCREFERENCESTATUS>-1</MCREFERENCESTATUS>
+<MCREPOSITORYTYPEQN>com.sapit.NewPackage1:reptype.directory</MCREPOSITORYTYPEQN>
+<MCSCRIPTSTATUS>0</MCSCRIPTSTATUS>
+<MCSOURCEGUID>AD476CD9-A2E0-4A45-912B-582A9E7C4196</MCSOURCEGUID>
+<MULTIPROVISION>0</MULTIPROVISION>
+<MXPROTECTED>0</MXPROTECTED>
+<NAME>newglobalad</NAME>
+<PRIORITY_ACTUAL>20</PRIORITY_ACTUAL>
+<PRIORITY_DEF>20</PRIORITY_DEF>
+<PROVISION>0</PROVISION>
+<REVISION_NUMBER>0</REVISION_NUMBER>
+<SCHEDULE_RULE>On demand</SCHEDULE_RULE>
+<STATE>1</STATE>
+</JOB>
+<JOB JOBGUID="D56FCE86-6701-413C-A702-6EE5D436F9B9" MCPACKAGEID="com.sapit.connector.ad.idm">
+<ACTIVE>1</ACTIVE>
+<AUTOCREATED>0</AUTOCREATED>
+<BOOTSTRAPJOB>0</BOOTSTRAPJOB>
+<CHANGED_BY>mxmc_admin</CHANGED_BY>
+<CHANGED_DATE>1688742794480</CHANGED_DATE>
+<ENGINE_TYPE>2</ENGINE_TYPE>
+<JOBDEFINITION>
+<mx:EMS xmlns:mx="http://www.maxware.com/EMS">
+<mx:GUID>4C9E437B-8B6F-409F-B3E0-5797A3D169AB</mx:GUID>
+<mx:VERSION>1.0</mx:VERSION>
+<mx:DSEJobs>
+<mx:Sequence>
+<mx:Step Enabled="TRUE" Key="DeleteADgroup"/>
+</mx:Sequence>
+<mx:Job name="DeleteADgroup">
+<mx:Description/>
+<mx:Sequence>
+<mx:Step Enabled="TRUE" Key="52a40df2-31a7-4493-a65e-2c3853d6db82"/>
+</mx:Sequence>
+<mx:Globals/>
+<mx:Functions/>
+<mx:Common>
+<ENGINETYPE>1</ENGINETYPE>
+<SCRIPTENG>JScript</SCRIPTENG>
+<EVLOG>0</EVLOG>
+<ERRLOG>%$ddm.ddmpath%\DSE.log</ERRLOG>
+<XLRESET>1</XLRESET>
+</mx:Common>
+<mx:Pass name="52a40df2-31a7-4493-a65e-2c3853d6db82">
+<TYPE>ToDSA Direct</TYPE>
+<DESCRIPTION>deleteGroupInAD-MoveOU</DESCRIPTION>
+<REPOSITORY>0</REPOSITORY>
+<UPDATEDB>%$ddm.identitycenter%</UPDATEDB>
+<MAXDELETE>5%</MAXDELETE>
+<AUDITLEVEL>0</AUDITLEVEL>
+<DELTAENABLED>0</DELTAENABLED>
+<SKIP>0</SKIP>
+<JUSTDELTA>0</JUSTDELTA>
+<MARKDEL>0</MARKDEL>
+<AUTODELETE>0</AUTODELETE>
+<CURRTAB>2</CURRTAB>
+<READFROMPVO>1</READFROMPVO>
+<FROMDB>%$ddm.identitycenter%</FROMDB>
+<FROMSQL>select m.MSKEY as mskey,m.SearchValue as groupType,m1.SearchValue as mskeyvalue,SUBSTRING(m1.SearchValue,0,CHARINDEX(',',m1.SearchValue))  as cn&#13;
+from &#13;
+mxmc_db.dbo.idmv_value_ext_active as  m,&#13;
+mxmc_db.dbo.idmv_value_ext_active as  m1,mxmc_db.dbo.idmv_value_ext_active as  m2 &#13;
+where &#13;
+m.AttrName='SAPIT_AD_GROUP_TYPE' and m.SearchValue in('8','-2147483640') &#13;
+and m2.Modifytime&gt;='1970-01-01 00:00:00:00'  and m.MSKEY=m1.mskey &#13;
+and m1.AttrName='SAPIT_AD_DN'&#13;
+and m1.SearchValue in (select distinct dn from mxmc_db.mxmc_rt_u.sapit_ad_group_all_%$rep.$NAME%)&#13;
+and m2.MSKEY=m.MSKEY and&#13;
+ m2.AttrName='SAPIT_AD_ACTIVE' and m2.SearchValue='0' </FROMSQL>
+<FILTEREDITSTATUS>16</FILTEREDITSTATUS>
+<USEIDSTORE>0</USEIDSTORE>
+<IDSTORE>null</IDSTORE>
+<SOURCEENTRYTYPE>MX_PRIVILEGE</SOURCEENTRYTYPE>
+<HOST>%$rep.LDAP_HOST%</HOST>
+<PORT>%$rep.LDAP_PORT_SSL%</PORT>
+<NAME>%$rep.LDAP_LOGIN_JAVA%</NAME>
+<PASSWORD>{DES3CBC}1:0fa4a5b784953998-38fb3fe2eea664e22007fe24f1a6313cbcbae36a80d55ffbe90ac7ef8ef5d6ef</PASSWORD>
+<MAXERR>0</MAXERR>
+<LDAP3SUPPORT>1</LDAP3SUPPORT>
+<CHARSET>null</CHARSET>
+<LDAPCHARSET>2</LDAPCHARSET>
+<SECURITYOPTION>1</SECURITYOPTION>
+<ADDQUOTES>0</ADDQUOTES>
+<PASSTYPE>LDAP operation</PASSTYPE>
+<CSV>0</CSV>
+<CSVHEAD>0</CSVHEAD>
+<CSVDELIM>;</CSVDELIM>
+<SPLITLINE>|</SPLITLINE>
+<ARESET>0</ARESET>
+<LDIFSPLITLINE>|</LDIFSPLITLINE>
+<ENABLE>1</ENABLE>
+<DSML>0</DSML>
+<BINARYOUTPUT>0</BINARYOUTPUT>
+<mx:Class>
+<mx:attr name="distinguishedName">
+<mx:value>%SAPIT_AD_DN%</mx:value>
+</mx:attr>
+<mx:attr name="changetype">
+<mx:value>modrdn</mx:value>
+</mx:attr>
+<mx:attr name="newrdn">
+<mx:value>CN=%SAPIT_PRIVILEGE_TECHNICAL_NAME%</mx:value>
+</mx:attr>
+<mx:attr name="newsuperior">
+<mx:value>%$rep.LDAP_STARTING_POINT_GROUPS_SOFTDELETE%</mx:value>
+</mx:attr>
+<mx:attr name="deleteoldrdn">
+<mx:value>1</mx:value>
+</mx:attr>
+</mx:Class>
+</mx:Pass>
+</mx:Job>
+</mx:DSEJobs>
+</mx:EMS>
+</JOBDEFINITION>
+<MAX_LOGENTRIES>100</MAX_LOGENTRIES>
+<MCPUBLIC>0</MCPUBLIC>
+<MCREFERENCESTATUS>-1</MCREFERENCESTATUS>
+<MCSCRIPTSTATUS>0</MCSCRIPTSTATUS>
+<MCSOURCEGUID>D56FCE86-6701-413C-A702-6EE5D436F9B9</MCSOURCEGUID>
+<MULTIPROVISION>0</MULTIPROVISION>
+<MXPROTECTED>0</MXPROTECTED>
+<NAME>DeleteADgroup</NAME>
+<PRIORITY_ACTUAL>20</PRIORITY_ACTUAL>
+<PRIORITY_DEF>20</PRIORITY_DEF>
+<PROVISION>1</PROVISION>
+<REVISION_NUMBER>0</REVISION_NUMBER>
+<SCHEDULE_RULE>Provision</SCHEDULE_RULE>
+<STATE>1</STATE>
+</JOB>
+<JOB JOBGUID="E12E02D9-B7CD-4740-966A-A5D89F8980DB" MCPACKAGEID="com.sapit.connector.ad.idm">
+<ACTIVE>1</ACTIVE>
+<AUTOCREATED>0</AUTOCREATED>
+<BOOTSTRAPJOB>0</BOOTSTRAPJOB>
+<CHANGED_BY>mxmc_admin</CHANGED_BY>
+<CHANGED_DATE>1679912686137</CHANGED_DATE>
+<ENGINE_TYPE>2</ENGINE_TYPE>
+<JOBDEFINITION>
+<mx:EMS xmlns:mx="http://www.maxware.com/EMS">
+<mx:GUID>CAEF847E-2C6D-4BEF-9ECD-8FBDA9472884</mx:GUID>
+<mx:VERSION>1.0</mx:VERSION>
+<mx:DSEJobs>
+<mx:Sequence>
+<mx:Step Enabled="TRUE" Key="writeBacktoIDM"/>
+</mx:Sequence>
+<mx:Job name="writeBacktoIDM">
+<mx:Description/>
+<mx:Sequence>
+<mx:Step Enabled="TRUE" Key="c057aded-f4ab-4a27-9c2f-e10157273759"/>
+</mx:Sequence>
+<mx:Globals/>
+<mx:Functions/>
+<mx:Common>
+<ENGINETYPE>1</ENGINETYPE>
+<SCRIPTENG>JScript</SCRIPTENG>
+<EVLOG>0</EVLOG>
+<ERRLOG>%$ddm.ddmpath%\DSE.log</ERRLOG>
+<XLRESET>1</XLRESET>
+</mx:Common>
+<mx:Pass name="c057aded-f4ab-4a27-9c2f-e10157273759">
+<TYPE>ToIDStore</TYPE>
+<DESCRIPTION>writeBackToIDM</DESCRIPTION>
+<REPOSITORY>0</REPOSITORY>
+<UPDATEDB>%$ddm.identitycenter%</UPDATEDB>
+<MAXDELETE>5%</MAXDELETE>
+<AUDITLEVEL>0</AUDITLEVEL>
+<DELTAENABLED>0</DELTAENABLED>
+<SKIP>0</SKIP>
+<JUSTDELTA>0</JUSTDELTA>
+<MARKDEL>0</MARKDEL>
+<AUTODELETE>0</AUTODELETE>
+<CURRTAB>2</CURRTAB>
+<READFROMPVO>1</READFROMPVO>
+<FROMDB>%$ddm.identitycenter%</FROMDB>
+<FROMSQL>select  m.mcMSKEY as mskey,m2.SearchValue as groupType,m.mcMSKEYVALUE as mskeyvalue,&#13;
+m3.SearchValue as dn, m1.SearchValue as active&#13;
+from &#13;
+mxmc_db.dbo.idmv_entry_simple m with (nolock),&#13;
+mxmc_db.dbo.idmv_value_ext_active m1 with (nolock),&#13;
+mxmc_db.dbo.idmv_value_ext_active m2 with (nolock) ,&#13;
+mxmc_db.dbo.idmv_value_ext_active m3 with (nolock),&#13;
+mxmc_db.mxmc_rt_u.sapit_ad_group_all_%$rep.$NAME% as temp with (nolock)&#13;
+where&#13;
+ m.mcMSKEY=m1.MSKEY and  m2.MSKEY=m1.MSKEY and m3.MSKEY=m2.MSKEY and &#13;
+ m.mcEntryType='MX_PRIVILEGE'  and &#13;
+ m3.AttrName='SAPIT_PRIVILEGE_ADDN' and&#13;
+ m2.AttrName='SAPIT_AD_GROUP_TYPE' and m2.SearchValue in('8','-2147483640') &#13;
+ and m1.AttrName='SAPIT_AD_ACTIVE' and m1.SearchValue='1'&#13;
+ and m3.SearchValue=temp.dn</FROMSQL>
+<FILTEREDITSTATUS>16</FILTEREDITSTATUS>
+<USEIDSTORE>0</USEIDSTORE>
+<SOURCEENTRYTYPE>MX_PRIVILEGE</SOURCEENTRYTYPE>
+<IDSTORE>null</IDSTORE>
+<USERINFO>JobId=%$ddm.mcjob%</USERINFO>
+<DELIMITER>|</DELIMITER>
+<STOREID>Enterprise People</STOREID>
+<DATABASEURL>%$ddm.identitycenter%</DATABASEURL>
+<PROBE>0</PROBE>
+<SOURCEREPOSITORY>0</SOURCEREPOSITORY>
+<mx:Class>
+<mx:attr name="MSKEYVALUE">
+<mx:value>%MSKEYVALUE%</mx:value>
+</mx:attr>
+<mx:attr name="MX_ENTRYTYPE">
+<mx:value>MX_PRIVILEGE</mx:value>
+</mx:attr>
+<mx:attr name="changeType">
+<mx:value>modify</mx:value>
+</mx:attr>
+<mx:attr name="SAPIT_AD_DN">
+<mx:value>%SAPIT_PRIVILEGE_ADDN%</mx:value>
+</mx:attr>
+</mx:Class>
+</mx:Pass>
+</mx:Job>
+</mx:DSEJobs>
+</mx:EMS>
+</JOBDEFINITION>
+<MAX_LOGENTRIES>100</MAX_LOGENTRIES>
+<MCPUBLIC>0</MCPUBLIC>
+<MCREFERENCESTATUS>-1</MCREFERENCESTATUS>
+<MCSCRIPTSTATUS>0</MCSCRIPTSTATUS>
+<MCSOURCEGUID>E12E02D9-B7CD-4740-966A-A5D89F8980DB</MCSOURCEGUID>
+<MULTIPROVISION>0</MULTIPROVISION>
+<MXPROTECTED>0</MXPROTECTED>
+<NAME>writeBacktoIDM</NAME>
+<PRIORITY_ACTUAL>20</PRIORITY_ACTUAL>
+<PRIORITY_DEF>20</PRIORITY_DEF>
+<PROVISION>1</PROVISION>
+<REVISION_NUMBER>0</REVISION_NUMBER>
+<SCHEDULE_RULE>Provision</SCHEDULE_RULE>
+<STATE>1</STATE>
+</JOB>
+<JOB JOBGUID="EB92C79D-BB53-4768-AB60-E59D5969462F" MCPACKAGEID="com.sapit.connector.ad.idm">
+<ACTIVE>1</ACTIVE>
+<AUTOCREATED>0</AUTOCREATED>
+<BOOTSTRAPJOB>0</BOOTSTRAPJOB>
+<CHANGED_BY>mxmc_admin</CHANGED_BY>
+<CHANGED_DATE>1685086585977</CHANGED_DATE>
+<ENGINE_TYPE>2</ENGINE_TYPE>
+<JOBDEFINITION>
+<mx:EMS xmlns:mx="http://www.maxware.com/EMS">
+<mx:GUID>51479D0C-CC0E-4965-BC54-25048D96D017</mx:GUID>
+<mx:VERSION>1.0</mx:VERSION>
+<mx:DSEJobs>
+<mx:Sequence>
+<mx:Step Enabled="TRUE" Key="Action Task237"/>
+</mx:Sequence>
+<mx:Job name="Action Task237">
+<mx:Description/>
+<mx:Sequence>
+<mx:Step Enabled="TRUE" Key="0bf1e2bf-70ae-41d5-8c29-22d592e3401d"/>
+</mx:Sequence>
+<mx:Globals/>
+
+<mx:Common>
+<ENGINETYPE>1</ENGINETYPE>
+<SCRIPTENG>null</SCRIPTENG>
+<EVLOG>0</EVLOG>
+<ERRLOG>%$ddm.ddmpath%\DSE.log</ERRLOG>
+<XLRESET>1</XLRESET>
+<PASSDOC>null</PASSDOC>
+<SNMPTRAPLEVEL>0</SNMPTRAPLEVEL>
+<MAXERROR>0</MAXERROR>
+<LOGLIMIT>25</LOGLIMIT>
+<RIGHT_TRIM>0</RIGHT_TRIM>
+<MCLOGLEVEL>1</MCLOGLEVEL>
+</mx:Common>
+<mx:Pass name="0bf1e2bf-70ae-41d5-8c29-22d592e3401d">
+<TYPE>ToDSA Direct</TYPE>
+<DESCRIPTION>assignment</DESCRIPTION>
+<REPOSITORY>0</REPOSITORY>
+<UPDATEDB>%$ddm.identitycenter%</UPDATEDB>
+<MAXDELETE>5%</MAXDELETE>
+<AUDITLEVEL>0</AUDITLEVEL>
+<DELTAENABLED>0</DELTAENABLED>
+<SKIP>0</SKIP>
+<JUSTDELTA>0</JUSTDELTA>
+<MARKDEL>0</MARKDEL>
+<AUTODELETE>0</AUTODELETE>
+<CURRTAB>2</CURRTAB>
+<READFROMPVO>0</READFROMPVO>
+<FILTEREDITSTATUS>0</FILTEREDITSTATUS>
+<USEIDSTORE>1</USEIDSTORE>
+<IDSTORE>null</IDSTORE>
+<SOURCEENTRYTYPE>0</SOURCEENTRYTYPE>
+<HOST>%$rep.SAPIT_HOST%</HOST>
+<PORT>%$rep.LDAP_PORT_SSL%</PORT>
+<NAME>%$rep.LDAP_LOGIN%</NAME>
+<PASSWORD>%$rep.LDAP_PASSWORD%</PASSWORD>
+<MAXERR>0</MAXERR>
+<LDAP3SUPPORT>1</LDAP3SUPPORT>
+<CHARSET>null</CHARSET>
+<LDAPCHARSET>2</LDAPCHARSET>
+<SECURITYOPTION>0</SECURITYOPTION>
+<ADDQUOTES>0</ADDQUOTES>
+<PASSTYPE>LDAP operation</PASSTYPE>
+<CSV>0</CSV>
+<CSVHEAD>0</CSVHEAD>
+<CSVDELIM>;</CSVDELIM>
+<SPLITLINE>|</SPLITLINE>
+<ARESET>0</ARESET>
+<LDIFSPLITLINE>|</LDIFSPLITLINE>
+<ENABLE>1</ENABLE>
+<DSML>0</DSML>
+<BINARYOUTPUT>0</BINARYOUTPUT>
+<mx:Class>
+<mx:attr name="dn">
+<mx:value>$FUNCTION.sapit_assignUserToADSGroups()$$</mx:value>
+</mx:attr>
+<mx:attr name="changetype">
+<mx:value>modify</mx:value>
+</mx:attr>
+<mx:attr name="+member">
+<mx:value>%DNGLOBAL%</mx:value>
+</mx:attr>
+</mx:Class>
+</mx:Pass>
+
+
+<mx:Functions>
+<mx:Function Enabled="TRUE" ErrorStatus="0" Script="JScript" name="Script101">
+<mx:Code>// 1.0 | D057460 | 2012-12-07 | returns the privilege group name for SAP IDM group assignments
+// 1.1 | I818980 | 2013-06-19 | 7.2 adaption
+// 1.2 | I818980 | 2013-10-21 | Fix SQL error after 7.2 Upgrade
+// 1.3 | D037516 | 2015-12-02 | 8.0 adaption
+
+
+function Script101(Par) {
+
+    var AuditID = uGetAuditID();
+    var CurrentEntryID = uGetEntryID();
+
+    //uWarning("CurrentEntryID---" + CurrentEntryID);
+
+    //uErrMsg(1, CurrentEntryID + " / " +AuditID);
+    var priv = uSelect("select mcOtherMSKEY from idmv_link_ext_active with (NOLOCK) where mcThisMSKey = " + CurrentEntryID + " and mcProvAudit = '" + AuditID + "'");
+    //uWarning("AuditID---" + AuditID);
+    //uWarning("priv---" + priv);
+    var userDN = "" + uIS_GetValue(CurrentEntryID, "1", "DNGLOBAL");
+    //uWarning("userDN---" + userDN);
+    if (priv.length &gt; 0) {
+        var techName = uSelect("select top 1 avalue from idmv_value_ext_active with (NOLOCK) where mskey = " + priv + " and attrname = 'SAPIT_PRIVILEGE_TECHNICAL_NAME'");
+        var type = uSelect("select top 1 avalue from idmv_value_ext_active with (NOLOCK) where mskey = " + priv + " and attrname = 'MX_PRIVILEGE_TYPE'");
+        var ret = "cn=" + techName + ",ou=groups,ou=IAM,ou=Resources,DC=globallab,DC=corp,DC=sap";
+        //uWarning("type---" + type);
+        //uWarning("techName---" + techName);
+        //uWarning("ret---" + ret);
+        if (type.indexOf("GROUP") == 0) {
+            return ret;
+        } else {
+            uErrMsg(1, "Attention: auditID " + AuditID + " / entry " + CurrentEntryID + " / priv: " + priv);
+        }
+    } else {
+        var endReached = false;
+        while (!endReached) {
+            var tmp = uSelect("select refaudit from mxp_audit with (NOLOCK) where auditid = '" + AuditID + "'");
+            if (tmp.length &gt; 0 &amp;&amp; tmp.indexOf("null") &lt; 0) {
+                uWarning("AuditID 33---" + AuditID);
+                AuditID = tmp;
+                uWarning("AuditID 35---" + AuditID);
+            } else
+                endReached = true;
+            //uErrMsg(1,AuditID + "/" +tmp);
+        }
+
+
+        //priv = uSelect("select top 1 avalue from idmv_ovalue_basic_all with (NOLOCK) where mskey = " + CurrentEntryID + " and AuditID = '" + AuditID + "'");
+
+        priv = uSelect("SELECT top 1 AssignmentMSKEY FROM idmv_linkaudit_basic with (NOLOCK) WHERE  mcNewValidTo IS NULL and UserMSKEY = " + CurrentEntryID + " and AuditId = '" + AuditID + "'");
+        //priv = uSelect("SELECT top 1 AssignmentMSKEY FROM idmv_linkaudit_basic WHERE AuditId='" + AuditID + "' AND UserMSKEY=" + CurrentEntryID + " AND UserMSKEY IN (SELECT mskey FROM idmv_ovalue_basic_all with (NOLOCK) WHERE mskey = " + CurrentEntryID + ")");
+
+        //   uWarning("deserializedArray" + deserializedArray);
+        uWarning("AuditID 41---" + AuditID);
+        uWarning("priv 42---" + priv);
+
+
+        if (priv.length &gt; 0) {
+            var techName2 = uSelect("select top 1 avalue from idmv_value_ext_active with (NOLOCK) where mskey = " + priv + " and attrname = 'SAPIT_PRIVILEGE_TECHNICAL_NAME'");
+            var type2 = uSelect("select top 1 avalue from idmv_value_ext_active with (NOLOCK) where mskey = " + priv + " and attrname = 'MX_PRIVILEGE_TYPE'");
+            var ret2 = "cn=" + techName2 + ",ou=Groups,ou=IAM,ou=Resources,DC=globallab,DC=corp,DC=sap";
+            uWarning("type2---" + type2);
+            uWarning("techName2---" + techName2);
+            uWarning("ret2---" + ret2);
+
+            //uErrMsg(1,"remove: " + ret);
+            if (type2.indexOf("GROUP") == 0) {
+                return ret2;
+            } else {
+                uErrMsg(1, "Attention: auditID " + AuditID + " / entry " + CurrentEntryID + " / priv: " + priv);
+            }
+        }
+    }
+
+    uErrMsg(1, "No privilege can be found: auditID " + AuditID + " / entry " + CurrentEntryID + " / priv: " + priv);
+    return "";
+}</mx:Code>
+</mx:Function>
+<mx:Function Enabled="TRUE" ErrorStatus="0" Script="JScript" name="sapit_assignUserToADSGroups">
+<mx:Code>function sapit_assignUserToADSGroups(Par) {
+
+    var auditID = uGetAuditID(); //get current audit ID
+    var currentEntryID = uGetEntryID(); // get user MSKEY
+
+    //get the MSKEY of the privilege to be assigned
+    var privilegeMSKEY = uSelect("select mcOtherMSKEY from idmv_link_ext_active with (NOLOCK) where mcThisMSKey = " + currentEntryID + " and mcProvAudit = '" + auditID + "'");
+
+
+    if (privilegeMSKEY.length &gt; 0) {
+        //get privilege name by privilege MSKEY
+        var privilegeName = uSelect("select top 1 avalue from idmv_value_ext_active with (NOLOCK) where mskey = " + privilegeMSKEY + " and attrname = 'SAPIT_PRIVILEGE_TECHNICAL_NAME'");
+
+        //get privilege type
+        var privilegeType = uSelect("select top 1 avalue from idmv_value_ext_active with (NOLOCK) where mskey = " + privilegeMSKEY + " and attrname = 'MX_PRIVILEGE_TYPE'");
+
+        //get the LDAP starting point for groups from repository constants
+        var ldapStartingPoint = UserFunc.uGetConstant("rep.LDAP_STARTING_POINT_GROUPS");
+
+        //construct the group DN
+        var groupDN = "cn=" + privilegeName + "," + ldapStartingPoint;
+
+        if (privilegeType.indexOf("GROUP") == 0) {
+            return groupDN;
+        } else {
+            uErrMsg(1, "Attention: auditID " + auditID + " / entry " + currentEntryID + " / priv: " + privilegeMSKEY);
+        }
+    } else {
+        uErrMsg(1, "No privilege can be found: auditID " + auditID + " / entry " + currentEntryID + " / priv: " + privilegeMSKEY);
+
+    }
+
+
+    uErrMsg(1, "No privilege can be found: auditID " + auditID + " / entry " + currentEntryID + " / priv: " + privilegeMSKEY);
+    return "";
+
+}</mx:Code>
+</mx:Function>
+</mx:Functions>
+</mx:Job>
+</mx:DSEJobs>
+</mx:EMS>
+</JOBDEFINITION>
+<MACHINE>test_kt</MACHINE>
+<MAX_LOGENTRIES>100</MAX_LOGENTRIES>
+<MCPUBLIC>0</MCPUBLIC>
+<MCREFERENCESTATUS>-1</MCREFERENCESTATUS>
+<MCSCRIPTSTATUS>0</MCSCRIPTSTATUS>
+<MCSOURCEGUID>EB92C79D-BB53-4768-AB60-E59D5969462F</MCSOURCEGUID>
+<MULTIPROVISION>0</MULTIPROVISION>
+<MXPROTECTED>0</MXPROTECTED>
+<NAME>assignADSUser</NAME>
+<PRIORITY_ACTUAL>20</PRIORITY_ACTUAL>
+<PRIORITY_DEF>20</PRIORITY_DEF>
+<PROVISION>1</PROVISION>
+<REVISION_NUMBER>0</REVISION_NUMBER>
+<SCHEDULE_RULE>Provision</SCHEDULE_RULE>
+<STATE>1</STATE>
+</JOB>
+<JOB JOBGUID="ED54AEB4-E026-46E2-B89B-92427AA9F5EF" MCPACKAGEID="com.sapit.connector.ad.idm">
+<ACTIVE>1</ACTIVE>
+<AUTOCREATED>0</AUTOCREATED>
+<BOOTSTRAPJOB>0</BOOTSTRAPJOB>
+<CHANGED_BY>mxmc_admin</CHANGED_BY>
+<CHANGED_DATE>1688740234500</CHANGED_DATE>
+<ENGINE_TYPE>2</ENGINE_TYPE>
+<JOBDEFINITION>
+<mx:EMS xmlns:mx="http://www.maxware.com/EMS">
+<mx:GUID>0038AC22-9262-49AD-BED4-CA09DAACD8F0</mx:GUID>
+<mx:VERSION>1.0</mx:VERSION>
+<mx:DSEJobs>
+<mx:Sequence>
+<mx:Step Enabled="TRUE" Key="set Privileges in IDM"/>
+</mx:Sequence>
+<mx:Job name="set Privileges in IDM">
+<mx:Description/>
+<mx:Sequence>
+<mx:Step Enabled="TRUE" Key="bf50cd7a-07fe-4cf2-82d8-82579dac96db"/>
+</mx:Sequence>
+<mx:Globals/>
+
+<mx:Common>
+<ENGINETYPE>1</ENGINETYPE>
+<SCRIPTENG>null</SCRIPTENG>
+<EVLOG>0</EVLOG>
+<ERRLOG>%$ddm.ddmpath%\DSE.log</ERRLOG>
+<XLRESET>1</XLRESET>
+<PASSDOC>null</PASSDOC>
+<SNMPTRAPLEVEL>0</SNMPTRAPLEVEL>
+<MAXERROR>0</MAXERROR>
+<LOGLIMIT>25</LOGLIMIT>
+<RIGHT_TRIM>0</RIGHT_TRIM>
+<MCLOGLEVEL>1</MCLOGLEVEL>
+</mx:Common>
+<mx:Pass name="bf50cd7a-07fe-4cf2-82d8-82579dac96db">
+<TYPE>ToIDStore</TYPE>
+<DESCRIPTION>setPrivelegesInIDM</DESCRIPTION>
+<REPOSITORY>0</REPOSITORY>
+<UPDATEDB>%$ddm.identitycenter%</UPDATEDB>
+<MAXDELETE>5%</MAXDELETE>
+<AUDITLEVEL>0</AUDITLEVEL>
+<DELTAENABLED>0</DELTAENABLED>
+<SKIP>0</SKIP>
+<JUSTDELTA>0</JUSTDELTA>
+<MARKDEL>0</MARKDEL>
+<AUTODELETE>0</AUTODELETE>
+<CURRTAB>2</CURRTAB>
+<READFROMPVO>1</READFROMPVO>
+<FILTEREDITSTATUS>0</FILTEREDITSTATUS>
+<USEIDSTORE>1</USEIDSTORE>
+<SOURCEENTRYTYPE>MX_PRIVILEGE</SOURCEENTRYTYPE>
+<IDSTORE>null</IDSTORE>
+<USERINFO>JobId=%$ddm.mcjob%</USERINFO>
+<DELIMITER>|</DELIMITER>
+<STOREID>Enterprise People</STOREID>
+<DATABASEURL>%$ddm.identitycenter%</DATABASEURL>
+<PROBE>0</PROBE>
+<SOURCEREPOSITORY>0</SOURCEREPOSITORY>
+<mx:Class>
+<mx:attr name="MSKEYVALUE">
+<mx:value>%MSKEYVALUE%</mx:value>
+</mx:attr>
+<mx:attr name="MX_ENTRYTYPE">
+<mx:value>MX_PRIVILEGE</mx:value>
+</mx:attr>
+<mx:attr name="changeType">
+<mx:value>modify</mx:value>
+</mx:attr>
+<mx:attr name="MSKEYVALUE">
+<mx:value>PRIV:GROUP:$FUNCTION.sapit_getSystemName(%$rep.$NAME%)$$_$FUNCTION.sapit_getClient(%$rep.$NAME%)$$:%SAPIT_PRIVILEGE_TECHNICAL_NAME%</mx:value>
+</mx:attr>
+<mx:attr name="SAPIT_PRIVILEGE_ADDN">
+<mx:value>CN=%SAPIT_PRIVILEGE_TECHNICAL_NAME%,%$rep.LDAP_STARTING_POINT_GROUPS%</mx:value>
+</mx:attr>
+<mx:attr name="MX_REPOSITORYNAME">
+<mx:value>%$rep.$NAME%</mx:value>
+</mx:attr>
+<mx:attr name="MX_PRIVILEGE_TYPE">
+<mx:value>GROUP</mx:value>
+</mx:attr>
+<mx:attr name="DISPLAYNAME">
+<mx:value>$FUNCTION.sapit_getSystemName(%$rep.$NAME%)$$_$FUNCTION.sapit_getClient(%$rep.$NAME%)$$:%SAPIT_PRIVILEGE_TECHNICAL_NAME%</mx:value>
+</mx:attr>
+<mx:attr name="SAPIT_SYSTEM">
+<mx:value>$FUNCTION.sapit_getSystemName(%$rep.$NAME%)$$</mx:value>
+</mx:attr>
+<mx:attr name="SAPIT_CLIENT">
+<mx:value>$FUNCTION.sapit_getClient(%$rep.$NAME%)$$</mx:value>
+</mx:attr>
+<mx:attr name="MX_PROVISIONTASK">
+<mx:value>3DB6C50D-80D8-4109-BF20-6593D3E8BACD</mx:value>
+</mx:attr>
+<mx:attr name="MX_DEPROVISIONTASK">
+<mx:value>2E05DD88-E9CC-4BC8-A3F9-8C113B0A281B</mx:value>
+</mx:attr>
+<mx:attr name="MX_MODIFYTASK">
+<mx:value>-1</mx:value>
+</mx:attr>
+</mx:Class>
+</mx:Pass>
+
+<mx:Functions>
+<mx:Function Enabled="TRUE" GlobalScript="TRUE" Script="JScript" name="sapit_getSystemName"/>
+<mx:Function Enabled="TRUE" GlobalScript="TRUE" Script="JScript" name="sapit_getClient"/>
+</mx:Functions>
+</mx:Job>
+</mx:DSEJobs>
+</mx:EMS>
+</JOBDEFINITION>
+<MAX_LOGENTRIES>100</MAX_LOGENTRIES>
+<MCPUBLIC>0</MCPUBLIC>
+<MCREFERENCESTATUS>-1</MCREFERENCESTATUS>
+<MCSCRIPTSTATUS>0</MCSCRIPTSTATUS>
+<MCSOURCEGUID>ED54AEB4-E026-46E2-B89B-92427AA9F5EF</MCSOURCEGUID>
+<MULTIPROVISION>0</MULTIPROVISION>
+<MXPROTECTED>0</MXPROTECTED>
+<NAME>set Privileges in IDM</NAME>
+<PRIORITY_ACTUAL>20</PRIORITY_ACTUAL>
+<PRIORITY_DEF>20</PRIORITY_DEF>
+<PROVISION>1</PROVISION>
+<REVISION_NUMBER>0</REVISION_NUMBER>
+<SCHEDULE_RULE>Provision</SCHEDULE_RULE>
+<STATE>1</STATE>
+</JOB>
+</JOBS>
+<TASKS>
+<TASK MCPACKAGEID="com.sapit.connector.ad.idm" TASKGUID="13EE689D-F3C1-48DD-963D-D96C1DDF245C">
+<ACTIONSQL>MXPROV_ENTRIES</ACTIONSQL>
+<ACTIONTYPE>0</ACTIONTYPE>
+<ALLOWMULTIEVENTS>0</ALLOWMULTIEVENTS>
+<BOOLSQLTYPE>-1</BOOLSQLTYPE>
+<ENABLED>1</ENABLED>
+<HARDPROVISION>0</HARDPROVISION>
+<INCLUDEDISABLEDENTRIES>0</INCLUDEDISABLEDENTRIES>
+<JOBGUID>EB92C79D-BB53-4768-AB60-E59D5969462F</JOBGUID>
+<MCPRIORITY>50</MCPRIORITY>
+<MCSOURCEGUID>13EE689D-F3C1-48DD-963D-D96C1DDF245C</MCSOURCEGUID>
+<MCWFUSERPRIORITY>0</MCWFUSERPRIORITY>
+<MXPROTECTED>0</MXPROTECTED>
+<ONFLAGS>0</ONFLAGS>
+<PRIVATE>1</PRIVATE>
+<PROCESSTYPE>0</PROCESSTYPE>
+<QOSTIME>30</QOSTIME>
+<REPORTTASK>0</REPORTTASK>
+<RETRIES>1</RETRIES>
+<RETRYDELAY>30</RETRYDELAY>
+<TASKCHANGED>1684431265217</TASKCHANGED>
+<TASKNAME>assignADSUser</TASKNAME>
+<TASKTYPE>0</TASKTYPE>
+<TASK_FLAGS>0</TASK_FLAGS>
+<UITASKTYPE>0</UITASKTYPE>
+<USECONTEXTVARS>0</USECONTEXTVARS>
+<WAITAFTER>0</WAITAFTER>
+<WAITBEFORE>0</WAITBEFORE>
+<WAITDELAY>30</WAITDELAY>
+<WAITRETRY>0</WAITRETRY>
+<WFDISPLAYORDER>1</WFDISPLAYORDER>
+<WFFLAGS>0</WFFLAGS>
+<WFINWELCOME>0</WFINWELCOME>
+<WFNODENYBUTTON>0</WFNODENYBUTTON>
+<WFSAVEOPTION>2</WFSAVEOPTION>
+<WFUSEADVANCEDSEARCH>0</WFUSEADVANCEDSEARCH>
+</TASK>
+<TASK MCPACKAGEID="com.sapit.connector.ad.idm" TASKGUID="182881F9-D736-4309-8F13-8D1B34588C4E">
+<ACTIONSQL>MXPROV_ENTRIES</ACTIONSQL>
+<ACTIONTYPE>0</ACTIONTYPE>
+<ALLOWMULTIEVENTS>0</ALLOWMULTIEVENTS>
+<BOOLSQLTYPE>-1</BOOLSQLTYPE>
+<ENABLED>1</ENABLED>
+<HARDPROVISION>0</HARDPROVISION>
+<INCLUDEDISABLEDENTRIES>0</INCLUDEDISABLEDENTRIES>
+<JOBGUID>E12E02D9-B7CD-4740-966A-A5D89F8980DB</JOBGUID>
+<MCPRIORITY>50</MCPRIORITY>
+<MCSOURCEGUID>182881F9-D736-4309-8F13-8D1B34588C4E</MCSOURCEGUID>
+<MCWFUSERPRIORITY>0</MCWFUSERPRIORITY>
+<MXPROTECTED>0</MXPROTECTED>
+<ONFLAGS>0</ONFLAGS>
+<PRIVATE>1</PRIVATE>
+<PROCESSTYPE>0</PROCESSTYPE>
+<QOSTIME>30</QOSTIME>
+<REPORTTASK>0</REPORTTASK>
+<RETRIES>1</RETRIES>
+<RETRYDELAY>30</RETRYDELAY>
+<TASKCHANGED>1679569481167</TASKCHANGED>
+<TASKNAME>writeBacktoIDM</TASKNAME>
+<TASKTYPE>0</TASKTYPE>
+<TASK_FLAGS>0</TASK_FLAGS>
+<UITASKTYPE>0</UITASKTYPE>
+<USECONTEXTVARS>0</USECONTEXTVARS>
+<WAITAFTER>0</WAITAFTER>
+<WAITBEFORE>0</WAITBEFORE>
+<WAITDELAY>30</WAITDELAY>
+<WAITRETRY>0</WAITRETRY>
+<WFDISPLAYORDER>1</WFDISPLAYORDER>
+<WFFLAGS>0</WFFLAGS>
+<WFINWELCOME>0</WFINWELCOME>
+<WFNODENYBUTTON>0</WFNODENYBUTTON>
+<WFSAVEOPTION>2</WFSAVEOPTION>
+<WFUSEADVANCEDSEARCH>0</WFUSEADVANCEDSEARCH>
+</TASK>
+<TASK MCPACKAGEID="com.sapit.connector.ad.idm" TASKGUID="2E05DD88-E9CC-4BC8-A3F9-8C113B0A281B" TASKROOT="true">
+<ACTIONSQL>MXPROV_ENTRIES</ACTIONSQL>
+<ACTIONTYPE>-1</ACTIONTYPE>
+<ALLOWMULTIEVENTS>0</ALLOWMULTIEVENTS>
+<BOOLSQLTYPE>-1</BOOLSQLTYPE>
+<ENABLED>1</ENABLED>
+<HARDPROVISION>0</HARDPROVISION>
+<INCLUDEDISABLEDENTRIES>0</INCLUDEDISABLEDENTRIES>
+<MCPRIORITY>50</MCPRIORITY>
+<MCSOURCEGUID>2E05DD88-E9CC-4BC8-A3F9-8C113B0A281B</MCSOURCEGUID>
+<MCWFUSERPRIORITY>0</MCWFUSERPRIORITY>
+<MXPROTECTED>0</MXPROTECTED>
+<ONFLAGS>0</ONFLAGS>
+<PRIVATE>0</PRIVATE>
+<PROCESSTYPE>0</PROCESSTYPE>
+<QOSTIME>30</QOSTIME>
+<REPORTTASK>0</REPORTTASK>
+<REPOSITORYID>ADS_LAB</REPOSITORYID>
+<RETRIES>1</RETRIES>
+<RETRYDELAY>30</RETRYDELAY>
+<TASKCHANGED>1682585718310</TASKCHANGED>
+<TASKGROUP>4C7F362D-8CF5-4227-B491-F3ACDC406EF8</TASKGROUP>
+<TASKNAME>DE-ASSIGNUSERADSGROUP</TASKNAME>
+<TASKTYPE>1</TASKTYPE>
+<TASK_FLAGS>0</TASK_FLAGS>
+<UITASKTYPE>0</UITASKTYPE>
+<USECONTEXTVARS>0</USECONTEXTVARS>
+<WAITAFTER>0</WAITAFTER>
+<WAITBEFORE>0</WAITBEFORE>
+<WAITDELAY>30</WAITDELAY>
+<WAITRETRY>0</WAITRETRY>
+<WFDISPLAYORDER>5</WFDISPLAYORDER>
+<WFFLAGS>0</WFFLAGS>
+<WFINWELCOME>0</WFINWELCOME>
+<WFNODENYBUTTON>0</WFNODENYBUTTON>
+<WFSAVEOPTION>2</WFSAVEOPTION>
+<WFUSEADVANCEDSEARCH>0</WFUSEADVANCEDSEARCH>
+<LINKS>
+<LINK>
+<CHILDDELAY>0</CHILDDELAY>
+<CHILDGROUP>1</CHILDGROUP>
+<CHILDLAYOUT>205,0,20,20:210,340,20,20|205,90,100,60:</CHILDLAYOUT>
+<CHILDORDER>1</CHILDORDER>
+<TASKLNK>445FDC92-B6D9-442A-ACA0-49717A44C671</TASKLNK>
+<TASKREF>2E05DD88-E9CC-4BC8-A3F9-8C113B0A281B</TASKREF>
+</LINK>
+</LINKS>
+</TASK>
+<TASK MCPACKAGEID="com.sapit.connector.ad.idm" TASKGUID="3DB6C50D-80D8-4109-BF20-6593D3E8BACD" TASKROOT="true">
+<ACTIONSQL>MXPROV_ENTRIES</ACTIONSQL>
+<ACTIONTYPE>-1</ACTIONTYPE>
+<ALLOWMULTIEVENTS>0</ALLOWMULTIEVENTS>
+<BOOLSQLTYPE>-1</BOOLSQLTYPE>
+<ENABLED>1</ENABLED>
+<HARDPROVISION>0</HARDPROVISION>
+<INCLUDEDISABLEDENTRIES>0</INCLUDEDISABLEDENTRIES>
+<MCPRIORITY>50</MCPRIORITY>
+<MCSOURCEGUID>3DB6C50D-80D8-4109-BF20-6593D3E8BACD</MCSOURCEGUID>
+<MCWFUSERPRIORITY>0</MCWFUSERPRIORITY>
+<MXPROTECTED>0</MXPROTECTED>
+<ONFLAGS>0</ONFLAGS>
+<PRIVATE>0</PRIVATE>
+<PROCESSTYPE>0</PROCESSTYPE>
+<QOSTIME>30</QOSTIME>
+<REPORTTASK>0</REPORTTASK>
+<REPOSITORYID>ADS_LAB</REPOSITORYID>
+<RETRIES>1</RETRIES>
+<RETRYDELAY>30</RETRYDELAY>
+<TASKCHANGED>1682585718310</TASKCHANGED>
+<TASKGROUP>4C7F362D-8CF5-4227-B491-F3ACDC406EF8</TASKGROUP>
+<TASKNAME>ASSIGNUSERADSGROUP</TASKNAME>
+<TASKTYPE>1</TASKTYPE>
+<TASK_FLAGS>0</TASK_FLAGS>
+<UITASKTYPE>0</UITASKTYPE>
+<USECONTEXTVARS>0</USECONTEXTVARS>
+<WAITAFTER>0</WAITAFTER>
+<WAITBEFORE>0</WAITBEFORE>
+<WAITDELAY>30</WAITDELAY>
+<WAITRETRY>0</WAITRETRY>
+<WFDISPLAYORDER>4</WFDISPLAYORDER>
+<WFFLAGS>0</WFFLAGS>
+<WFINWELCOME>0</WFINWELCOME>
+<WFNODENYBUTTON>0</WFNODENYBUTTON>
+<WFSAVEOPTION>2</WFSAVEOPTION>
+<WFUSEADVANCEDSEARCH>0</WFUSEADVANCEDSEARCH>
+<LINKS>
+<LINK>
+<CHILDDELAY>0</CHILDDELAY>
+<CHILDGROUP>1</CHILDGROUP>
+<CHILDLAYOUT>205,0,40,40:210,340,20,20|180,100,100,60:</CHILDLAYOUT>
+<CHILDORDER>1</CHILDORDER>
+<TASKLNK>13EE689D-F3C1-48DD-963D-D96C1DDF245C</TASKLNK>
+<TASKQUALIFIEDNAME>0</TASKQUALIFIEDNAME>
+<TASKREF>3DB6C50D-80D8-4109-BF20-6593D3E8BACD</TASKREF>
+</LINK>
+</LINKS>
+</TASK>
+<TASK MCPACKAGEID="com.sapit.connector.ad.idm" TASKGUID="445FDC92-B6D9-442A-ACA0-49717A44C671">
+<ACTIONSQL>MXPROV_ENTRIES</ACTIONSQL>
+<ACTIONTYPE>0</ACTIONTYPE>
+<ALLOWMULTIEVENTS>0</ALLOWMULTIEVENTS>
+<BOOLSQLTYPE>-1</BOOLSQLTYPE>
+<ENABLED>1</ENABLED>
+<HARDPROVISION>0</HARDPROVISION>
+<INCLUDEDISABLEDENTRIES>0</INCLUDEDISABLEDENTRIES>
+<JOBGUID>906059DB-7841-446C-BE0F-83FEDEDD3101</JOBGUID>
+<MCPRIORITY>50</MCPRIORITY>
+<MCSOURCEGUID>445FDC92-B6D9-442A-ACA0-49717A44C671</MCSOURCEGUID>
+<MCWFUSERPRIORITY>0</MCWFUSERPRIORITY>
+<MXPROTECTED>0</MXPROTECTED>
+<ONFLAGS>0</ONFLAGS>
+<PRIVATE>1</PRIVATE>
+<PROCESSTYPE>0</PROCESSTYPE>
+<QOSTIME>30</QOSTIME>
+<REPORTTASK>0</REPORTTASK>
+<RETRIES>1</RETRIES>
+<RETRYDELAY>30</RETRYDELAY>
+<TASKCHANGED>1684752919923</TASKCHANGED>
+<TASKNAME>de-assignADSUser</TASKNAME>
+<TASKTYPE>0</TASKTYPE>
+<TASK_FLAGS>0</TASK_FLAGS>
+<UITASKTYPE>0</UITASKTYPE>
+<USECONTEXTVARS>0</USECONTEXTVARS>
+<WAITAFTER>0</WAITAFTER>
+<WAITBEFORE>0</WAITBEFORE>
+<WAITDELAY>30</WAITDELAY>
+<WAITRETRY>0</WAITRETRY>
+<WFDISPLAYORDER>1</WFDISPLAYORDER>
+<WFFLAGS>0</WFFLAGS>
+<WFINWELCOME>0</WFINWELCOME>
+<WFNODENYBUTTON>0</WFNODENYBUTTON>
+<WFSAVEOPTION>2</WFSAVEOPTION>
+<WFUSEADVANCEDSEARCH>0</WFUSEADVANCEDSEARCH>
+</TASK>
+<TASK MCPACKAGEID="com.sapit.connector.ad.idm" TASKGUID="4F0E3E5C-9297-4EE7-A90C-E09A9BBD4E1E">
+<ACTIONSQL>MXPROV_ENTRIES</ACTIONSQL>
+<ACTIONTYPE>0</ACTIONTYPE>
+<ALLOWMULTIEVENTS>0</ALLOWMULTIEVENTS>
+<BOOLSQLTYPE>-1</BOOLSQLTYPE>
+<ENABLED>1</ENABLED>
+<HARDPROVISION>0</HARDPROVISION>
+<INCLUDEDISABLEDENTRIES>0</INCLUDEDISABLEDENTRIES>
+<JOBGUID>D56FCE86-6701-413C-A702-6EE5D436F9B9</JOBGUID>
+<MCPRIORITY>50</MCPRIORITY>
+<MCSOURCEGUID>4F0E3E5C-9297-4EE7-A90C-E09A9BBD4E1E</MCSOURCEGUID>
+<MCWFUSERPRIORITY>0</MCWFUSERPRIORITY>
+<MXPROTECTED>0</MXPROTECTED>
+<ONFLAGS>0</ONFLAGS>
+<PRIVATE>1</PRIVATE>
+<PROCESSTYPE>0</PROCESSTYPE>
+<QOSTIME>30</QOSTIME>
+<REPORTTASK>0</REPORTTASK>
+<RETRIES>1</RETRIES>
+<RETRYDELAY>30</RETRYDELAY>
+<TASKCHANGED>1679296483653</TASKCHANGED>
+<TASKNAME>DeleteADgroup</TASKNAME>
+<TASKTYPE>0</TASKTYPE>
+<TASK_FLAGS>0</TASK_FLAGS>
+<UITASKTYPE>0</UITASKTYPE>
+<USECONTEXTVARS>0</USECONTEXTVARS>
+<WAITAFTER>0</WAITAFTER>
+<WAITBEFORE>0</WAITBEFORE>
+<WAITDELAY>30</WAITDELAY>
+<WAITRETRY>0</WAITRETRY>
+<WFDISPLAYORDER>1</WFDISPLAYORDER>
+<WFFLAGS>0</WFFLAGS>
+<WFINWELCOME>0</WFINWELCOME>
+<WFNODENYBUTTON>0</WFNODENYBUTTON>
+<WFSAVEOPTION>2</WFSAVEOPTION>
+<WFUSEADVANCEDSEARCH>0</WFUSEADVANCEDSEARCH>
+</TASK>
+<TASK MCPACKAGEID="com.sapit.connector.ad.idm" TASKGUID="5DC2A1DB-EC16-480C-BBD0-0A41653A4406">
+<ACTIONSQL>MXPROV_ENTRIES</ACTIONSQL>
+<ACTIONTYPE>0</ACTIONTYPE>
+<ALLOWMULTIEVENTS>0</ALLOWMULTIEVENTS>
+<BOOLSQLTYPE>-1</BOOLSQLTYPE>
+<ENABLED>1</ENABLED>
+<HARDPROVISION>0</HARDPROVISION>
+<INCLUDEDISABLEDENTRIES>0</INCLUDEDISABLEDENTRIES>
+<JOBGUID>4FB6832E-E514-4006-BF2A-8B755B9BE6EE</JOBGUID>
+<MCPRIORITY>50</MCPRIORITY>
+<MCSOURCEGUID>5DC2A1DB-EC16-480C-BBD0-0A41653A4406</MCSOURCEGUID>
+<MCWFUSERPRIORITY>0</MCWFUSERPRIORITY>
+<MXPROTECTED>0</MXPROTECTED>
+<ONFLAGS>0</ONFLAGS>
+<PRIVATE>1</PRIVATE>
+<PROCESSTYPE>0</PROCESSTYPE>
+<QOSTIME>30</QOSTIME>
+<REPORTTASK>0</REPORTTASK>
+<RETRIES>1</RETRIES>
+<RETRYDELAY>30</RETRYDELAY>
+<TASKCHANGED>1688743977523</TASKCHANGED>
+<TASKNAME>CreateAD ldap</TASKNAME>
+<TASKTYPE>0</TASKTYPE>
+<TASK_FLAGS>0</TASK_FLAGS>
+<UITASKTYPE>0</UITASKTYPE>
+<USECONTEXTVARS>0</USECONTEXTVARS>
+<WAITAFTER>0</WAITAFTER>
+<WAITBEFORE>0</WAITBEFORE>
+<WAITDELAY>30</WAITDELAY>
+<WAITRETRY>0</WAITRETRY>
+<WFDISPLAYORDER>1</WFDISPLAYORDER>
+<WFFLAGS>0</WFFLAGS>
+<WFINWELCOME>0</WFINWELCOME>
+<WFNODENYBUTTON>0</WFNODENYBUTTON>
+<WFSAVEOPTION>2</WFSAVEOPTION>
+<WFUSEADVANCEDSEARCH>0</WFUSEADVANCEDSEARCH>
+</TASK>
+<TASK MCPACKAGEID="com.sapit.connector.ad.idm" TASKGUID="7544947C-CE75-4106-B361-B3F16F57FD90" TASKROOT="true">
+<ACTIONSQL>MXPROV_ENTRIES</ACTIONSQL>
+<ACTIONTYPE>-1</ACTIONTYPE>
+<ALLOWMULTIEVENTS>0</ALLOWMULTIEVENTS>
+<BOOLSQLTYPE>-1</BOOLSQLTYPE>
+<DISPLAYNAME>Modify AD Group-[groupType]</DISPLAYNAME>
+<ENABLED>1</ENABLED>
+<HARDPROVISION>0</HARDPROVISION>
+<INCLUDEDISABLEDENTRIES>0</INCLUDEDISABLEDENTRIES>
+<MCPRIORITY>50</MCPRIORITY>
+<MCSOURCEGUID>7544947C-CE75-4106-B361-B3F16F57FD90</MCSOURCEGUID>
+<MCWFUSERPRIORITY>0</MCWFUSERPRIORITY>
+<MXPROTECTED>0</MXPROTECTED>
+<OBJECTCLASS>MX_PRIVILEGE</OBJECTCLASS>
+<ONFLAGS>0</ONFLAGS>
+<PRIVATE>0</PRIVATE>
+<PROCESSTYPE>0</PROCESSTYPE>
+<QOSTIME>30</QOSTIME>
+<REPORTTASK>0</REPORTTASK>
+<RETRIES>0</RETRIES>
+<RETRYDELAY>0</RETRYDELAY>
+<SEMAPHORESKIPIFCLEAR>0</SEMAPHORESKIPIFCLEAR>
+<TASKCHANGED>1679394601780</TASKCHANGED>
+<TASKGROUP>6DAFE9B2-C50D-4D2F-98F7-C40DBA00ACCE</TASKGROUP>
+<TASKNAME>modifyADGroupType</TASKNAME>
+<TASKTYPE>1</TASKTYPE>
+<TASK_FLAGS>0</TASK_FLAGS>
+<UITASKTYPE>1</UITASKTYPE>
+<USECONTEXTVARS>0</USECONTEXTVARS>
+<WAITAFTER>0</WAITAFTER>
+<WAITBEFORE>0</WAITBEFORE>
+<WAITDELAY>30</WAITDELAY>
+<WAITRETRY>0</WAITRETRY>
+<WFCONFIRMMESSAGE>AD Group updated successfully!</WFCONFIRMMESSAGE>
+<WFDISPLAYORDER>2</WFDISPLAYORDER>
+<WFFLAGS>0</WFFLAGS>
+<WFHEADER>Modify AD Group-[groupType]</WFHEADER>
+<WFINWELCOME>0</WFINWELCOME>
+<WFNODENYBUTTON>0</WFNODENYBUTTON>
+<WFSAVECAPTION>Modify</WFSAVECAPTION>
+<WFSAVEOPTION>1</WFSAVEOPTION>
+<WFTRAILER>Modify AD Group-[groupType]</WFTRAILER>
+<WFUSEADVANCEDSEARCH>0</WFUSEADVANCEDSEARCH>
+<ATTRIBUTES>
+<ATTRIBUTE ATTR_ID="MSKEYVALUE" isLayoutAttr="0">
+<ACCESS_CODE>1</ACCESS_CODE>
+<DISPLAYLIST>0</DISPLAYLIST>
+<DISPLAY_ORDER>1</DISPLAY_ORDER>
+<INVISIBLE>0</INVISIBLE>
+<LISTED>1</LISTED>
+<REQUIRED_ATTR>1</REQUIRED_ATTR>
+<SHOW_PROPERTIES>0</SHOW_PROPERTIES>
+<SUMMARYATTR>0</SUMMARYATTR>
+<TASKID>7544947C-CE75-4106-B361-B3F16F57FD90</TASKID>
+</ATTRIBUTE>
+<ATTRIBUTE ATTR_ID="MX_ENTRYTYPE" isLayoutAttr="0">
+<ACCESS_CODE>1</ACCESS_CODE>
+<DEFAULTVALUE>MX_PRIVILEGE</DEFAULTVALUE>
+<DISPLAYLIST>0</DISPLAYLIST>
+<DISPLAY_ORDER>2</DISPLAY_ORDER>
+<INVISIBLE>0</INVISIBLE>
+<LISTED>1</LISTED>
+<REQUIRED_ATTR>1</REQUIRED_ATTR>
+<SHOW_PROPERTIES>0</SHOW_PROPERTIES>
+<SUMMARYATTR>0</SUMMARYATTR>
+<TASKID>7544947C-CE75-4106-B361-B3F16F57FD90</TASKID>
+</ATTRIBUTE>
+<ATTRIBUTE ATTR_ID="SAPIT_AD_GROUP_TYPE" isLayoutAttr="0">
+<ACCESS_CODE>0</ACCESS_CODE>
+<DISPLAYLIST>0</DISPLAYLIST>
+<DISPLAY_ORDER>3</DISPLAY_ORDER>
+<INVISIBLE>0</INVISIBLE>
+<LISTED>1</LISTED>
+<REQUIRED_ATTR>0</REQUIRED_ATTR>
+<SHOW_PROPERTIES>0</SHOW_PROPERTIES>
+<SUMMARYATTR>0</SUMMARYATTR>
+<TASKID>7544947C-CE75-4106-B361-B3F16F57FD90</TASKID>
+</ATTRIBUTE>
+<ATTRIBUTE ATTR_ID="SAPIT_PRIVILEGE_TECHNICAL_NAME" isLayoutAttr="0">
+<ACCESS_CODE>1</ACCESS_CODE>
+<DISPLAYLIST>0</DISPLAYLIST>
+<DISPLAY_ORDER>4</DISPLAY_ORDER>
+<INVISIBLE>0</INVISIBLE>
+<LISTED>1</LISTED>
+<REQUIRED_ATTR>0</REQUIRED_ATTR>
+<SHOW_PROPERTIES>0</SHOW_PROPERTIES>
+<SUMMARYATTR>0</SUMMARYATTR>
+<TASKID>7544947C-CE75-4106-B361-B3F16F57FD90</TASKID>
+</ATTRIBUTE>
+</ATTRIBUTES>
+<LINKS>
+<LINK>
+<CHILDDELAY>0</CHILDDELAY>
+<CHILDGROUP>1</CHILDGROUP>
+<CHILDORDER>1</CHILDORDER>
+<TASKLNK>B93673CD-D772-49F0-909F-CE947B9E6E16</TASKLNK>
+<TASKREF>7544947C-CE75-4106-B361-B3F16F57FD90</TASKREF>
+</LINK>
+</LINKS>
+<ACCESS_CONTROLS>
+<ACCESS_CONTROL>
+<FILTEREDITSTATUS>0</FILTEREDITSTATUS>
+<MEMBERTYPE>1</MEMBERTYPE>
+<MSKEY>PRIV:IDM:USERADMINISTRATION</MSKEY>
+<TARGETFILTEREDITSTATUS>0</TARGETFILTEREDITSTATUS>
+<TARGETMEMBERTYPE>0</TARGETMEMBERTYPE>
+<TARGETMSKEY>0</TARGETMSKEY>
+<TASKID>7544947C-CE75-4106-B361-B3F16F57FD90</TASKID>
+</ACCESS_CONTROL>
+<ACCESS_CONTROL>
+<FILTEREDITSTATUS>0</FILTEREDITSTATUS>
+<MEMBERTYPE>1</MEMBERTYPE>
+<MSKEY>PRIV:IDM:USERMANAGEMENT</MSKEY>
+<TARGETFILTEREDITSTATUS>0</TARGETFILTEREDITSTATUS>
+<TARGETMEMBERTYPE>0</TARGETMEMBERTYPE>
+<TARGETMSKEY>0</TARGETMSKEY>
+<TASKID>7544947C-CE75-4106-B361-B3F16F57FD90</TASKID>
+</ACCESS_CONTROL>
+</ACCESS_CONTROLS>
+</TASK>
+<TASK MCPACKAGEID="com.sapit.connector.ad.idm" TASKGUID="A4548709-FB56-4132-9B53-4A23D7E773C3">
+<ACTIONSQL>MXPROV_ENTRIES</ACTIONSQL>
+<ACTIONTYPE>0</ACTIONTYPE>
+<ALLOWMULTIEVENTS>0</ALLOWMULTIEVENTS>
+<BOOLSQLTYPE>-1</BOOLSQLTYPE>
+<ENABLED>1</ENABLED>
+<HARDPROVISION>0</HARDPROVISION>
+<INCLUDEDISABLEDENTRIES>0</INCLUDEDISABLEDENTRIES>
+<JOBGUID>25D10F39-5D6D-47C8-A582-4890E25D31C2</JOBGUID>
+<MCPRIORITY>50</MCPRIORITY>
+<MCSOURCEGUID>A4548709-FB56-4132-9B53-4A23D7E773C3</MCSOURCEGUID>
+<MCWFUSERPRIORITY>0</MCWFUSERPRIORITY>
+<MXPROTECTED>0</MXPROTECTED>
+<ONFLAGS>0</ONFLAGS>
+<PRIVATE>1</PRIVATE>
+<PROCESSTYPE>0</PROCESSTYPE>
+<QOSTIME>30</QOSTIME>
+<REPORTTASK>0</REPORTTASK>
+<RETRIES>1</RETRIES>
+<RETRYDELAY>30</RETRYDELAY>
+<TASKCHANGED>1679393125750</TASKCHANGED>
+<TASKNAME>Modify AD Group</TASKNAME>
+<TASKTYPE>0</TASKTYPE>
+<TASK_FLAGS>0</TASK_FLAGS>
+<UITASKTYPE>0</UITASKTYPE>
+<USECONTEXTVARS>0</USECONTEXTVARS>
+<WAITAFTER>0</WAITAFTER>
+<WAITBEFORE>0</WAITBEFORE>
+<WAITDELAY>30</WAITDELAY>
+<WAITRETRY>0</WAITRETRY>
+<WFDISPLAYORDER>1</WFDISPLAYORDER>
+<WFFLAGS>0</WFFLAGS>
+<WFINWELCOME>0</WFINWELCOME>
+<WFNODENYBUTTON>0</WFNODENYBUTTON>
+<WFSAVEOPTION>2</WFSAVEOPTION>
+<WFUSEADVANCEDSEARCH>0</WFUSEADVANCEDSEARCH>
+</TASK>
+<TASK MCPACKAGEID="com.sapit.connector.ad.idm" TASKGUID="A9796DF2-C88D-4514-8D10-99E26C554355" TASKROOT="true">
+<ACTIONSQL>MXPROV_ENTRIES</ACTIONSQL>
+<ACTIONTYPE>-1</ACTIONTYPE>
+<ALLOWMULTIEVENTS>0</ALLOWMULTIEVENTS>
+<BOOLSQLTYPE>-1</BOOLSQLTYPE>
+<DISPLAYNAME>Create AD Group</DISPLAYNAME>
+<ENABLED>1</ENABLED>
+<HARDPROVISION>0</HARDPROVISION>
+<INCLUDEDISABLEDENTRIES>0</INCLUDEDISABLEDENTRIES>
+<MCPRIORITY>50</MCPRIORITY>
+<MCSOURCEGUID>A9796DF2-C88D-4514-8D10-99E26C554355</MCSOURCEGUID>
+<MCWFUSERPRIORITY>0</MCWFUSERPRIORITY>
+<MXPROTECTED>0</MXPROTECTED>
+<OBJECTCLASS>MX_PRIVILEGE</OBJECTCLASS>
+<ONFLAGS>0</ONFLAGS>
+<PRIVATE>0</PRIVATE>
+<PROCESSTYPE>0</PROCESSTYPE>
+<QOSTIME>30</QOSTIME>
+<REPORTTASK>0</REPORTTASK>
+<RETRIES>0</RETRIES>
+<RETRYDELAY>0</RETRYDELAY>
+<SEMAPHORESKIPIFCLEAR>0</SEMAPHORESKIPIFCLEAR>
+<TASKCHANGED>1679042324440</TASKCHANGED>
+<TASKGROUP>6DAFE9B2-C50D-4D2F-98F7-C40DBA00ACCE</TASKGROUP>
+<TASKNAME>createADGroupPrivilege</TASKNAME>
+<TASKTYPE>1</TASKTYPE>
+<TASK_FLAGS>1</TASK_FLAGS>
+<UITASKTYPE>1</UITASKTYPE>
+<USECONTEXTVARS>0</USECONTEXTVARS>
+<WAITAFTER>0</WAITAFTER>
+<WAITBEFORE>0</WAITBEFORE>
+<WAITDELAY>30</WAITDELAY>
+<WAITRETRY>0</WAITRETRY>
+<WFCONFIRMMESSAGE>AD Group Created Successfully!</WFCONFIRMMESSAGE>
+<WFDISPLAYORDER>3</WFDISPLAYORDER>
+<WFFLAGS>0</WFFLAGS>
+<WFHEADER>Create AD Group Privilege</WFHEADER>
+<WFINWELCOME>0</WFINWELCOME>
+<WFNODENYBUTTON>0</WFNODENYBUTTON>
+<WFSAVEOPTION>1</WFSAVEOPTION>
+<WFTRAILER>Create AD Group Privilege</WFTRAILER>
+<WFUSEADVANCEDSEARCH>0</WFUSEADVANCEDSEARCH>
+<ATTRIBUTES>
+<ATTRIBUTE ATTR_ID="SAPIT_PRIVILEGE_TECHNICAL_NAME" isLayoutAttr="0">
+<ACCESS_CODE>0</ACCESS_CODE>
+<DEFAULTVALUE>&lt;Enter AD Group Name To Proceed&gt;</DEFAULTVALUE>
+<DISPLAYLIST>0</DISPLAYLIST>
+<DISPLAY_ORDER>1</DISPLAY_ORDER>
+<INVISIBLE>0</INVISIBLE>
+<LISTED>1</LISTED>
+<REQUIRED_ATTR>1</REQUIRED_ATTR>
+<SHOW_PROPERTIES>0</SHOW_PROPERTIES>
+<SUMMARYATTR>0</SUMMARYATTR>
+<TASKID>A9796DF2-C88D-4514-8D10-99E26C554355</TASKID>
+</ATTRIBUTE>
+<ATTRIBUTE ATTR_ID="MX_ENTRYTYPE" isLayoutAttr="0">
+<ACCESS_CODE>0</ACCESS_CODE>
+<DEFAULTVALUE>MX_PRIVILEGE</DEFAULTVALUE>
+<DISPLAYLIST>0</DISPLAYLIST>
+<DISPLAY_ORDER>2</DISPLAY_ORDER>
+<INVISIBLE>0</INVISIBLE>
+<LISTED>0</LISTED>
+<REQUIRED_ATTR>0</REQUIRED_ATTR>
+<SHOW_PROPERTIES>0</SHOW_PROPERTIES>
+<SUMMARYATTR>0</SUMMARYATTR>
+<TASKID>A9796DF2-C88D-4514-8D10-99E26C554355</TASKID>
+</ATTRIBUTE>
+<ATTRIBUTE ATTR_ID="MX_OWNER" isLayoutAttr="0">
+<ACCESS_CODE>0</ACCESS_CODE>
+<DISPLAYLIST>0</DISPLAYLIST>
+<DISPLAY_ORDER>3</DISPLAY_ORDER>
+<INVISIBLE>0</INVISIBLE>
+<LISTED>1</LISTED>
+<REQUIRED_ATTR>0</REQUIRED_ATTR>
+<SHOW_PROPERTIES>0</SHOW_PROPERTIES>
+<SUMMARYATTR>0</SUMMARYATTR>
+<TASKID>A9796DF2-C88D-4514-8D10-99E26C554355</TASKID>
+</ATTRIBUTE>
+<ATTRIBUTE ATTR_ID="SAPIT_AD_ACTIVE" isLayoutAttr="0">
+<ACCESS_CODE>0</ACCESS_CODE>
+<DEFAULTVALUE>1</DEFAULTVALUE>
+<DISPLAYLIST>0</DISPLAYLIST>
+<DISPLAY_ORDER>4</DISPLAY_ORDER>
+<INVISIBLE>0</INVISIBLE>
+<LISTED>0</LISTED>
+<REQUIRED_ATTR>0</REQUIRED_ATTR>
+<SHOW_PROPERTIES>0</SHOW_PROPERTIES>
+<SUMMARYATTR>0</SUMMARYATTR>
+<TASKID>A9796DF2-C88D-4514-8D10-99E26C554355</TASKID>
+</ATTRIBUTE>
+<ATTRIBUTE ATTR_ID="SAPIT_AD_GROUP_TYPE" isLayoutAttr="0">
+<ACCESS_CODE>0</ACCESS_CODE>
+<DEFAULTVALUE>&lt;-2 for Security Group and 8 for Distribution Group&gt;</DEFAULTVALUE>
+<DISPLAYLIST>0</DISPLAYLIST>
+<DISPLAY_ORDER>5</DISPLAY_ORDER>
+<INVISIBLE>0</INVISIBLE>
+<LISTED>1</LISTED>
+<REQUIRED_ATTR>1</REQUIRED_ATTR>
+<SHOW_PROPERTIES>0</SHOW_PROPERTIES>
+<SUMMARYATTR>0</SUMMARYATTR>
+<TASKID>A9796DF2-C88D-4514-8D10-99E26C554355</TASKID>
+</ATTRIBUTE>
+<ATTRIBUTE ATTR_ID="SAPIT_ADGROUP_DESCRIPTION" isLayoutAttr="0">
+<ACCESS_CODE>0</ACCESS_CODE>
+<DEFAULTVALUE>&lt;Enter AD Group Description To Proceed&gt;</DEFAULTVALUE>
+<DISPLAYLIST>0</DISPLAYLIST>
+<DISPLAY_ORDER>6</DISPLAY_ORDER>
+<INVISIBLE>0</INVISIBLE>
+<LISTED>1</LISTED>
+<REQUIRED_ATTR>1</REQUIRED_ATTR>
+<SHOW_PROPERTIES>0</SHOW_PROPERTIES>
+<SUMMARYATTR>0</SUMMARYATTR>
+<TASKID>A9796DF2-C88D-4514-8D10-99E26C554355</TASKID>
+</ATTRIBUTE>
+</ATTRIBUTES>
+<LINKS>
+<LINK>
+<CHILDDELAY>0</CHILDDELAY>
+<CHILDGROUP>1</CHILDGROUP>
+<CHILDORDER>1</CHILDORDER>
+<TASKLNK>B93673CD-D772-49F0-909F-CE947B9E6E16</TASKLNK>
+<TASKREF>A9796DF2-C88D-4514-8D10-99E26C554355</TASKREF>
+</LINK>
+</LINKS>
+<ACCESS_CONTROLS>
+<ACCESS_CONTROL>
+<FILTEREDITSTATUS>0</FILTEREDITSTATUS>
+<MEMBERTYPE>1</MEMBERTYPE>
+<MSKEY>PRIV:IDM:USERADMINISTRATION</MSKEY>
+<TARGETFILTEREDITSTATUS>0</TARGETFILTEREDITSTATUS>
+<TARGETMEMBERTYPE>0</TARGETMEMBERTYPE>
+<TARGETMSKEY>0</TARGETMSKEY>
+<TASKID>A9796DF2-C88D-4514-8D10-99E26C554355</TASKID>
+</ACCESS_CONTROL>
+<ACCESS_CONTROL>
+<FILTEREDITSTATUS>0</FILTEREDITSTATUS>
+<MEMBERTYPE>1</MEMBERTYPE>
+<MSKEY>PRIV:IDM:USERMANAGEMENT</MSKEY>
+<TARGETFILTEREDITSTATUS>0</TARGETFILTEREDITSTATUS>
+<TARGETMEMBERTYPE>0</TARGETMEMBERTYPE>
+<TARGETMSKEY>0</TARGETMSKEY>
+<TASKID>A9796DF2-C88D-4514-8D10-99E26C554355</TASKID>
+</ACCESS_CONTROL>
+</ACCESS_CONTROLS>
+</TASK>
+<TASK MCPACKAGEID="com.sapit.connector.ad.idm" TASKGUID="B93673CD-D772-49F0-909F-CE947B9E6E16" TASKROOT="true">
+<ACTIONSQL>MXPROV_ENTRIES</ACTIONSQL>
+<ACTIONTYPE>-1</ACTIONTYPE>
+<ALLOWMULTIEVENTS>0</ALLOWMULTIEVENTS>
+<BOOLSQLTYPE>-1</BOOLSQLTYPE>
+<ENABLED>1</ENABLED>
+<HARDPROVISION>0</HARDPROVISION>
+<INCLUDEDISABLEDENTRIES>0</INCLUDEDISABLEDENTRIES>
+<MCPRIORITY>50</MCPRIORITY>
+<MCSOURCEGUID>B93673CD-D772-49F0-909F-CE947B9E6E16</MCSOURCEGUID>
+<MCWFUSERPRIORITY>0</MCWFUSERPRIORITY>
+<MXPROTECTED>0</MXPROTECTED>
+<ONFLAGS>0</ONFLAGS>
+<PRIVATE>0</PRIVATE>
+<PROCESSTYPE>0</PROCESSTYPE>
+<QOSTIME>30</QOSTIME>
+<REPORTTASK>0</REPORTTASK>
+<REPOSITORYID>ADS_LAB</REPOSITORYID>
+<RETRIES>1</RETRIES>
+<RETRYDELAY>30</RETRYDELAY>
+<TASKCHANGED>1682328558057</TASKCHANGED>
+<TASKGROUP>4C7F362D-8CF5-4227-B491-F3ACDC406EF8</TASKGROUP>
+<TASKNAME>CreateModifyADGroup</TASKNAME>
+<TASKTYPE>1</TASKTYPE>
+<TASK_FLAGS>0</TASK_FLAGS>
+<UITASKTYPE>0</UITASKTYPE>
+<USECONTEXTVARS>1</USECONTEXTVARS>
+<WAITAFTER>0</WAITAFTER>
+<WAITBEFORE>0</WAITBEFORE>
+<WAITDELAY>30</WAITDELAY>
+<WAITRETRY>0</WAITRETRY>
+<WFDISPLAYORDER>2</WFDISPLAYORDER>
+<WFFLAGS>0</WFFLAGS>
+<WFINWELCOME>0</WFINWELCOME>
+<WFNODENYBUTTON>0</WFNODENYBUTTON>
+<WFSAVEOPTION>2</WFSAVEOPTION>
+<WFUSEADVANCEDSEARCH>0</WFUSEADVANCEDSEARCH>
+<LINKS>
+<LINK>
+<CHILDDELAY>0</CHILDDELAY>
+<CHILDGROUP>1</CHILDGROUP>
+<CHILDLAYOUT>410,0,40,40:255,530,40,40|400,80,40,40:245,430,40,40</CHILDLAYOUT>
+<CHILDORDER>1</CHILDORDER>
+<TASKLNK>E0D9D184-428B-48C0-849D-B0A4D9E4F472</TASKLNK>
+<TASKREF>B93673CD-D772-49F0-909F-CE947B9E6E16</TASKREF>
+</LINK>
+</LINKS>
+</TASK>
+<TASK MCPACKAGEID="com.sapit.connector.ad.idm" TASKGUID="CE77F542-73DD-455D-8D93-95B1894E1524" TASKROOT="true">
+<ACTIONSQL>MXPROV_ENTRIES</ACTIONSQL>
+<ACTIONTYPE>-1</ACTIONTYPE>
+<ALLOWMULTIEVENTS>0</ALLOWMULTIEVENTS>
+<BOOLSQLTYPE>-1</BOOLSQLTYPE>
+<DISPLAYNAME>Delete AD Group</DISPLAYNAME>
+<ENABLED>1</ENABLED>
+<HARDPROVISION>0</HARDPROVISION>
+<INCLUDEDISABLEDENTRIES>0</INCLUDEDISABLEDENTRIES>
+<MCPRIORITY>50</MCPRIORITY>
+<MCSOURCEGUID>CE77F542-73DD-455D-8D93-95B1894E1524</MCSOURCEGUID>
+<MCWFUSERPRIORITY>0</MCWFUSERPRIORITY>
+<MXPROTECTED>0</MXPROTECTED>
+<OBJECTCLASS>MX_PRIVILEGE</OBJECTCLASS>
+<ONFLAGS>0</ONFLAGS>
+<PRIVATE>0</PRIVATE>
+<PROCESSTYPE>0</PROCESSTYPE>
+<QOSTIME>30</QOSTIME>
+<REPORTTASK>0</REPORTTASK>
+<RETRIES>0</RETRIES>
+<RETRYDELAY>0</RETRYDELAY>
+<SEMAPHORESKIPIFCLEAR>0</SEMAPHORESKIPIFCLEAR>
+<TASKCHANGED>1679910911107</TASKCHANGED>
+<TASKGROUP>6DAFE9B2-C50D-4D2F-98F7-C40DBA00ACCE</TASKGROUP>
+<TASKNAME>deleteADGroup</TASKNAME>
+<TASKTYPE>1</TASKTYPE>
+<TASK_FLAGS>0</TASK_FLAGS>
+<UITASKTYPE>1</UITASKTYPE>
+<USECONTEXTVARS>0</USECONTEXTVARS>
+<WAITAFTER>0</WAITAFTER>
+<WAITBEFORE>0</WAITBEFORE>
+<WAITDELAY>30</WAITDELAY>
+<WAITRETRY>0</WAITRETRY>
+<WFCONFIRMMESSAGE>AD Group Deleted Successfully !</WFCONFIRMMESSAGE>
+<WFDISPLAYORDER>1</WFDISPLAYORDER>
+<WFFLAGS>0</WFFLAGS>
+<WFHEADER>Delete AD Group</WFHEADER>
+<WFINWELCOME>0</WFINWELCOME>
+<WFNODENYBUTTON>0</WFNODENYBUTTON>
+<WFSAVECAPTION> Delete </WFSAVECAPTION>
+<WFSAVEOPTION>1</WFSAVEOPTION>
+<WFTRAILER>Delete AD Group</WFTRAILER>
+<WFUSEADVANCEDSEARCH>0</WFUSEADVANCEDSEARCH>
+<ATTRIBUTES>
+<ATTRIBUTE ATTR_ID="DISPLAYNAME" isLayoutAttr="0">
+<ACCESS_CODE>1</ACCESS_CODE>
+<DISPLAYLIST>0</DISPLAYLIST>
+<DISPLAY_ORDER>1</DISPLAY_ORDER>
+<INVISIBLE>0</INVISIBLE>
+<LISTED>1</LISTED>
+<REQUIRED_ATTR>1</REQUIRED_ATTR>
+<SHOW_PROPERTIES>0</SHOW_PROPERTIES>
+<SUMMARYATTR>0</SUMMARYATTR>
+<TASKID>CE77F542-73DD-455D-8D93-95B1894E1524</TASKID>
+</ATTRIBUTE>
+<ATTRIBUTE ATTR_ID="MSKEYVALUE" isLayoutAttr="0">
+<ACCESS_CODE>1</ACCESS_CODE>
+<DISPLAYLIST>0</DISPLAYLIST>
+<DISPLAY_ORDER>2</DISPLAY_ORDER>
+<INVISIBLE>0</INVISIBLE>
+<LISTED>1</LISTED>
+<REQUIRED_ATTR>0</REQUIRED_ATTR>
+<SHOW_PROPERTIES>0</SHOW_PROPERTIES>
+<SUMMARYATTR>0</SUMMARYATTR>
+<TASKID>CE77F542-73DD-455D-8D93-95B1894E1524</TASKID>
+</ATTRIBUTE>
+<ATTRIBUTE ATTR_ID="SAPIT_PRIVILEGE_TECHNICAL_NAME" isLayoutAttr="0">
+<ACCESS_CODE>1</ACCESS_CODE>
+<DISPLAYLIST>0</DISPLAYLIST>
+<DISPLAY_ORDER>3</DISPLAY_ORDER>
+<INVISIBLE>0</INVISIBLE>
+<LISTED>1</LISTED>
+<REQUIRED_ATTR>1</REQUIRED_ATTR>
+<SHOW_PROPERTIES>0</SHOW_PROPERTIES>
+<SUMMARYATTR>0</SUMMARYATTR>
+<TASKID>CE77F542-73DD-455D-8D93-95B1894E1524</TASKID>
+</ATTRIBUTE>
+<ATTRIBUTE ATTR_ID="SAPIT_AD_ACTIVE" isLayoutAttr="0">
+<ACCESS_CODE>0</ACCESS_CODE>
+<DEFAULTVALUE>0</DEFAULTVALUE>
+<DISPLAYLIST>0</DISPLAYLIST>
+<DISPLAY_ORDER>4</DISPLAY_ORDER>
+<INVISIBLE>0</INVISIBLE>
+<LISTED>0</LISTED>
+<REQUIRED_ATTR>0</REQUIRED_ATTR>
+<SHOW_PROPERTIES>0</SHOW_PROPERTIES>
+<SUMMARYATTR>0</SUMMARYATTR>
+<TASKID>CE77F542-73DD-455D-8D93-95B1894E1524</TASKID>
+</ATTRIBUTE>
+</ATTRIBUTES>
+<LINKS>
+<LINK>
+<CHILDDELAY>0</CHILDDELAY>
+<CHILDGROUP>1</CHILDGROUP>
+<CHILDORDER>1</CHILDORDER>
+<TASKLNK>F9EA76A5-EFC4-42E2-94C8-FC5B29C5508E</TASKLNK>
+<TASKREF>CE77F542-73DD-455D-8D93-95B1894E1524</TASKREF>
+</LINK>
+</LINKS>
+<ACCESS_CONTROLS>
+<ACCESS_CONTROL>
+<FILTEREDITSTATUS>0</FILTEREDITSTATUS>
+<MEMBERTYPE>1</MEMBERTYPE>
+<MSKEY>PRIV:IDM:USERADMINISTRATION</MSKEY>
+<TARGETFILTEREDITSTATUS>0</TARGETFILTEREDITSTATUS>
+<TARGETMEMBERTYPE>0</TARGETMEMBERTYPE>
+<TARGETMSKEY>0</TARGETMSKEY>
+<TASKID>CE77F542-73DD-455D-8D93-95B1894E1524</TASKID>
+</ACCESS_CONTROL>
+<ACCESS_CONTROL>
+<FILTEREDITSTATUS>0</FILTEREDITSTATUS>
+<MEMBERTYPE>1</MEMBERTYPE>
+<MSKEY>PRIV:IDM:USERMANAGEMENT</MSKEY>
+<TARGETFILTEREDITSTATUS>0</TARGETFILTEREDITSTATUS>
+<TARGETMEMBERTYPE>0</TARGETMEMBERTYPE>
+<TARGETMSKEY>0</TARGETMSKEY>
+<TASKID>CE77F542-73DD-455D-8D93-95B1894E1524</TASKID>
+</ACCESS_CONTROL>
+</ACCESS_CONTROLS>
+</TASK>
+<TASK MCPACKAGEID="com.sapit.connector.ad.idm" TASKGUID="D73FFF95-52D8-41F3-8949-A24346A78FFD">
+<ACTIONSQL>MXPROV_ENTRIES</ACTIONSQL>
+<ACTIONTYPE>-3</ACTIONTYPE>
+<ALLOWMULTIEVENTS>0</ALLOWMULTIEVENTS>
+<BOOLSQL IS_SELF_REFERRING="0">select count(a.cn) as count
+from 
+mxmc_db.dbo.idmv_entry_simple m with (nolock),
+mxmc_db.dbo.idmv_value_ext_active m1 with (nolock),
+mxmc_db.dbo.idmv_value_ext_active m2 with (nolock) ,
+mxmc_db.dbo.idmv_value_ext_active m3 with (nolock) left join mxmc_db.mxmc_rt_u.sapit_ad_group_all_%$pck.REPO_NAME% as a with (nolock)
+on 
+m3.SearchValue=a.cn
+where m.mcMSKEY=m1.MSKEY and  m2.MSKEY=m1.MSKEY and m3.MSKEY=m2.MSKEY and 
+ m.mcEntryType='MX_PRIVILEGE'   and 
+ m3.AttrName='SAPIT_PRIVILEGE_TECHNICAL_NAME'
+   and
+ m2.AttrName='SAPIT_AD_GROUP_TYPE' and m2.SearchValue in('8','-2147483640') 
+ and m1.AttrName='SAPIT_AD_ACTIVE' and m1.SearchValue='0' 
+ and m3.MSKEY=%MSKEY%</BOOLSQL>
+<BOOLSQLTYPE>1</BOOLSQLTYPE>
+<ENABLED>1</ENABLED>
+<HARDPROVISION>0</HARDPROVISION>
+<INCLUDEDISABLEDENTRIES>0</INCLUDEDISABLEDENTRIES>
+<MCPRIORITY>50</MCPRIORITY>
+<MCSOURCEGUID>D73FFF95-52D8-41F3-8949-A24346A78FFD</MCSOURCEGUID>
+<MCWFUSERPRIORITY>0</MCWFUSERPRIORITY>
+<MXPROTECTED>0</MXPROTECTED>
+<ONFLAGS>0</ONFLAGS>
+<PRIVATE>1</PRIVATE>
+<PROCESSTYPE>0</PROCESSTYPE>
+<QOSTIME>30</QOSTIME>
+<REPORTTASK>0</REPORTTASK>
+<RETRIES>1</RETRIES>
+<RETRYDELAY>30</RETRYDELAY>
+<TASKCHANGED>1682328934127</TASKCHANGED>
+<TASKNAME>Conditional Task(1)(1)</TASKNAME>
+<TASKTYPE>1</TASKTYPE>
+<TASK_FLAGS>0</TASK_FLAGS>
+<UITASKTYPE>0</UITASKTYPE>
+<USECONTEXTVARS>0</USECONTEXTVARS>
+<WAITAFTER>0</WAITAFTER>
+<WAITBEFORE>0</WAITBEFORE>
+<WAITDELAY>30</WAITDELAY>
+<WAITRETRY>0</WAITRETRY>
+<WFDISPLAYORDER>1</WFDISPLAYORDER>
+<WFFLAGS>0</WFFLAGS>
+<WFINWELCOME>0</WFINWELCOME>
+<WFNODENYBUTTON>0</WFNODENYBUTTON>
+<WFSAVEOPTION>2</WFSAVEOPTION>
+<WFUSEADVANCEDSEARCH>0</WFUSEADVANCEDSEARCH>
+<TASK_PARAMETERS>
+<TASK_PARAMETER>
+<MCKEY>MX_FILTER</MCKEY>
+<MCTASKID>D73FFF95-52D8-41F3-8949-A24346A78FFD</MCTASKID>
+<MCTYPE>0</MCTYPE>
+</TASK_PARAMETER>
+<TASK_PARAMETER>
+<MCKEY>MX_FILTER_EDITSTATUS</MCKEY>
+<MCTASKID>D73FFF95-52D8-41F3-8949-A24346A78FFD</MCTASKID>
+<MCTYPE>0</MCTYPE>
+<MCVALUE>16</MCVALUE>
+</TASK_PARAMETER>
+</TASK_PARAMETERS>
+<LINKS>
+<LINK>
+<CHILDDELAY>0</CHILDDELAY>
+<CHILDGROUP>1</CHILDGROUP>
+<CHILDLAYOUT>400,80,40,60:245,550,40,60|405,180,100,60:</CHILDLAYOUT>
+<CHILDORDER>1</CHILDORDER>
+<TASKLNK>182881F9-D736-4309-8F13-8D1B34588C4E</TASKLNK>
+<TASKREF>D73FFF95-52D8-41F3-8949-A24346A78FFD</TASKREF>
+</LINK>
+<LINK>
+<CHILDDELAY>0</CHILDDELAY>
+<CHILDGROUP>1</CHILDGROUP>
+<CHILDLAYOUT>400,80,40,60:245,550,40,60|405,300,100,60:</CHILDLAYOUT>
+<CHILDORDER>2</CHILDORDER>
+<TASKLNK>4F0E3E5C-9297-4EE7-A90C-E09A9BBD4E1E</TASKLNK>
+<TASKREF>D73FFF95-52D8-41F3-8949-A24346A78FFD</TASKREF>
+</LINK>
+</LINKS>
+</TASK>
+<TASK MCPACKAGEID="com.sapit.connector.ad.idm" TASKGUID="E0D9D184-428B-48C0-849D-B0A4D9E4F472">
+<ACTIONSQL>MXPROV_ENTRIES</ACTIONSQL>
+<ACTIONTYPE>-3</ACTIONTYPE>
+<ALLOWMULTIEVENTS>0</ALLOWMULTIEVENTS>
+<BOOLSQL IS_SELF_REFERRING="0">select count(a.cn) as count
+from 
+mxmc_db.dbo.idmv_entry_simple m with (nolock),
+mxmc_db.dbo.idmv_value_ext_active m1 with (nolock),
+mxmc_db.dbo.idmv_value_ext_active m2 with (nolock) ,
+mxmc_db.dbo.idmv_value_ext_active m3 with (nolock) left join mxmc_db.mxmc_rt_u.sapit_ad_group_all_%$pck.REPO_NAME% as a with (nolock)
+on 
+m3.SearchValue=a.cn
+where m.mcMSKEY=m1.MSKEY and  m2.MSKEY=m1.MSKEY and m3.MSKEY=m2.MSKEY and 
+ m.mcEntryType='MX_PRIVILEGE'   and 
+ m3.AttrName='SAPIT_PRIVILEGE_TECHNICAL_NAME'
+   and
+ m2.AttrName='SAPIT_AD_GROUP_TYPE' and m2.SearchValue in('8','-2147483640') 
+ and m1.AttrName='SAPIT_AD_ACTIVE' and m1.SearchValue='1' 
+ and m3.MSKEY=%MSKEY%</BOOLSQL>
+<BOOLSQLTYPE>1</BOOLSQLTYPE>
+<ENABLED>1</ENABLED>
+<HARDPROVISION>0</HARDPROVISION>
+<INCLUDEDISABLEDENTRIES>0</INCLUDEDISABLEDENTRIES>
+<MCPRIORITY>50</MCPRIORITY>
+<MCSOURCEGUID>E0D9D184-428B-48C0-849D-B0A4D9E4F472</MCSOURCEGUID>
+<MCWFUSERPRIORITY>0</MCWFUSERPRIORITY>
+<MXPROTECTED>0</MXPROTECTED>
+<ONFLAGS>0</ONFLAGS>
+<PRIVATE>1</PRIVATE>
+<PROCESSTYPE>0</PROCESSTYPE>
+<QOSTIME>30</QOSTIME>
+<REPORTTASK>0</REPORTTASK>
+<RETRIES>1</RETRIES>
+<RETRYDELAY>30</RETRYDELAY>
+<TASKCHANGED>1688744726237</TASKCHANGED>
+<TASKNAME>Conditional Task(1)</TASKNAME>
+<TASKTYPE>1</TASKTYPE>
+<TASK_FLAGS>0</TASK_FLAGS>
+<UITASKTYPE>0</UITASKTYPE>
+<USECONTEXTVARS>0</USECONTEXTVARS>
+<WAITAFTER>0</WAITAFTER>
+<WAITBEFORE>0</WAITBEFORE>
+<WAITDELAY>30</WAITDELAY>
+<WAITRETRY>0</WAITRETRY>
+<WFDISPLAYORDER>1</WFDISPLAYORDER>
+<WFFLAGS>0</WFFLAGS>
+<WFINWELCOME>0</WFINWELCOME>
+<WFNODENYBUTTON>0</WFNODENYBUTTON>
+<WFSAVEOPTION>2</WFSAVEOPTION>
+<WFUSEADVANCEDSEARCH>0</WFUSEADVANCEDSEARCH>
+<TASK_PARAMETERS>
+<TASK_PARAMETER>
+<MCKEY>MX_FILTER</MCKEY>
+<MCTASKID>E0D9D184-428B-48C0-849D-B0A4D9E4F472</MCTASKID>
+<MCTYPE>0</MCTYPE>
+</TASK_PARAMETER>
+<TASK_PARAMETER>
+<MCKEY>MX_FILTER_EDITSTATUS</MCKEY>
+<MCTASKID>E0D9D184-428B-48C0-849D-B0A4D9E4F472</MCTASKID>
+<MCTYPE>0</MCTYPE>
+<MCVALUE>16</MCVALUE>
+</TASK_PARAMETER>
+</TASK_PARAMETERS>
+<LINKS>
+<LINK>
+<CHILDDELAY>0</CHILDDELAY>
+<CHILDGROUP>0</CHILDGROUP>
+<CHILDLAYOUT>400,80,40,40:245,430,40,40|205,180,100,60:</CHILDLAYOUT>
+<CHILDORDER>1</CHILDORDER>
+<TASKLNK>F9B84A07-6E94-43D9-83DF-1119ED6557A7</TASKLNK>
+<TASKREF>E0D9D184-428B-48C0-849D-B0A4D9E4F472</TASKREF>
+</LINK>
+<LINK>
+<CHILDDELAY>0</CHILDDELAY>
+<CHILDGROUP>1</CHILDGROUP>
+<CHILDLAYOUT>400,80,40,40:245,430,40,40|405,180,100,60:</CHILDLAYOUT>
+<CHILDORDER>1</CHILDORDER>
+<TASKLNK>F58D6C77-467F-45FD-BE53-99D3E0E8AB26</TASKLNK>
+<TASKREF>E0D9D184-428B-48C0-849D-B0A4D9E4F472</TASKREF>
+</LINK>
+<LINK>
+<CHILDDELAY>0</CHILDDELAY>
+<CHILDGROUP>1</CHILDGROUP>
+<CHILDLAYOUT>400,80,40,40:245,430,40,40|405,300,100,60:</CHILDLAYOUT>
+<CHILDORDER>2</CHILDORDER>
+<TASKLNK>A4548709-FB56-4132-9B53-4A23D7E773C3</TASKLNK>
+<TASKREF>E0D9D184-428B-48C0-849D-B0A4D9E4F472</TASKREF>
+</LINK>
+<LINK>
+<CHILDDELAY>0</CHILDDELAY>
+<CHILDGROUP>0</CHILDGROUP>
+<CHILDLAYOUT>400,80,40,40:245,430,40,40|205,300,100,60:</CHILDLAYOUT>
+<CHILDORDER>2</CHILDORDER>
+<TASKLNK>5DC2A1DB-EC16-480C-BBD0-0A41653A4406</TASKLNK>
+<TASKREF>E0D9D184-428B-48C0-849D-B0A4D9E4F472</TASKREF>
+</LINK>
+</LINKS>
+</TASK>
+<TASK MCPACKAGEID="com.sapit.connector.ad.idm" TASKGUID="F58D6C77-467F-45FD-BE53-99D3E0E8AB26">
+<ACTIONSQL>MXPROV_ENTRIES</ACTIONSQL>
+<ACTIONTYPE>0</ACTIONTYPE>
+<ALLOWMULTIEVENTS>0</ALLOWMULTIEVENTS>
+<BOOLSQLTYPE>-1</BOOLSQLTYPE>
+<ENABLED>1</ENABLED>
+<HARDPROVISION>0</HARDPROVISION>
+<INCLUDEDISABLEDENTRIES>0</INCLUDEDISABLEDENTRIES>
+<JOBGUID>4AAE07C9-0D43-4CD9-9F43-40622E06E426</JOBGUID>
+<MCPRIORITY>50</MCPRIORITY>
+<MCSOURCEGUID>F58D6C77-467F-45FD-BE53-99D3E0E8AB26</MCSOURCEGUID>
+<MCWFUSERPRIORITY>0</MCWFUSERPRIORITY>
+<MXPROTECTED>0</MXPROTECTED>
+<ONFLAGS>0</ONFLAGS>
+<PRIVATE>1</PRIVATE>
+<PROCESSTYPE>0</PROCESSTYPE>
+<QOSTIME>30</QOSTIME>
+<REPORTTASK>0</REPORTTASK>
+<RETRIES>1</RETRIES>
+<RETRYDELAY>30</RETRYDELAY>
+<TASKCHANGED>1678963820277</TASKCHANGED>
+<TASKNAME>WriteBacktoIDM</TASKNAME>
+<TASKTYPE>0</TASKTYPE>
+<TASK_FLAGS>0</TASK_FLAGS>
+<UITASKTYPE>0</UITASKTYPE>
+<USECONTEXTVARS>0</USECONTEXTVARS>
+<WAITAFTER>0</WAITAFTER>
+<WAITBEFORE>0</WAITBEFORE>
+<WAITDELAY>30</WAITDELAY>
+<WAITRETRY>0</WAITRETRY>
+<WFDISPLAYORDER>1</WFDISPLAYORDER>
+<WFFLAGS>0</WFFLAGS>
+<WFINWELCOME>0</WFINWELCOME>
+<WFNODENYBUTTON>0</WFNODENYBUTTON>
+<WFSAVEOPTION>2</WFSAVEOPTION>
+<WFUSEADVANCEDSEARCH>0</WFUSEADVANCEDSEARCH>
+</TASK>
+<TASK MCPACKAGEID="com.sapit.connector.ad.idm" TASKGUID="F9B84A07-6E94-43D9-83DF-1119ED6557A7">
+<ACTIONSQL>MXPROV_ENTRIES</ACTIONSQL>
+<ACTIONTYPE>0</ACTIONTYPE>
+<ALLOWMULTIEVENTS>0</ALLOWMULTIEVENTS>
+<BOOLSQLTYPE>-1</BOOLSQLTYPE>
+<ENABLED>1</ENABLED>
+<HARDPROVISION>0</HARDPROVISION>
+<INCLUDEDISABLEDENTRIES>0</INCLUDEDISABLEDENTRIES>
+<JOBGUID>ED54AEB4-E026-46E2-B89B-92427AA9F5EF</JOBGUID>
+<MCPRIORITY>50</MCPRIORITY>
+<MCSOURCEGUID>F9B84A07-6E94-43D9-83DF-1119ED6557A7</MCSOURCEGUID>
+<MCWFUSERPRIORITY>0</MCWFUSERPRIORITY>
+<MXPROTECTED>0</MXPROTECTED>
+<ONFLAGS>0</ONFLAGS>
+<PRIVATE>1</PRIVATE>
+<PROCESSTYPE>0</PROCESSTYPE>
+<QOSTIME>30</QOSTIME>
+<REPORTTASK>0</REPORTTASK>
+<RETRIES>1</RETRIES>
+<RETRYDELAY>30</RETRYDELAY>
+<TASKCHANGED>1683180202240</TASKCHANGED>
+<TASKNAME>set Privileges in IDM</TASKNAME>
+<TASKTYPE>0</TASKTYPE>
+<TASK_FLAGS>0</TASK_FLAGS>
+<UITASKTYPE>0</UITASKTYPE>
+<USECONTEXTVARS>0</USECONTEXTVARS>
+<WAITAFTER>0</WAITAFTER>
+<WAITBEFORE>0</WAITBEFORE>
+<WAITDELAY>30</WAITDELAY>
+<WAITRETRY>0</WAITRETRY>
+<WFDISPLAYORDER>1</WFDISPLAYORDER>
+<WFFLAGS>0</WFFLAGS>
+<WFINWELCOME>0</WFINWELCOME>
+<WFNODENYBUTTON>0</WFNODENYBUTTON>
+<WFSAVEOPTION>2</WFSAVEOPTION>
+<WFUSEADVANCEDSEARCH>0</WFUSEADVANCEDSEARCH>
+</TASK>
+<TASK MCPACKAGEID="com.sapit.connector.ad.idm" TASKGUID="F9EA76A5-EFC4-42E2-94C8-FC5B29C5508E" TASKROOT="true">
+<ACTIONSQL>MXPROV_ENTRIES</ACTIONSQL>
+<ACTIONTYPE>-1</ACTIONTYPE>
+<ALLOWMULTIEVENTS>0</ALLOWMULTIEVENTS>
+<BOOLSQLTYPE>-1</BOOLSQLTYPE>
+<ENABLED>1</ENABLED>
+<HARDPROVISION>0</HARDPROVISION>
+<INCLUDEDISABLEDENTRIES>0</INCLUDEDISABLEDENTRIES>
+<MCPRIORITY>50</MCPRIORITY>
+<MCSOURCEGUID>F9EA76A5-EFC4-42E2-94C8-FC5B29C5508E</MCSOURCEGUID>
+<MCWFUSERPRIORITY>0</MCWFUSERPRIORITY>
+<MXPROTECTED>0</MXPROTECTED>
+<ONFLAGS>0</ONFLAGS>
+<PRIVATE>0</PRIVATE>
+<PROCESSTYPE>0</PROCESSTYPE>
+<QOSTIME>30</QOSTIME>
+<REPORTTASK>0</REPORTTASK>
+<REPOSITORYID>ADS_LAB</REPOSITORYID>
+<RETRIES>1</RETRIES>
+<RETRYDELAY>30</RETRYDELAY>
+<TASKCHANGED>1682331577337</TASKCHANGED>
+<TASKGROUP>4C7F362D-8CF5-4227-B491-F3ACDC406EF8</TASKGROUP>
+<TASKNAME>DeleteADgroup(softDelete)</TASKNAME>
+<TASKTYPE>1</TASKTYPE>
+<TASK_FLAGS>0</TASK_FLAGS>
+<UITASKTYPE>0</UITASKTYPE>
+<USECONTEXTVARS>1</USECONTEXTVARS>
+<WAITAFTER>0</WAITAFTER>
+<WAITBEFORE>0</WAITBEFORE>
+<WAITDELAY>30</WAITDELAY>
+<WAITRETRY>0</WAITRETRY>
+<WFDISPLAYORDER>3</WFDISPLAYORDER>
+<WFFLAGS>0</WFFLAGS>
+<WFINWELCOME>0</WFINWELCOME>
+<WFNODENYBUTTON>0</WFNODENYBUTTON>
+<WFSAVEOPTION>2</WFSAVEOPTION>
+<WFUSEADVANCEDSEARCH>0</WFUSEADVANCEDSEARCH>
+<LINKS>
+<LINK>
+<CHILDDELAY>0</CHILDDELAY>
+<CHILDGROUP>1</CHILDGROUP>
+<CHILDLAYOUT>410,0,20,20:255,650,20,20|400,80,40,60:245,550,40,60</CHILDLAYOUT>
+<CHILDORDER>1</CHILDORDER>
+<TASKLNK>D73FFF95-52D8-41F3-8949-A24346A78FFD</TASKLNK>
+<TASKREF>F9EA76A5-EFC4-42E2-94C8-FC5B29C5508E</TASKREF>
+</LINK>
+</LINKS>
+</TASK>
+</TASKS>
+<FOLDERS>
+<FOLDER GROUPGUID="1650493F-7A7A-4BDA-BAA7-D1D71ED71CD8">
+<ACTIVATEDATE>1669185403637</ACTIVATEDATE>
+<GROUP_NAME>Jobs</GROUP_NAME>
+<GROUP_STATUS>1</GROUP_STATUS>
+<MCPACKAGEID>com.sapit.connector.ad.idm</MCPACKAGEID>
+<MCSOURCEGUID>483F09CE-104F-42F5-94D8-C681EEE7807E</MCSOURCEGUID>
+<PROVISION_GROUP>0</PROVISION_GROUP>
+<WFAUTOEXPAND>0</WFAUTOEXPAND>
+<WFDISPLAYORDER>50</WFDISPLAYORDER>
+<WFSHOWGROUP>0</WFSHOWGROUP>
+</FOLDER>
+<FOLDER GROUPGUID="1F96DAC4-4F9C-4516-A593-9F301F8CF17C">
+<ACTIVATEDATE>1669185403637</ACTIVATEDATE>
+<DISPLAYNAME>Manage AD Groups</DISPLAYNAME>
+<GROUP_NAME>Forms</GROUP_NAME>
+<GROUP_STATUS>1</GROUP_STATUS>
+<MCPACKAGEID>com.sapit.connector.ad.idm</MCPACKAGEID>
+<MCSOURCEGUID>613A0EFF-E745-41FB-A730-200D3E37DA76</MCSOURCEGUID>
+<PROVISION_GROUP>5</PROVISION_GROUP>
+<WFAUTOEXPAND>0</WFAUTOEXPAND>
+<WFDISPLAYORDER>50</WFDISPLAYORDER>
+<WFSHOWGROUP>0</WFSHOWGROUP>
+</FOLDER>
+<FOLDER GROUPGUID="4C7F362D-8CF5-4227-B491-F3ACDC406EF8">
+<ACTIVATEDATE>1669185403637</ACTIVATEDATE>
+<GROUP_NAME>Processes</GROUP_NAME>
+<GROUP_STATUS>1</GROUP_STATUS>
+<MCPACKAGEID>com.sapit.connector.ad.idm</MCPACKAGEID>
+<MCSOURCEGUID>5D1E4051-D468-4279-A0F0-2DC8EC05F736</MCSOURCEGUID>
+<PROVISION_GROUP>1</PROVISION_GROUP>
+<WFAUTOEXPAND>0</WFAUTOEXPAND>
+<WFDISPLAYORDER>50</WFDISPLAYORDER>
+<WFSHOWGROUP>0</WFSHOWGROUP>
+</FOLDER>
+<FOLDER GROUPGUID="6DAFE9B2-C50D-4D2F-98F7-C40DBA00ACCE">
+<ACTIVATEDATE>1676995563140</ACTIVATEDATE>
+<DISPLAYNAME>Manage AD Group</DISPLAYNAME>
+<GROUP_NAME>ADForms</GROUP_NAME>
+<GROUP_STATUS>1</GROUP_STATUS>
+<MCPACKAGEID>com.sapit.connector.ad.idm</MCPACKAGEID>
+<MCSOURCEGUID>6DAFE9B2-C50D-4D2F-98F7-C40DBA00ACCE</MCSOURCEGUID>
+<PARENT_GROUP>1F96DAC4-4F9C-4516-A593-9F301F8CF17C</PARENT_GROUP>
+<PROVISION_GROUP>5</PROVISION_GROUP>
+<WFAUTOEXPAND>0</WFAUTOEXPAND>
+<WFDISPLAYORDER>50</WFDISPLAYORDER>
+<WFSHOWGROUP>1</WFSHOWGROUP>
+</FOLDER>
+</FOLDERS>
+</PACKAGE>
+</PACKAGES>
+<ENTRIES>
+<ENTRY>
+<MCDISPLAYNAME>PRIV:IDM:USERADMINISTRATION</MCDISPLAYNAME>
+<MCENTRYTYPE>MX_PRIVILEGE</MCENTRYTYPE>
+<MCMSKEYVALUE>PRIV:IDM:USERADMINISTRATION</MCMSKEYVALUE>
+</ENTRY>
+<ENTRY>
+<MCDISPLAYNAME>PRIV:IDM:USERMANAGEMENT</MCDISPLAYNAME>
+<MCENTRYTYPE>MX_PRIVILEGE</MCENTRYTYPE>
+<MCMSKEYVALUE>PRIV:IDM:USERMANAGEMENT</MCMSKEYVALUE>
+</ENTRY>
+</ENTRIES>
+<DISPATCHERS>
+<DISPATCHER MACHINE="TEST_KT">
+<JOBID>4F0935CC-6AAD-4565-B3BA-AA2B959FB51B</JOBID>
+<JOBID>ED54AEB4-E026-46E2-B89B-92427AA9F5EF</JOBID>
+<JOBID>EB92C79D-BB53-4768-AB60-E59D5969462F</JOBID>
+<JOBID>906059DB-7841-446C-BE0F-83FEDEDD3101</JOBID>
+<JOBID>4FB6832E-E514-4006-BF2A-8B755B9BE6EE</JOBID>
+</DISPATCHER>
+<DISPATCHER MACHINE="TEST_PREETI">
+<JOBID>ED54AEB4-E026-46E2-B89B-92427AA9F5EF</JOBID>
+</DISPATCHER>
+<DISPATCHER MACHINE="rts1_privilege_upload_dispatcher">
+<JOBID>AD476CD9-A2E0-4A45-912B-582A9E7C4196</JOBID>
+</DISPATCHER>
+<DISPATCHER MACHINE="rts2_privilege_upload_dispatcher">
+<JOBID>AD476CD9-A2E0-4A45-912B-582A9E7C4196</JOBID>
+</DISPATCHER>
+</DISPATCHERS>
+<PACKAGE_HISTORY>
+<MCDESCRIPTION>test</MCDESCRIPTION>
+<MCMODIFIEDBYUSERNAME>C5355547</MCMODIFIEDBYUSERNAME>
+<MCMODIFIEDDATE>1697013799000</MCMODIFIEDDATE>
+<MCPACKAGEID>com.sapit.connector.ad.idm</MCPACKAGEID>
+</PACKAGE_HISTORY>
+</IDM>
