@@ -1,0 +1,511 @@
+<IDM EXPORTED_ON="2023-10-11 10:30:26.3366667" IS_PACKAGE_FOLDER_EXPORT="0" PACKAGE_TRANSPORT_VERSION="8#0#8#2020#0#1#800SP8#1814#1814#1807" SCHEMA_VERSION="1814">
+<PACKAGES>
+<PACKAGE MCQUALIFIEDNAME="com.sapit.connector.ad.idm">
+<MCCOPIEDFROM>com.sapit.connector.newglobalad.pe3</MCCOPIEDFROM>
+<MCCOPIEDFROMMAJORVERSION>0</MCCOPIEDFROMMAJORVERSION>
+<MCCOPIEDFROMMINORVERSION>2</MCCOPIEDFROMMINORVERSION>
+<MCDISPLAYNAME>com.sapit.connector.ad.idm</MCDISPLAYNAME>
+<MCLASTMODIFIED>1670243483973</MCLASTMODIFIED>
+<MCMAJORVERSION>0</MCMAJORVERSION>
+<MCMINORVERSION>0</MCMINORVERSION>
+<MCPACKAGELEVEL>1814</MCPACKAGELEVEL>
+<MCPACKAGETYPE>0</MCPACKAGETYPE>
+<MCQUALIFIEDNAME>com.sapit.connector.ad.idm</MCQUALIFIEDNAME>
+<PACKAGE_VARS>
+<VARIABLE>
+<MCPACKAGEID>com.sapit.connector.ad.idm</MCPACKAGEID>
+<VARBEHAVIOR>0</VARBEHAVIOR>
+<VARCATEGORY>-1</VARCATEGORY>
+<VARDESCRIPTION>Identity Store ID</VARDESCRIPTION>
+<VARNAME>SAP_MASTER_IDS_ID</VARNAME>
+<VARTYPE>0</VARTYPE>
+<VARVALUE>1</VARVALUE>
+</VARIABLE>
+</PACKAGE_VARS>
+<PACKAGE_SCRIPTS>
+<SCRIPT>
+<MCENABLED>1</MCENABLED>
+<MCPACKAGEID>com.sapit.connector.ad.idm</MCPACKAGEID>
+<MCPROTECTED>0</MCPROTECTED>
+<MCSCRIPTDEFINITION>// Main function:cutTimeFromDate1
+
+function cutTimeFromDate1(Par) {
+    // 2016-12-31T23:59:59
+    var dateTime = Par;
+    // 2016-12-31
+    var date = dateTime.substring(0, 10);
+
+    return date;
+}</MCSCRIPTDEFINITION>
+<MCSCRIPTLANGUAGE>JScript</MCSCRIPTLANGUAGE>
+<MCSCRIPTLASTCHANGE>1675936930747</MCSCRIPTLASTCHANGE>
+<MCSCRIPTNAME>cutTimeFromDate1</MCSCRIPTNAME>
+<MCSCRIPTSTATUS>0</MCSCRIPTSTATUS>
+</SCRIPT>
+<SCRIPT>
+<MCENABLED>1</MCENABLED>
+<MCPACKAGEID>com.sapit.connector.ad.idm</MCPACKAGEID>
+<MCPROTECTED>0</MCPROTECTED>
+<MCSCRIPTDEFINITION>// Main function:retrieveCN_fromDN
+
+function retrieveCN_fromDN(Par) {
+    var idstore = "%$pck.SAP_MASTER_IDS_ID%";
+    var sapit_sapnumber = Par;
+
+
+
+    var mskeyFinal = uSelect("select searchvalue from idmv_value_ext_active where attrname = 'MSKEYVALUE' and mskey in(select top 1 MSKEY from idmv_value_ext_active with (NOLOCK) where  IS_ID =" + idstore + " and AttrName ='SAPIT_SAPNUMBER' and SearchValue = '" + sapit_sapnumber + "' order by Modifytime desc) and IS_ID =" + idstore + ";");
+    if (mskeyFinal.indexOf("!ERROR") &gt;= 0) {
+        mskeyFinal = "";
+    }
+
+    return mskeyFinal;
+
+}</MCSCRIPTDEFINITION>
+<MCSCRIPTLANGUAGE>JScript</MCSCRIPTLANGUAGE>
+<MCSCRIPTLASTCHANGE>1669300377363</MCSCRIPTLASTCHANGE>
+<MCSCRIPTNAME>retrieveCN_fromDN</MCSCRIPTNAME>
+<MCSCRIPTSTATUS>0</MCSCRIPTSTATUS>
+</SCRIPT>
+<SCRIPT>
+<MCENABLED>1</MCENABLED>
+<MCPACKAGEID>com.sapit.connector.ad.idm</MCPACKAGEID>
+<MCPROTECTED>0</MCPROTECTED>
+<MCSCRIPTDEFINITION>// Main function:sapit_getJobVariable
+
+function sapit_getJobVariable(Par) {
+    var parArr = Par.split("!!");
+    var jobVariable = parArr[0];
+    var defaultValue = parArr[1];
+    var value = uGetUserVar(jobVariable, defaultValue);
+    return value;
+}</MCSCRIPTDEFINITION>
+<MCSCRIPTLANGUAGE>JScript</MCSCRIPTLANGUAGE>
+<MCSCRIPTLASTCHANGE>1675937003903</MCSCRIPTLASTCHANGE>
+<MCSCRIPTNAME>sapit_getJobVariable</MCSCRIPTNAME>
+<MCSCRIPTSTATUS>0</MCSCRIPTSTATUS>
+</SCRIPT>
+<SCRIPT>
+<MCENABLED>1</MCENABLED>
+<MCPACKAGEID>com.sapit.connector.ad.idm</MCPACKAGEID>
+<MCPROTECTED>0</MCPROTECTED>
+<MCSCRIPTDEFINITION>// Main function:setJobVariable
+
+function setJobVariable(Par) {
+    var parameterSet = Par.keySet();
+    var I = parameterSet.iterator();
+    var curr;
+    while (I.hasNext()) {
+        curr = I.next();
+        var currValue = Par.get(curr);
+        if (currValue == "delete" || currValue.indexOf("!ERROR") &gt;= 0) {
+            OutString = uSetUserVar(curr, "");
+        } else {
+            OutString = uSetUserVar(curr, currValue);
+        }
+    }
+    return;
+}</MCSCRIPTDEFINITION>
+<MCSCRIPTLANGUAGE>JScript</MCSCRIPTLANGUAGE>
+<MCSCRIPTLASTCHANGE>1675937057827</MCSCRIPTLASTCHANGE>
+<MCSCRIPTNAME>setJobVariable</MCSCRIPTNAME>
+<MCSCRIPTSTATUS>0</MCSCRIPTSTATUS>
+</SCRIPT>
+</PACKAGE_SCRIPTS>
+<JOBS>
+<JOB JOBGUID="AD476CD9-A2E0-4A45-912B-582A9E7C4196" MCPACKAGEID="com.sapit.connector.ad.idm">
+<ACTIVE>1</ACTIVE>
+<AUTOCREATED>0</AUTOCREATED>
+<BOOTSTRAPJOB>0</BOOTSTRAPJOB>
+<CHANGED_BY>mxmc_admin</CHANGED_BY>
+<CHANGED_DATE>1695736697690</CHANGED_DATE>
+<ENGINE_TYPE>2</ENGINE_TYPE>
+<GROUP_ID>1650493F-7A7A-4BDA-BAA7-D1D71ED71CD8</GROUP_ID>
+<JOBDEFINITION>
+<mx:EMS xmlns:mx="http://www.maxware.com/EMS">
+<mx:GUID>01115DD6-6719-451E-8C6D-20529C4D1056</mx:GUID>
+<mx:VERSION>1.0</mx:VERSION>
+<mx:DSEJobs>
+<mx:Sequence>
+<mx:Step Enabled="TRUE" Key="New Job 494"/>
+</mx:Sequence>
+<mx:Job name="New Job 494">
+<mx:Description/>
+<mx:Sequence>
+<mx:Step Enabled="TRUE" Key="a5797997-2f46-4c29-8bed-20211470db19"/>
+<mx:Step Enabled="TRUE" Key="d58be42c-bd2a-4382-bfdd-39af7daa6193"/>
+<mx:Step Enabled="TRUE" Key="5a8d2797-1fea-4473-951e-69020585edbf"/>
+<mx:Step Enabled="TRUE" Key="b1116b16-a7a7-4356-95a3-fa3e4f9f0839"/>
+<mx:Step Enabled="TRUE" Key="3238124a-f8f6-4123-ab39-4c8238610ab9"/>
+<mx:Step Enabled="TRUE" Key="d5fc990c-7540-4599-9b80-0595d80df044"/>
+</mx:Sequence>
+<mx:Globals/>
+
+<mx:Common>
+<ENGINETYPE>1</ENGINETYPE>
+<SCRIPTENG>null</SCRIPTENG>
+<EVLOG>0</EVLOG>
+<ERRLOG>%$ddm.ddmpath%\DSE.log</ERRLOG>
+<XLRESET>1</XLRESET>
+<SNMPTRAPLEVEL>0</SNMPTRAPLEVEL>
+<MAXERROR>0</MAXERROR>
+<LOGLIMIT>25</LOGLIMIT>
+<RIGHT_TRIM>0</RIGHT_TRIM>
+<MCLOGLEVEL>1</MCLOGLEVEL>
+<ERRFUNCTION>null</ERRFUNCTION>
+<SNMPREMOTEHOST>null</SNMPREMOTEHOST>
+</mx:Common>
+<mx:Pass name="a5797997-2f46-4c29-8bed-20211470db19">
+<TYPE>To Generic</TYPE>
+<DESCRIPTION>setCurrentruntime</DESCRIPTION>
+<REPOSITORY>0</REPOSITORY>
+<UPDATEDB>%$ddm.identitycenter%</UPDATEDB>
+<MAXDELETE>5%</MAXDELETE>
+<AUDITLEVEL>0</AUDITLEVEL>
+<DELTAENABLED>0</DELTAENABLED>
+<SKIP>0</SKIP>
+<JUSTDELTA>0</JUSTDELTA>
+<MARKDEL>0</MARKDEL>
+<AUTODELETE>0</AUTODELETE>
+<CURRTAB>2</CURRTAB>
+<READFROMPVO>0</READFROMPVO>
+<FROMDB>%$ddm.identitycenter%</FROMDB>
+<FROMSQL>select CONVERT(VARCHAR(19), GETDATE(), 126) as jobcurrentstamp;&#13;
+&#13;
+&#13;
+</FROMSQL>
+<FILTEREDITSTATUS>16</FILTEREDITSTATUS>
+<USEIDSTORE>0</USEIDSTORE>
+<IDSTORE>null</IDSTORE>
+<SCRIPTNEXT>setJobVariable</SCRIPTNEXT>
+<mx:Class>
+<mx:attr name="CURRENTRUNTIME">
+<mx:value>%jobcurrentstamp%</mx:value>
+</mx:attr>
+</mx:Class>
+<SOURCEENTRYTYPE/>
+</mx:Pass>
+<mx:Pass name="d58be42c-bd2a-4382-bfdd-39af7daa6193">
+<TYPE>Fromsource DSA</TYPE>
+<DESCRIPTION>Read Office Number for Cusers</DESCRIPTION>
+<REPOSITORY>0</REPOSITORY>
+<UPDATEDB>%$ddm.identitycenter%</UPDATEDB>
+<MAXDELETE>5%</MAXDELETE>
+<AUDITLEVEL>0</AUDITLEVEL>
+<DELTAENABLED>0</DELTAENABLED>
+<SKIP>0</SKIP>
+<JUSTDELTA>0</JUSTDELTA>
+<MARKDEL>1</MARKDEL>
+<AUTODELETE>0</AUTODELETE>
+<CURRTAB>2</CURRTAB>
+<TODB>%$ddm.identitycenter%</TODB>
+<DBTABLE>sapit_%$rep.$NAME%_ofc_Tel_Cusers</DBTABLE>
+<READFROMPVO>0</READFROMPVO>
+<SOURCEENTRYTYPE>0</SOURCEENTRYTYPE>
+<DELTABLE>1</DELTABLE>
+<FSIZEL>0</FSIZEL>
+<LDAPTRYTORESOLVESIZETIMELIMITPROBLEMS>false</LDAPTRYTORESOLVESIZETIMELIMITPROBLEMS>
+<LDAPMAXNUMBEROFRECURSIVELOOPS>0</LDAPMAXNUMBEROFRECURSIVELOOPS>
+<LDAPENCRYPTCONNECTIONSTRING>false</LDAPENCRYPTCONNECTIONSTRING>
+<RESOLVELOOPS>0</RESOLVELOOPS>
+<OPTREFERRALS>0</OPTREFERRALS>
+<DEREF>0</DEREF>
+<SECURITYOPTION>1</SECURITYOPTION>
+<PAGESIZE>50</PAGESIZE>
+<CHARSET>null</CHARSET>
+<LDAPCHARSET>2</LDAPCHARSET>
+<TIMELIMIT>80</TIMELIMIT>
+<SIZELIMIT>180</SIZELIMIT>
+<LDAP3SUPPORT>1</LDAP3SUPPORT>
+<PASSWORD>%$rep.LDAP_PASSWORD%</PASSWORD>
+<NAME>%$rep.LDAP_LOGIN%</NAME>
+<FROMDB>LDAP://%$rep.LDAP_HOST%:%$rep.LDAP_PORT_SSL%/%$rep.LDAP_STARTING_POINT_OFCNO_CUSER%?dn,telephoneNumber,whenChanged?ONE?(objectClass=*)</FROMDB>
+<mx:Class>
+<mx:attr name="dn">
+<mx:value>,,dn</mx:value>
+</mx:attr>
+<mx:attr name="telephoneNumber">
+<mx:value>,,telephoneNumber</mx:value>
+</mx:attr>
+<mx:attr name="whenChanged">
+<mx:value>,,whenChanged</mx:value>
+</mx:attr>
+</mx:Class>
+</mx:Pass>
+<mx:Pass name="5a8d2797-1fea-4473-951e-69020585edbf">
+<TYPE>Fromsource DSA</TYPE>
+<DESCRIPTION>Read Office Number for Dusers</DESCRIPTION>
+<REPOSITORY>0</REPOSITORY>
+<UPDATEDB>%$ddm.identitycenter%</UPDATEDB>
+<MAXDELETE>5%</MAXDELETE>
+<AUDITLEVEL>0</AUDITLEVEL>
+<DELTAENABLED>0</DELTAENABLED>
+<SKIP>0</SKIP>
+<JUSTDELTA>0</JUSTDELTA>
+<MARKDEL>0</MARKDEL>
+<AUTODELETE>0</AUTODELETE>
+<CURRTAB>2</CURRTAB>
+<TODB>%$ddm.identitycenter%</TODB>
+<DBTABLE>sapit_%$rep.$NAME%_ofc_Tel_Dusers</DBTABLE>
+<READFROMPVO>0</READFROMPVO>
+<SOURCEENTRYTYPE>0</SOURCEENTRYTYPE>
+<DELTABLE>1</DELTABLE>
+<FSIZEL>0</FSIZEL>
+<LDAPTRYTORESOLVESIZETIMELIMITPROBLEMS>false</LDAPTRYTORESOLVESIZETIMELIMITPROBLEMS>
+<LDAPMAXNUMBEROFRECURSIVELOOPS>0</LDAPMAXNUMBEROFRECURSIVELOOPS>
+<LDAPENCRYPTCONNECTIONSTRING>false</LDAPENCRYPTCONNECTIONSTRING>
+<RESOLVELOOPS>0</RESOLVELOOPS>
+<OPTREFERRALS>0</OPTREFERRALS>
+<DEREF>0</DEREF>
+<SECURITYOPTION>1</SECURITYOPTION>
+<PAGESIZE>50</PAGESIZE>
+<CHARSET>null</CHARSET>
+<LDAPCHARSET>2</LDAPCHARSET>
+<TIMELIMIT>80</TIMELIMIT>
+<SIZELIMIT>180</SIZELIMIT>
+<LDAP3SUPPORT>1</LDAP3SUPPORT>
+<PASSWORD>%$rep.LDAP_PASSWORD%</PASSWORD>
+<NAME>%$rep.LDAP_LOGIN%</NAME>
+<FROMDB>LDAP://%$rep.LDAP_HOST%:%$rep.LDAP_PORT_SSL%/%$rep.LDAP_STARTING_POINT_OFCNO_DUSER%?dn,telephoneNumber,whenChanged?ONE?(objectClass=*)</FROMDB>
+<mx:Class>
+<mx:attr name="dn">
+<mx:value>,,dn</mx:value>
+</mx:attr>
+<mx:attr name="telephoneNumber">
+<mx:value>,,telephoneNumber</mx:value>
+</mx:attr>
+<mx:attr name="whenChanged">
+<mx:value>,,whenChanged</mx:value>
+</mx:attr>
+</mx:Class>
+</mx:Pass>
+<mx:Pass name="b1116b16-a7a7-4356-95a3-fa3e4f9f0839">
+<TYPE>Fromsource DSA</TYPE>
+<DESCRIPTION>Read Office Number for Iusers</DESCRIPTION>
+<REPOSITORY>0</REPOSITORY>
+<UPDATEDB>%$ddm.identitycenter%</UPDATEDB>
+<MAXDELETE>5%</MAXDELETE>
+<AUDITLEVEL>0</AUDITLEVEL>
+<DELTAENABLED>0</DELTAENABLED>
+<SKIP>0</SKIP>
+<JUSTDELTA>0</JUSTDELTA>
+<MARKDEL>0</MARKDEL>
+<AUTODELETE>0</AUTODELETE>
+<CURRTAB>2</CURRTAB>
+<TODB>%$ddm.identitycenter%</TODB>
+<DBTABLE>sapit_%$rep.$NAME%_ofc_Tel_Iusers</DBTABLE>
+<READFROMPVO>0</READFROMPVO>
+<SOURCEENTRYTYPE>0</SOURCEENTRYTYPE>
+<DELTABLE>1</DELTABLE>
+<FSIZEL>0</FSIZEL>
+<LDAPTRYTORESOLVESIZETIMELIMITPROBLEMS>false</LDAPTRYTORESOLVESIZETIMELIMITPROBLEMS>
+<LDAPMAXNUMBEROFRECURSIVELOOPS>0</LDAPMAXNUMBEROFRECURSIVELOOPS>
+<LDAPENCRYPTCONNECTIONSTRING>false</LDAPENCRYPTCONNECTIONSTRING>
+<RESOLVELOOPS>0</RESOLVELOOPS>
+<OPTREFERRALS>0</OPTREFERRALS>
+<DEREF>0</DEREF>
+<SECURITYOPTION>1</SECURITYOPTION>
+<PAGESIZE>50</PAGESIZE>
+<CHARSET>null</CHARSET>
+<LDAPCHARSET>2</LDAPCHARSET>
+<TIMELIMIT>80</TIMELIMIT>
+<SIZELIMIT>180</SIZELIMIT>
+<LDAP3SUPPORT>1</LDAP3SUPPORT>
+<PASSWORD>%$rep.LDAP_PASSWORD%</PASSWORD>
+<NAME>%$rep.LDAP_LOGIN%</NAME>
+<FROMDB>LDAP://%$rep.LDAP_HOST%:%$rep.LDAP_PORT_SSL%/%$rep.LDAP_STARTING_POINT_OFCNO_IUSER%?dn,telephoneNumber,whenChanged?ONE?(objectClass=*)</FROMDB>
+<mx:Class>
+<mx:attr name="dn">
+<mx:value>,,dn</mx:value>
+</mx:attr>
+<mx:attr name="telephoneNumber">
+<mx:value>,,telephoneNumber</mx:value>
+</mx:attr>
+<mx:attr name="whenChanged">
+<mx:value>,,whenChanged</mx:value>
+</mx:attr>
+</mx:Class>
+</mx:Pass>
+<mx:Pass name="3238124a-f8f6-4123-ab39-4c8238610ab9">
+<TYPE>ToIDStore</TYPE>
+<DESCRIPTION>writetelephoneNumber</DESCRIPTION>
+<REPOSITORY>0</REPOSITORY>
+<UPDATEDB>%$ddm.identitycenter%</UPDATEDB>
+<DELTAID>sapitd_%$rep.$NAME%_phoneNumber</DELTAID>
+<MAXDELETE>5%</MAXDELETE>
+<AUDITLEVEL>0</AUDITLEVEL>
+<DELTAENABLED>1</DELTAENABLED>
+<SKIP>1</SKIP>
+<JUSTDELTA>0</JUSTDELTA>
+<MARKDEL>0</MARKDEL>
+<AUTODELETE>0</AUTODELETE>
+<CURRTAB>2</CURRTAB>
+<READFROMPVO>0</READFROMPVO>
+<FROMDB>%$ddm.identitycenter%</FROMDB>
+<FROMSQL>select distinct a.dn as dn,a.telephoneNumber as telephoneNumber,&#13;
+a.whenChanged as whenChanged,replace(LEFT(a.dn,CHARINDEX(',',a.dn)-1),'CN=','') as &#13;
+sapit_sapnumber from mxmc_db.mxmc_rt_u.sapit_%$rep.$NAME%_ofc_Tel_Cusers as a WITH (NOLOCK)&#13;
+inner join mxmc_db.dbo.idmv_value_ext_active as b &#13;
+on replace(LEFT(a.dn,CHARINDEX(',',a.dn)-1),'CN=','')=b.aValue &#13;
+where &#13;
+b.AttrName='SAPIT_SAPNUMBER'&#13;
+and a.telephoneNumber is not null  and IS_ID='%$pck.SAP_MASTER_IDS_ID%'&#13;
+and CAST( CAST(a.whenChanged AS VARCHAR(8)) AS DATE) &gt;= '$FUNCTION.cutTimeFromDate1($FUNCTION.sapit_getJobVariable(SAPIT_TIME_LAST!!1970-01-01T00:00:00)$$)$$' &#13;
+&#13;
+union &#13;
+&#13;
+select distinct a.dn as dn,a.telephoneNumber as telephoneNumber,&#13;
+a.whenChanged as whenChanged,replace(LEFT(a.dn,CHARINDEX(',',a.dn)-1),'CN=','') as &#13;
+sapit_sapnumber from mxmc_db.mxmc_rt_u.sapit_%$rep.$NAME%_ofc_Tel_Dusers as a WITH (NOLOCK)&#13;
+inner join mxmc_db.dbo.idmv_value_ext_active as b &#13;
+on replace(LEFT(a.dn,CHARINDEX(',',a.dn)-1),'CN=','')=b.aValue &#13;
+where &#13;
+b.AttrName='SAPIT_SAPNUMBER'&#13;
+and a.telephoneNumber is not null  and IS_ID='%$pck.SAP_MASTER_IDS_ID%'&#13;
+and CAST( CAST(a.whenChanged AS VARCHAR(8)) AS DATE) &gt;= '$FUNCTION.cutTimeFromDate1($FUNCTION.sapit_getJobVariable(SAPIT_TIME_LAST!!1970-01-01T00:00:00)$$)$$' &#13;
+&#13;
+union&#13;
+&#13;
+ select distinct a.dn as dn,a.telephoneNumber as telephoneNumber,&#13;
+a.whenChanged as whenChanged,replace(LEFT(a.dn,CHARINDEX(',',a.dn)-1),'CN=','') as &#13;
+sapit_sapnumber from mxmc_db.mxmc_rt_u.sapit_%$rep.$NAME%_ofc_Tel_Iusers as a WITH (NOLOCK)&#13;
+inner join mxmc_db.dbo.idmv_value_ext_active as b &#13;
+on replace(LEFT(a.dn,CHARINDEX(',',a.dn)-1),'CN=','')=b.aValue &#13;
+where &#13;
+b.AttrName='SAPIT_SAPNUMBER'&#13;
+and a.telephoneNumber is not null  and IS_ID='%$pck.SAP_MASTER_IDS_ID%'&#13;
+and CAST( CAST(a.whenChanged AS VARCHAR(8)) AS DATE) &gt;= '$FUNCTION.cutTimeFromDate1($FUNCTION.sapit_getJobVariable(SAPIT_TIME_LAST!!1970-01-01T00:00:00)$$)$$'</FROMSQL>
+<FILTEREDITSTATUS>16</FILTEREDITSTATUS>
+<USEIDSTORE>0</USEIDSTORE>
+<SOURCEENTRYTYPE>0</SOURCEENTRYTYPE>
+<IDSTORE>null</IDSTORE>
+<USERINFO>JobId=%$ddm.mcjob%</USERINFO>
+<DELIMITER>|</DELIMITER>
+<STOREID>Enterprise People</STOREID>
+<DATABASEURL>%$ddm.identitycenter%</DATABASEURL>
+<PROBE>0</PROBE>
+<SOURCEREPOSITORY>0</SOURCEREPOSITORY>
+<mx:Class>
+<mx:attr name="MSKEYVALUE">
+<mx:value>$FUNCTION.retrieveCN_fromDN(%sapit_sapnumber%)$$</mx:value>
+</mx:attr>
+<mx:attr name="MX_ENTRYTYPE">
+<mx:value>MX_PERSON</mx:value>
+</mx:attr>
+<mx:attr name="changeType">
+<mx:value>modify</mx:value>
+</mx:attr>
+<mx:attr name="MX_PHONE_PRIMARY">
+<mx:value>%telephoneNumber%</mx:value>
+</mx:attr>
+</mx:Class>
+</mx:Pass>
+<mx:Pass name="d5fc990c-7540-4599-9b80-0595d80df044">
+<TYPE>To Generic</TYPE>
+<DESCRIPTION>setLastruntime</DESCRIPTION>
+<REPOSITORY>0</REPOSITORY>
+<UPDATEDB>%$ddm.identitycenter%</UPDATEDB>
+<MAXDELETE>5%</MAXDELETE>
+<AUDITLEVEL>0</AUDITLEVEL>
+<DELTAENABLED>0</DELTAENABLED>
+<SKIP>0</SKIP>
+<JUSTDELTA>0</JUSTDELTA>
+<MARKDEL>0</MARKDEL>
+<AUTODELETE>0</AUTODELETE>
+<CURRTAB>2</CURRTAB>
+<READFROMPVO>0</READFROMPVO>
+<FROMDB>%$ddm.identitycenter%</FROMDB>
+<FILTEREDITSTATUS>0</FILTEREDITSTATUS>
+<USEIDSTORE>0</USEIDSTORE>
+<IDSTORE>null</IDSTORE>
+<SOURCEENTRYTYPE>0</SOURCEENTRYTYPE>
+<SCRIPTNEXT>setJobVariable</SCRIPTNEXT>
+<mx:Class>
+<mx:attr name="SAPIT_TIME_LAST">
+<mx:value>$FUNCTION.sapit_getJobVariable(CURRENTRUNTIME)$$</mx:value>
+</mx:attr>
+</mx:Class>
+</mx:Pass>
+
+
+
+
+<mx:Functions>
+<mx:Function Enabled="TRUE" GlobalScript="TRUE" Script="JScript" name="retrieveCN_fromDN"/>
+<mx:Function Enabled="TRUE" GlobalScript="TRUE" Script="JScript" name="cutTimeFromDate1"/>
+<mx:Function Enabled="TRUE" GlobalScript="TRUE" Script="JScript" name="sapit_getJobVariable"/>
+<mx:Function Enabled="TRUE" GlobalScript="TRUE" Script="JScript" name="setJobVariable"/>
+</mx:Functions>
+</mx:Job>
+</mx:DSEJobs>
+</mx:EMS>
+</JOBDEFINITION>
+<MAX_LOGENTRIES>100</MAX_LOGENTRIES>
+<MCPUBLIC>0</MCPUBLIC>
+<MCREFERENCESTATUS>-1</MCREFERENCESTATUS>
+<MCREPOSITORYTYPEQN>com.sapit.NewPackage1:reptype.directory</MCREPOSITORYTYPEQN>
+<MCSCRIPTSTATUS>0</MCSCRIPTSTATUS>
+<MCSOURCEGUID>AD476CD9-A2E0-4A45-912B-582A9E7C4196</MCSOURCEGUID>
+<MULTIPROVISION>0</MULTIPROVISION>
+<MXPROTECTED>0</MXPROTECTED>
+<NAME>newglobalad</NAME>
+<PRIORITY_ACTUAL>20</PRIORITY_ACTUAL>
+<PRIORITY_DEF>20</PRIORITY_DEF>
+<PROVISION>0</PROVISION>
+<REVISION_NUMBER>0</REVISION_NUMBER>
+<SCHEDULE_RULE>On demand</SCHEDULE_RULE>
+<STATE>1</STATE>
+</JOB>
+</JOBS>
+<FOLDERS>
+<FOLDER GROUPGUID="1650493F-7A7A-4BDA-BAA7-D1D71ED71CD8">
+<ACTIVATEDATE>1669185403637</ACTIVATEDATE>
+<GROUP_NAME>Jobs</GROUP_NAME>
+<GROUP_STATUS>1</GROUP_STATUS>
+<MCPACKAGEID>com.sapit.connector.ad.idm</MCPACKAGEID>
+<MCSOURCEGUID>483F09CE-104F-42F5-94D8-C681EEE7807E</MCSOURCEGUID>
+<PROVISION_GROUP>0</PROVISION_GROUP>
+<WFAUTOEXPAND>0</WFAUTOEXPAND>
+<WFDISPLAYORDER>50</WFDISPLAYORDER>
+<WFSHOWGROUP>0</WFSHOWGROUP>
+</FOLDER>
+<FOLDER GROUPGUID="1F96DAC4-4F9C-4516-A593-9F301F8CF17C">
+<ACTIVATEDATE>1669185403637</ACTIVATEDATE>
+<GROUP_NAME>Forms</GROUP_NAME>
+<GROUP_STATUS>1</GROUP_STATUS>
+<MCPACKAGEID>com.sapit.connector.ad.idm</MCPACKAGEID>
+<MCSOURCEGUID>613A0EFF-E745-41FB-A730-200D3E37DA76</MCSOURCEGUID>
+<PROVISION_GROUP>5</PROVISION_GROUP>
+<WFAUTOEXPAND>0</WFAUTOEXPAND>
+<WFDISPLAYORDER>50</WFDISPLAYORDER>
+<WFSHOWGROUP>1</WFSHOWGROUP>
+</FOLDER>
+<FOLDER GROUPGUID="4C7F362D-8CF5-4227-B491-F3ACDC406EF8">
+<ACTIVATEDATE>1669185403637</ACTIVATEDATE>
+<GROUP_NAME>Processes</GROUP_NAME>
+<GROUP_STATUS>1</GROUP_STATUS>
+<MCPACKAGEID>com.sapit.connector.ad.idm</MCPACKAGEID>
+<MCSOURCEGUID>5D1E4051-D468-4279-A0F0-2DC8EC05F736</MCSOURCEGUID>
+<PROVISION_GROUP>1</PROVISION_GROUP>
+<WFAUTOEXPAND>0</WFAUTOEXPAND>
+<WFDISPLAYORDER>50</WFDISPLAYORDER>
+<WFSHOWGROUP>0</WFSHOWGROUP>
+</FOLDER>
+</FOLDERS>
+</PACKAGE>
+</PACKAGES>
+<DISPATCHERS>
+<DISPATCHER MACHINE="rts1_privilege_upload_dispatcher">
+<JOBID>AD476CD9-A2E0-4A45-912B-582A9E7C4196</JOBID>
+</DISPATCHER>
+<DISPATCHER MACHINE="rts2_privilege_upload_dispatcher">
+<JOBID>AD476CD9-A2E0-4A45-912B-582A9E7C4196</JOBID>
+</DISPATCHER>
+</DISPATCHERS>
+<PACKAGE_HISTORY>
+<MCDESCRIPTION>Created package with id 312 owned by C5355019</MCDESCRIPTION>
+<MCMODIFIEDBYUSERNAME>C5355019</MCMODIFIEDBYUSERNAME>
+<MCMODIFIEDDATE>1676544515000</MCMODIFIEDDATE>
+<MCPACKAGEID>com.sapit.connector.ad.idm</MCPACKAGEID>
+</PACKAGE_HISTORY>
+</IDM>
